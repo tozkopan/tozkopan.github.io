@@ -2,7 +2,9 @@
 		controllerName="github.main" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="Title">
 		<content>
-	
+			<FlexBox height="100%" alignItems="Center" justifyContent="Center">
+				<Button text="Hello there!" press="handleHello"/>
+			</FlexBox>
 		</content>
 	</Page>
 </core:View>
