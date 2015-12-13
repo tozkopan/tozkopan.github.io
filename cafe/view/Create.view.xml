@@ -1,0 +1,69 @@
+<core:View controllerName="mvideo.cafe.view.Create"
+	xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:m="sap.m" xmlns="sap.uxap"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<html:style>
+		.myTileGroupText{
+			padding: 2px;
+			margin-left: 10px;
+			margin-top: 5px;
+			border-bottom-style: solid;
+			font-size: 20px;
+			font-style: italic;
+		}
+		.myTile .sapMStdTileTopRow {
+			margin-bottom: 0px;
+		}
+		.myTile .sapMStdTileInfo {
+			margin-top: 0px;
+		}
+		.myTile.sapMTile{
+			height:	10rem;
+		}
+		.myTile>.sapMTileContent{
+			height: 10rem;
+		}
+		.myTile>.sapMTileContent>.sapMStdTileTopRow{
+			height: 3rem;
+		}
+		.myTile>.sapMTileContent>.sapMStdTileBottomRow{
+			height: 5rem;
+		}
+		.myTile>.sapMTileContent>.sapMStdTileTopRow>.sapMStdTileNumDiv{
+			height: 3rem;
+		}
+		.myObjectPageLayout .sapUxAPObjectPageHeaderIdentifier .sapUxAPObjectPageHeaderIdentifierContainer{
+		    padding-top: 1rem;
+    		padding-bottom: 0.5rem;
+		}
+	</html:style>
+
+	<ObjectPageLayout id="ObjectPageLayout" class="myObjectPageLayout"
+		enableLazyLoading="false" sections="{/tileGroup}">
+		<headerTitle>
+			<ObjectPageHeader objectTitle="Добавление льгот"/>
+		</headerTitle>
+
+		<headerContent>
+			<m:Text text="Выберите необходимые льготы Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat" />
+		</headerContent>
+		<sections>
+			<ObjectPageSection subSections="">
+				<subSections>
+					<ObjectPageSubSection title="{name}" mode="Collapsed" >
+						<blocks>
+							<l:HorizontalLayout content="{tiles}" allowWrapping="true">
+								<m:StandardTile class="myTile" icon="sap-icon://{icon}" press="onTilePress"
+								type="{ path: 'available', formatter: 'mvideo.cafe.util.Formatter.tileType' }"				
+								number="{price}" numberUnit="" title="{name}"
+								info="{ path: 'available', formatter: 'mvideo.cafe.util.Formatter.tileInfo' }"
+								infoState="{ path: 'available', formatter: 'mvideo.cafe.util.Formatter.tileInfoState' }" />
+							</l:HorizontalLayout>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+	</ObjectPageLayout>
+
+</core:View>
+

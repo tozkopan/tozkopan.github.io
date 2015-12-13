@@ -1,0 +1,143 @@
+<core:View controllerName="mvideo.cafe.view.Detail"
+	xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:u="sap.ui.unified"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<html:style>
+		.myDetailMain{
+		margin: 10px 15px;
+		}
+		.myDetailMain>*{
+		margin-top: 5px;
+		margin-bottom: 5px;
+		}
+		.myDetailMainLeft {
+		font-size:
+		18px;
+		}
+		.myDetailMainRight {
+		font-size: 18px;
+		}
+		.myForm2
+		.sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont>.sapUiFormResGridLbl:not(.sapUiRespGridSpanM12)>.sapMLabel{
+		text-align: left !important;
+		}
+		.myForm2 .sapUiForm .sapMLabel:after {
+		content: "";
+		}
+	</html:style>
+	<Page title=" ">
+		<content>
+			<VBox class="myDetailMain" width="50%">
+				<items>
+					<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+						<items>
+							<Text class="myDetailMainLeft" text="Группа" />
+							<Text class="myDetailMainRight"
+								text="{path: 'group', formatter:'mvideo.cafe.util.Formatter.getGroupHeader'}" />
+						</items>
+					</FlexBox>
+					<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+						<items>
+							<Text class="myDetailMainLeft" text="Название" />
+							<Text class="myDetailMainRight" text="{name}" />
+						</items>
+					</FlexBox>
+					<FlexBox alignItems="Start" justifyContent="SpaceBetween"
+						visible="{ path: 'price', formatter: 'mvideo.cafe.util.Formatter.isNotEmpty'}">
+						<items>
+							<Text class="myDetailMainLeft" text="Стоимость" />
+							<Text class="myDetailMainRight" text="{price} рублей" />
+						</items>
+					</FlexBox>
+					<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+						<items>
+							<Text class="myDetailMainLeft" text="Статус" />
+							<Text class="myDetailMainRight"
+								text="{ path: 'available', formatter: 'mvideo.cafe.util.Formatter.tileInfo' }" />
+						</items>
+					</FlexBox>
+				</items>
+			</VBox>
+			<IconTabBar id="idIconTabBarMulti" expanded="{device>/isNoPhone}"
+				class="sapUiResponsiveContentPadding">
+				<items>
+					<IconTabFilter icon="sap-icon://hint">
+						<Text
+							text="Описание {path:'dummy', formatter:'mvideo.cafe.util.Formatter.getBlahBlah'}" />
+					</IconTabFilter>
+					<IconTabFilter icon="sap-icon://attachment" count="2">
+						<HBox visible="{local>/edit}">
+							<u:FileUploader id="fileUploader" name="myFileUpload"
+								placeholder="Выберите файл" uploadUrl="upload/" width="400px"
+								uploadComplete="handleUploadComplete" />
+						</HBox>
+						<List>
+							<StandardListItem title="Паспорт.pdf" />
+							<StandardListItem title="Заявление.jpg" visible="{local>/nedit}" />
+						</List>
+					</IconTabFilter>
+					<IconTabFilter id="addInfo" icon="sap-icon://form"
+						visible="{path: 'group', formatter:'mvideo.cafe.util.Formatter.showAddInfo'}">
+						<!-- Выгодоприобретатель 1: %: Фамилия: Имя: Отчество: Отношение к 
+							Застрахованному лицу: Паспортные данные Выгодоприобретателя: Адрес проживания 
+							Выгодоприобретателя: Телефон -->
+
+						<f:SimpleForm id="sfCgange" maxContainerCols="2"
+							visible="{local>/edit}" editable="true" layout="ResponsiveGridLayout"
+							title="Выгодоприобретатель" labelSpanL="4" labelSpanM="4"
+							emptySpanL="2" emptySpanM="2" columnsL="1" columnsM="1"
+							class="myForm editableForm">
+							<f:content>
+								<Label text="Процент" />
+								<Input value="{/beneficiary2/percent}" placeholder="Введите процент" />
+								<Label text="Фамилия" />
+								<Input value="{/beneficiary2/second_name}" />
+								<Label text="Имя" />
+								<Input value="{/beneficiary2/first_name}" />
+								<Label text="Отчество" />
+								<Input value="{/beneficiary2/middle_name}" />
+								<Label text="Отношение к Застрахованному лицу" />
+								<Input value="{/beneficiary2/relation}" />
+								<Label text="Паспортные данные" />
+								<Input value="{/beneficiary2/document}" />
+								<Label text="Адрес проживания" />
+								<Input value="{/beneficiary2/address}" />
+							</f:content>
+						</f:SimpleForm>
+
+						<f:SimpleForm id="sfDisplay" maxContainerCols="2"
+							visible="{local>/nedit}" editable="false" layout="ResponsiveGridLayout"
+							title="Выгодоприобретатель" labelSpanL="4" labelSpanM="4"
+							emptySpanL="2" emptySpanM="2" columnsL="1" columnsM="1" class="myForm">
+							<f:content>
+								<Label text="Процент" />
+								<Text text="{/beneficiary/percent}" />
+								<Label text="Фамилия" />
+								<Text text="{/beneficiary/second_name}" />
+								<Label text="Имя" />
+								<Text text="{/beneficiary/first_name}" />
+								<Label text="Отчество" />
+								<Text text="{/beneficiary/middle_name}" />
+								<Label text="Отношение к Застрахованному лицу" />
+								<Text text="{/beneficiary/relation}" />
+								<Label text="Паспортные данные" />
+								<Text text="{/beneficiary/document}" />
+								<Label text="Адрес проживания" />
+								<Text text="{/beneficiary/address}" />
+							</f:content>
+						</f:SimpleForm>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+		<footer>
+			<Toolbar>
+				<Button press="onCancel" visible="{local>/edit}" icon="sap-icon://decline"
+					text="Отменить" />
+				<ToolbarSpacer />
+				<Button press="onSend" visible="{local>/edit}" icon="sap-icon://begin"
+					text="Отправить" />
+			</Toolbar>
+		</footer>
+	</Page>
+</core:View>

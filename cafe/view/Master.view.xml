@@ -1,0 +1,56 @@
+<core:View controllerName="mvideo.cafe.view.Master"
+	xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<html:style>
+		.mainList .sapMSLITitleOnly,.sapMSLITitle{
+		font-size: 1rem;
+		}
+		.mySubHeader .sapMText{
+			font-size: 1rem;
+		}
+		.mySubHeader>.sapMBarLeft{
+		    padding-left: 10px;
+		}
+		.mySubHeader>.sapMBarRight{
+		    padding-right: 10px;
+		}
+	</html:style>
+	<Page title="Кафетерий льгот">
+		<subHeader>
+			<Bar class="mySubHeader">
+				<contentLeft>
+					<Text text="Остаток" />
+				</contentLeft>
+				<contentRight>
+					<Text text="12000 из 25000" />
+				</contentRight>
+			</Bar>
+		</subHeader>
+		<content>
+			<List id="mainList" class="mainList" mode="None"
+				items="{ path : '/benifits' ,
+					sorter: { path: 'group', descending: false, group: true },
+					groupHeaderFactory: '.getGroupHeader'}">
+				<items>
+					<StandardListItem title="{name}" description="{price}"
+						adaptTitleSize="true" type="Active" press="onListPress"
+						info="{ path: 'available', formatter: 'mvideo.cafe.util.Formatter.tileInfo' }"
+						infoState="{ path: 'available', formatter: 'mvideo.cafe.util.Formatter.tileInfoState' }" />
+					<!-- <ObjectListItem title="{name}"> -->
+
+					<!-- </ObjectListItem> -->
+				</items>
+			</List>
+
+		</content>
+
+
+		<footer>
+			<Toolbar>
+				<Button icon="sap-icon://add" text="Добавить" press="onCreate" />
+				<ToolbarSpacer />
+			</Toolbar>
+		</footer>
+	</Page>
+</core:View>
+

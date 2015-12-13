@@ -1,0 +1,181 @@
+{
+  "benifits": [
+    {
+      "name": "Больничный лист",
+      "group": "fix",
+      "price": "",
+      "available": 5
+    },
+    {
+      "name": "Дисконт на товары компании (10%)",
+      "group": "fix",
+      "price": "",
+      "available": 5
+    },
+    {
+      "name": "Бонусные рубли к праздникам",
+      "group": "fix",
+      "price": "",
+      "available": 5
+    },
+    {
+      "name": "ДМС сотрудника МИДЛ",
+      "group": "dms",
+      "price": "20000",
+      "available": 1
+    },
+    {
+      "name": "2 млн.руб.",
+      "group": "enslife",
+      "price": "2500",
+      "available": 1
+    },
+    {
+      "name": "1000 в месяц",
+      "group": "cell",
+      "price": "12000",
+      "available": 1
+    },
+    {
+      "name": "ДМС  родственника 50%",
+      "group": "dms",
+      "price": "22500",
+      "available": 1
+    }
+  ],
+  "groups": [
+    {
+      "id": "dms",
+      "name": "ДМС"
+    },
+    {
+      "id": "enslife",
+      "name": "Страхование жизни и НС"
+    },
+    {
+      "id": "cell",
+      "name": "Сотовая связь"
+    },
+    {
+      "id": "fix",
+      "name": "Фиксированные"
+    }
+  ],
+  "tileGroup": [
+    {
+      "name": "ДМС",
+      "tiles": [
+        {
+          "group": "dms",
+          "icon": "add",
+          "price": "35000",
+          "name": "ДМС сотрудника МИДЛ",
+          "available": 2
+        },
+        {
+          "group": "dms",
+          "icon": "add",
+          "price": "20000",
+          "name": "ДМС сотрудника Менеджмент",
+          "available": 1
+        },
+        {
+          "group": "dms",
+          "icon": "add",
+          "price": "20000",
+          "name": "ДМС сотрудника регионы",
+          "available": 1
+        },
+        {
+          "group": "dms",
+          "icon": "add",
+          "price": "45000",
+          "name": "ДМС  родственника 100%",
+          "available": 1
+        },
+        {
+          "group": "dms",
+          "icon": "add",
+          "price": "22500",
+          "name": "ДМС  родственника 50%",
+          "available": 3
+        }
+      ]
+    },
+    {
+      "name": "Сотовая связь",
+      "tiles": [
+        {
+          "group": "cell",
+          "icon": "phone",
+          "price": "30000",
+          "name": "2500 в месяц",
+          "available": 2
+        },
+        {
+          "group": "cell",
+          "icon": "phone",
+          "price": "12000",
+          "name": "1000 в месяц",
+          "available": 1
+        },
+        {
+          "group": "cell",
+          "icon": "phone",
+          "price": "6000",
+          "name": "500 в месяц",
+          "available": 3
+        },
+        {
+          "group": "cell",
+          "icon": "phone",
+          "price": "3000",
+          "name": "250 в месяц",
+          "available": 1
+        }
+      ]
+    },
+    {
+      "name": "Страхование жизни и НС",
+      "tiles": [
+        {
+          "group": "enslife",
+          "icon": "insurance-life",
+          "price": "9000",
+          "name": "5 млн.руб.",
+          "available": 1
+        },
+        {
+          "group": "enslife",
+          "icon": "insurance-life",
+          "price": "2500",
+          "name": "2 млн.руб.",
+          "available": 1
+        },
+        {
+          "group": "enslife",
+          "icon": "insurance-life",
+          "price": "1000",
+          "name": "1 млн.руб.",
+          "available": 1
+        },
+        {
+          "group": "enslife",
+          "icon": "insurance-life",
+          "price": "500",
+          "name": "500 тыс.руб.",
+          "available": 1
+        }
+      ]
+    }
+  ],
+  "beneficiary": {
+    "percent": "50",
+    "second_name": "Иванов",
+    "first_name": "Иван",
+    "middle_name": "Иванович",
+    "relation": "родственник",
+    "document": "1234 56789, выдан УВД Перова города Сургут в 01.01.2001",
+    "address": "г.Сургут, ул.Ленина 1"
+  }
+}
