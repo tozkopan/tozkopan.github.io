@@ -22,25 +22,25 @@
       "name": "ДМС сотрудника МИДЛ",
       "group": "dms",
       "price": "20000",
-      "available": 1
+      "available": 2
     },
     {
       "name": "2 млн.руб.",
       "group": "enslife",
       "price": "2500",
-      "available": 1
+      "available": 3
     },
     {
       "name": "1000 в месяц",
       "group": "cell",
       "price": "12000",
-      "available": 1
+      "available": 2
     },
     {
       "name": "ДМС  родственника 50%",
       "group": "dms",
       "price": "22500",
-      "available": 1
+      "available": 2
     }
   ],
   "groups": [
