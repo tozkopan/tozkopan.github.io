@@ -25,7 +25,7 @@
 		content: "";
 		}
 	</html:style>
-	<Page title=" ">
+	<Page title="{name}">
 		<content>
 			<VBox class="myDetailMain" width="50%">
 				<items>
@@ -36,12 +36,12 @@
 								text="{path: 'group', formatter:'mvideo.cafe.util.Formatter.getGroupHeader'}" />
 						</items>
 					</FlexBox>
-					<FlexBox alignItems="Start" justifyContent="SpaceBetween">
-						<items>
-							<Text class="myDetailMainLeft" text="Название" />
-							<Text class="myDetailMainRight" text="{name}" />
-						</items>
-					</FlexBox>
+					<!-- <FlexBox alignItems="Start" justifyContent="SpaceBetween"> -->
+					<!-- <items> -->
+					<!-- <Text class="myDetailMainLeft" text="Название" /> -->
+					<!-- <Text class="myDetailMainRight" text="{name}" /> -->
+					<!-- </items> -->
+					<!-- </FlexBox> -->
 					<FlexBox alignItems="Start" justifyContent="SpaceBetween"
 						visible="{ path: 'price', formatter: 'mvideo.cafe.util.Formatter.isNotEmpty'}">
 						<items>
@@ -102,6 +102,8 @@
 								<Input value="{/beneficiary2/document}" />
 								<Label text="Адрес проживания" />
 								<Input value="{/beneficiary2/address}" />
+								<Label text="Телефон" />
+								<Input value="{/beneficiary2/phone}" />
 							</f:content>
 						</f:SimpleForm>
 
@@ -124,6 +126,8 @@
 								<Text text="{/beneficiary/document}" />
 								<Label text="Адрес проживания" />
 								<Text text="{/beneficiary/address}" />
+								<Label text="Телефон" />
+								<Input value="{/beneficiary/phone}" />
 							</f:content>
 						</f:SimpleForm>
 					</IconTabFilter>
