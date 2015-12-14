@@ -49,7 +49,7 @@ mvideo.cafe.util.Formatter = {
 	tileInfo : function(input) {
 		switch (input) {
 		case 1:
-			return "Открыта";
+			return "В корзине";
 		case 2:
 			return "На согласовании";
 		case 3:
@@ -57,7 +57,7 @@ mvideo.cafe.util.Formatter = {
 		case 4:
 			return "Не доступна";
 		case 5:
-			return ""; // fixed benefits
+			return "Вне лимита"; // fixed benefits
 		}
 	},
 

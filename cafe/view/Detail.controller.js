@@ -20,4 +20,7 @@ sap.ui.controller("mvideo.cafe.view.Detail", {
 			null, false
 		);
 	},
+	handleBack: function(evt){
+		this.app.backDetail();
+	},
 });

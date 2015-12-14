@@ -22,7 +22,7 @@
       "name": "ДМС сотрудника МИДЛ",
       "group": "dms",
       "price": "20000",
-      "available": 2
+      "available": 1
     },
     {
       "name": "2 млн.руб.",
@@ -34,7 +34,7 @@
       "name": "1000 в месяц",
       "group": "cell",
       "price": "12000",
-      "available": 2
+      "available": 1
     },
     {
       "name": "ДМС  родственника 50%",
@@ -70,11 +70,12 @@
           "icon": "add",
           "price": "35000",
           "name": "ДМС сотрудника МИДЛ",
+          "img":"img/ins.png",
           "available": 2
         },
         {
           "group": "dms",
-          "icon": "add",
+          "icon": "pharmacy",
           "price": "20000",
           "name": "ДМС сотрудника Менеджмент",
           "available": 1

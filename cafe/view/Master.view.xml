@@ -6,35 +6,50 @@
 		font-size: 1rem;
 		}
 		.mySubHeader .sapMText{
-			font-size: 1rem;
+		font-size: 1rem;
 		}
 		.mySubHeader>.sapMBarLeft{
-		    padding-left: 10px;
+		padding-left: 10px;
 		}
 		.mySubHeader>.sapMBarRight{
-		    padding-right: 10px;
+		padding-right: 10px;
+		}
+		.mainList .sapMDLIValue{
+		font-size: 1rem;
+		}
+		.mainList .sapMDLILabel{
+		font-size: 1rem;
+		color: #007cc0;
+		}
+		.limitList .sapMDLIValue{
+		font-size: 1.5rem;
+		}
+		.limitList .sapMDLILabel{
+		font-size: 1rem;
+		font-weight: bold;
+		color: #005483;
+		}
+		.limitList .sapMDLI{
+		height: 2rem;
 		}
 	</html:style>
 	<Page title="Кафетерий льгот">
-		<subHeader>
-			<Bar class="mySubHeader">
-				<contentLeft>
-					<Text text="Остаток" />
-				</contentLeft>
-				<contentRight>
-					<Text text="12000 из 25000" />
-				</contentRight>
-			</Bar>
-		</subHeader>
 		<content>
+			<List mode="None" class="limitList">
+				<items>
+					<DisplayListItem label="Доступно" value="12000" />
+					<DisplayListItem label="Перерасход" value="0" />
+				</items>
+			</List>
+
 			<List id="mainList" class="mainList" mode="None"
 				items="{ path : '/benifits' ,
-					sorter: { path: 'group', descending: false, group: true },
-					groupHeaderFactory: '.getGroupHeader'}">
+					sorter: { path: 'available', descending: false, group: true },
+					groupHeaderFactory: '.getAvailableHeader'}">
 				<items>
-					<StandardListItem title="{name}" description="{price}"
-						adaptTitleSize="true" type="Active" press="onListPress"
-						info="{ path: 'available', formatter: 'mvideo.cafe.util.Formatter.tileInfo' }"
+					<StandardListItem title="{name}"
+						description="{ path: 'group', formatter: 'mvideo.cafe.util.Formatter.getGroupHeader' }"
+						adaptTitleSize="true" type="Active" press="onListPress" info="{price}"
 						infoState="{ path: 'available', formatter: 'mvideo.cafe.util.Formatter.tileInfoState' }" />
 					<!-- <ObjectListItem title="{name}"> -->
 
@@ -47,7 +62,7 @@
 
 		<footer>
 			<Toolbar>
-				<Button icon="sap-icon://add" text="Добавить" press="onCreate" />
+				<!-- <Button icon="sap-icon://add" text="Добавить" press="onCreate" /> -->
 				<ToolbarSpacer />
 			</Toolbar>
 		</footer>

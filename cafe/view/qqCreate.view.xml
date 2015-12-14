@@ -1,0 +1,56 @@
+<core:View controllerName="mvideo.cafe.view.Create"
+	xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns="sap.m" xmlns:ux="sap.uxap"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<html:style>
+		.myTileGroupText{
+		    padding: 2px;
+		    margin-left: 10px;
+		    margin-top: 5px;
+		    border-bottom-style: solid;
+		    font-size: 20px;
+		    font-style: italic;
+		}
+		.myTile .sapMStdTileTopRow {
+		    margin-bottom: 0px;
+		}
+		.myTile .sapMStdTileInfo {
+		    margin-top: 0px;
+		}
+		.myTile.sapMTile{
+			height: 10rem;
+		}
+		.myTile>.sapMTileContent{
+			height: 10rem;
+		}
+		.myTile>.sapMTileContent>.sapMStdTileTopRow{
+			height: 3rem;
+		}
+		.myTile>.sapMTileContent>.sapMStdTileBottomRow{
+			height: 5rem;
+		}
+		.myTile>.sapMTileContent>.sapMStdTileTopRow>.sapMStdTileNumDiv{
+			height: 3rem;
+		}
+	</html:style>
+	<Page title=" " showNavButton="true" navButtonPress="onBack">
+		<VBox items="{/tileGroup}" >
+			<VBox>
+				<Text class="myTileGroupText" text="{name}" />
+				<l:HorizontalLayout content="{tiles}" allowWrapping="true">
+					<StandardTile class="myTile" icon="sap-icon://{icon}"
+					type="{ path: 'available', formatter: 'mvideo.cafe.util.Formatter.tileType' }"				
+					number="{price}" numberUnit="" title="{name}"
+					info="{ path: 'available', formatter: 'mvideo.cafe.util.Formatter.tileInfo' }"
+					infoState="{ path: 'available', formatter: 'mvideo.cafe.util.Formatter.tileInfoState' }" />
+				</l:HorizontalLayout>
+			</VBox>
+		</VBox>
+
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer />
+			</Toolbar>
+		</footer>
+	</Page>
+</core:View>
+

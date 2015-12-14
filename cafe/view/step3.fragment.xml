@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+	<Text
+		text="Описание {path:'dummy', formatter:'mvideo.cafe.util.Formatter.getBlahBlah'}" />
+</core:FragmentDefinition>

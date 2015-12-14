@@ -3,60 +3,114 @@
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<html:style>
 		.myTileGroupText{
-			padding: 2px;
-			margin-left: 10px;
-			margin-top: 5px;
-			border-bottom-style: solid;
-			font-size: 20px;
-			font-style: italic;
+		padding: 2px;
+		margin-left: 10px;
+		margin-top: 5px;
+		border-bottom-style: solid;
+		font-size: 20px;
+		font-style: italic;
 		}
 		.myTile .sapMStdTileTopRow {
-			margin-bottom: 0px;
+		margin-bottom: 0px;
 		}
 		.myTile .sapMStdTileInfo {
-			margin-top: 0px;
+		margin-top: 0px;
 		}
 		.myTile.sapMTile{
-			height:	10rem;
+		height: 8rem;
 		}
 		.myTile>.sapMTileContent{
-			height: 10rem;
+		height: 8rem;
 		}
 		.myTile>.sapMTileContent>.sapMStdTileTopRow{
-			height: 3rem;
+		height: 3rem;
 		}
 		.myTile>.sapMTileContent>.sapMStdTileBottomRow{
-			height: 5rem;
+		height: 3rem;
 		}
 		.myTile>.sapMTileContent>.sapMStdTileTopRow>.sapMStdTileNumDiv{
-			height: 3rem;
+		height: 3rem;
 		}
-		.myObjectPageLayout .sapUxAPObjectPageHeaderIdentifier .sapUxAPObjectPageHeaderIdentifierContainer{
-		    padding-top: 1rem;
-    		padding-bottom: 0.5rem;
+		.myObjectPageLayout .sapUxAPObjectPageHeaderIdentifier
+		.sapUxAPObjectPageHeaderIdentifierContainer{
+		padding-top: 1rem;
+		padding-bottom: 0.5rem;
+		}
+		.myCustomTile{
+		width:192px;
+		height:128px;
+		}
+		.myCustomTile .myCTContainer{
+		position: relative;
+		}
+		.myCustomTile
+		.myCTBack{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0px;
+		left:
+		0px;
+		z-index: 0;
+		}
+		.myCustomTile .myCTFront{
+		z-index: 1;
+		padding: 10px;
+		}
+		.myCTPrice{
+		font-size: 2rem;
+		}
+		.myCTName{
+		font-size: 1.1rem;
+		padding-top: 10px;
+		}
+		.myWhiteShadow{
+		text-shadow:
+		-1px -1px 0 #FFF,
+		1px -1px 0 #FFF,
+		-1px 1px 0 #FFF,
+		1px 1px 0 #FFF;
 		}
 	</html:style>
 
 	<ObjectPageLayout id="ObjectPageLayout" class="myObjectPageLayout"
 		enableLazyLoading="false" sections="{/tileGroup}">
 		<headerTitle>
-			<ObjectPageHeader objectTitle="Добавление льгот"/>
+			<ObjectPageHeader objectTitle="Добавление льгот" />
 		</headerTitle>
 
 		<headerContent>
-			<m:Text text="Выберите необходимые льготы Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat" />
+			<m:Text
+				text="Выберите необходимые льготы Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat" />
 		</headerContent>
 		<sections>
 			<ObjectPageSection subSections="">
 				<subSections>
-					<ObjectPageSubSection title="{name}" mode="Collapsed" >
+					<ObjectPageSubSection title="{name}" mode="Collapsed">
 						<blocks>
-							<l:HorizontalLayout content="{tiles}" allowWrapping="true">
-								<m:StandardTile class="myTile" icon="sap-icon://{icon}" press="onTilePress"
-								type="{ path: 'available', formatter: 'mvideo.cafe.util.Formatter.tileType' }"				
-								number="{price}" numberUnit="" title="{name}"
-								info="{ path: 'available', formatter: 'mvideo.cafe.util.Formatter.tileInfo' }"
-								infoState="{ path: 'available', formatter: 'mvideo.cafe.util.Formatter.tileInfoState' }" />
+							<l:HorizontalLayout content="{tiles}"
+								allowWrapping="true">
+								<!-- <m:StandardTile class="myTile" icon="sap-icon://{icon}" press="onTilePress" 
+									type="{ path: 'available', formatter: 'mvideo.cafe.util.Formatter.tileType' 
+									}" number="{price}" numberUnit="" title="{name}" /> -->
+								<m:CustomTile class="sapMTile myCustomTile" press="onTilePress">
+									<m:content>
+										<m:VBox class="myCTContainer">
+											<m:VBox class="myCTFront">
+												<m:HBox justifyContent="SpaceBetween">
+													<core:Icon class="sapMStdTileIconDiv" size="32px"
+														src="sap-icon://{icon}" />
+													<m:Text class="myCTPrice myWhiteShadow" text="{price}" />
+												</m:HBox>
+												<m:Text class="myCTName myWhiteShadow" text="{name}" />
+											</m:VBox>
+											<m:HBox class="myCTBack">
+												<m:Image src="{img}" />
+											</m:HBox>
+										</m:VBox>
+									</m:content>
+								</m:CustomTile>
+
 							</l:HorizontalLayout>
 						</blocks>
 					</ObjectPageSubSection>

@@ -8,7 +8,9 @@ sap.ui.define([
 			//rootView : "sap.ui.demo.wt.view.App"
 		},
 		createContent : function() {
-			this.app = new sap.m.SplitApp();
+			this.app = new sap.m.SplitApp({
+				"mode":sap.m.SplitAppMode.ShowHideMode
+			});
 			this.app.setBackgroundColor("white");
 			
 			this.app.handleDetail = function(context,edit){
@@ -64,7 +66,7 @@ sap.ui.define([
 				}
 			}), false);
 			
-			this.app.setInitialDetail("Empty");
+			this.app.setInitialDetail("Create");
 //			this.app.setInitialDetail("Detail");
 			
 			// set data model
