@@ -14,8 +14,6 @@ sap.ui.controller("mvideo.cafe.view.Create", {
 		this.app.backDetail();
 	},
 	onTilePress: function(evt) {
-		this.app.handleDetail(
-			evt.getSource().getBindingContext(), true
-		);
+		this.app.handleDetail(evt.getSource().getBindingContext(), "Wizard", true);
 	}
 });

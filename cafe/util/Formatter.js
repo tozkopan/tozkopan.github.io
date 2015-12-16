@@ -4,6 +4,17 @@ mvideo.cafe.util.Formatter = {
 	aMonth : [ "января", "февраля", "марта", "апреля", "мая", "июня", "июля",
 			"августа", "сентября", "октября", "ноября", "декабря" ],
 
+	getListMode : function(code) {
+		return (code == 1)?"Delete":"None";
+	},
+	
+	getGroupSum : function(array) {
+		var sum = 0;
+		array.forEach(function(item){
+			sum += parseFloat(item.price);
+		});
+		return mvideo.cafe.util.Formatter.formatMoney(sum);
+	},
 	getGroupHeader : function(code) {
 		var aGroups = sap.ui.getCore().myApp.getModel().getProperty("/groups");
 		if (aGroups && aGroups.length > 0) {
@@ -11,6 +22,12 @@ mvideo.cafe.util.Formatter = {
 				return (item.id == code);
 			})[0].name;
 		}
+	},
+	formatMoney : function(input, decimals, delimiter) {
+		if(delimiter === undefined){ delimiter = ','; }
+		var parts = parseFloat(input).toFixed(decimals).toString().split(".");
+	    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, delimiter);
+	    return parts.join(".") + ' р.';
 	},
 	showAddInfo : function(code) {
 		return code === "enslife";
@@ -130,6 +147,9 @@ mvideo.cafe.util.Formatter = {
 		return value == "true";
 	},
 
+	isArrayNotEmpty : function(array) {
+		return !!(array && array.length);
+	},
 	isNotEmpty : function(value) {
 		return !!(value);
 	},

@@ -22,7 +22,8 @@
 		color: #007cc0;
 		}
 		.limitList .sapMDLIValue{
-		font-size: 1.5rem;
+		font-size:
+		1.5rem;
 		}
 		.limitList .sapMDLILabel{
 		font-size: 1rem;
@@ -47,16 +48,17 @@
 					sorter: { path: 'available', descending: false, group: true },
 					groupHeaderFactory: '.getAvailableHeader'}">
 				<items>
-					<StandardListItem title="{name}"
-						description="{ path: 'group', formatter: 'mvideo.cafe.util.Formatter.getGroupHeader' }"
-						adaptTitleSize="true" type="Active" press="onListPress" info="{price}"
-						infoState="{ path: 'available', formatter: 'mvideo.cafe.util.Formatter.tileInfoState' }" />
-					<!-- <ObjectListItem title="{name}"> -->
-
-					<!-- </ObjectListItem> -->
+					<CustomListItem>
+						<Panel>
+							<StandardListItem title="{name}"
+								description="{ path: 'group', formatter: 'mvideo.cafe.util.Formatter.getGroupHeader' }"
+								adaptTitleSize="true" type="Active" press="onListPress"
+								info="{ path: 'price', formatter: 'mvideo.cafe.util.Formatter.formatMoney' }"
+								infoState="{ path: 'available', formatter: 'mvideo.cafe.util.Formatter.tileInfoState' }" />
+						</Panel>
+					</CustomListItem>
 				</items>
 			</List>
-
 		</content>
 
 

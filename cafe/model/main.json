@@ -1,21 +1,21 @@
 {
-  "benifits": [
+  "benifits": [  
     {
       "name": "Больничный лист",
       "group": "fix",
-      "price": "",
+      "price": "5000",
       "available": 5
     },
     {
       "name": "Дисконт на товары компании (10%)",
       "group": "fix",
-      "price": "",
+      "price": "8000",
       "available": 5
     },
     {
-      "name": "Бонусные рубли к праздникам",
+      "name": "Бонусные wрубли к праздникам",
       "group": "fix",
-      "price": "",
+      "price": "18000",
       "available": 5
     },
     {
@@ -41,6 +41,79 @@
       "group": "dms",
       "price": "22500",
       "available": 2
+    }
+  ],
+  "benifits_g": [
+    {
+      "group": 1,
+      "icon":"cart-3",
+      "content": [
+        {
+          "name": "ДМС сотрудника МИДЛ",
+          "group": "dms",
+          "price": "20000",
+          "available": 1
+        },
+        {
+          "name": "1000 в месяц",
+          "group": "cell",
+          "price": "12000",
+          "available": 1
+        }
+      ]
+    },
+    {
+      "group": 2,
+      "icon":"lateness",
+      "content": [
+        {
+          "name": "ДМС  родственника 50%",
+          "group": "dms",
+          "price": "22500",
+          "available": 2
+        }
+      ]
+    },
+    {
+      "group": 3,
+      "icon":"sys-enter",
+      "content": [
+        {
+          "name": "2 млн.руб.",
+          "group": "enslife",
+          "price": "2500",
+          "available": 3
+        }
+      ]
+    },
+    {
+      "group": 4,
+      "icon":"add",
+      "content": []
+    },
+    {
+      "group": 5,
+      "icon":"supplier",
+      "content": [
+        {
+          "name": "Больничный лист",
+          "group": "fix",
+          "price": "4000",
+          "available": 5
+        },
+        {
+          "name": "Дисконт на товары компании (10%)",
+          "group": "fix",
+          "price": "5000",
+          "available": 5
+        },
+        {
+          "name": "Бонусные рубли к праздникам",
+          "group": "fix",
+          "price": "3000",
+          "available": 5
+        }
+      ]
     }
   ],
   "groups": [
@@ -82,21 +155,21 @@
         },
         {
           "group": "dms",
-          "icon": "add",
+          "icon": "accidental-leave",
           "price": "20000",
           "name": "ДМС сотрудника регионы",
           "available": 1
         },
         {
           "group": "dms",
-          "icon": "add",
+          "icon": "electrocardiogram",
           "price": "45000",
           "name": "ДМС  родственника 100%",
           "available": 1
         },
         {
           "group": "dms",
-          "icon": "add",
+          "icon": "syringe",
           "price": "22500",
           "name": "ДМС  родственника 50%",
           "available": 3
@@ -179,5 +252,20 @@
     "document": "1234 56789, выдан УВД Перова города Сургут в 01.01.2001",
     "address": "г.Сургут, ул.Ленина 1",
     "phone": "+7-912-345-67-89"
-  }
+  },
+  "lorem":"ыберите необходимые льготы Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+  "instruction":[
+  	{
+  		"text":"Выберите необходимую льготу из предлагаемого списка, при клике вы увидите подробную информацию по льготе",
+  		"img":"bean_1.png"
+  	},
+  	{
+  		"text":"Для выбранной льготы заполните необходимые данные и приложите копии документов, по завершении льгота будет добавлена в корзину (список слева)",
+  		"img":"bean_2.png"
+  	},
+  	{
+  		"text":"Перепроверьте приложенный документы и введенные данные для льгот в корзине и отправьте их на согласование",
+  		"img":"bean_3.png"
+  	}
+  ]
 }

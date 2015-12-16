@@ -3,36 +3,87 @@
 	xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:u="sap.ui.unified"
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<html:style>
+		.myDetailMain{
+		margin: 10px 15px;
+		}
+		.myDetailMain>*{
+		margin-top: 5px;
+		margin-bottom: 5px;
+		}
+		.myDetailMainLeft {
+		font-size:
+		18px;
+		}
+		.myDetailMainRight {
+		font-size: 18px;
+		}
+		.myForm2
+		.sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont>.sapUiFormResGridLbl:not(.sapUiRespGridSpanM12)>.sapMLabel{
+		text-align: left !important;
+		}
+		.myForm2 .sapUiForm .sapMLabel:after {
+		content: "";
+		}
 	</html:style>
 	<Page title="{name}" showNavButton="true" navButtonPress="handleBack">
 		<content>
-			<Wizard id="CreateWizard" complete="wizardCompletedHandler"
-				showNextButton="false">
-				<WizardStep id="step1" title="Общая информация"
-					validated="false">
-					<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step1" />
-				</WizardStep>
-				<WizardStep id="step2" validated="false" title="Введите данные">
-					<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step2" />
-				</WizardStep>
-				<WizardStep id="step3" validated="true" activate="optionalStepActivation"
-					complete="optionalStepCompletion" title="Шаблоны документов">
-					<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step3" />
-				</WizardStep>
-				<WizardStep id="step4" validated="false" title="Прикрепленние файлов">
-					<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step4" />
-				</WizardStep>
-				<WizardStep id="step5" title="Подтверждение">
-					<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step5" />
-				</WizardStep>
-			</Wizard>
-
+			<VBox class="myDetailMain" width="50%">
+				<items>
+					<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+						<items>
+							<Text class="myDetailMainLeft" text="Группа" />
+							<Text class="myDetailMainRight"
+								text="{path: 'group', formatter:'mvideo.cafe.util.Formatter.getGroupHeader'}" />
+						</items>
+					</FlexBox>
+					<!-- <FlexBox alignItems="Start" justifyContent="SpaceBetween"> -->
+					<!-- <items> -->
+					<!-- <Text class="myDetailMainLeft" text="Название" /> -->
+					<!-- <Text class="myDetailMainRight" text="{name}" /> -->
+					<!-- </items> -->
+					<!-- </FlexBox> -->
+					<FlexBox alignItems="Start" justifyContent="SpaceBetween"
+						visible="{ path: 'price', formatter: 'mvideo.cafe.util.Formatter.isNotEmpty'}">
+						<items>
+							<Text class="myDetailMainLeft" text="Стоимость" />
+							<Text class="myDetailMainRight" text="{price} рублей" />
+						</items>
+					</FlexBox>
+					<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+						<items>
+							<Text class="myDetailMainLeft" text="Статус" />
+							<Text class="myDetailMainRight"
+								text="{ path: 'available', formatter: 'mvideo.cafe.util.Formatter.tileInfo' }" />
+						</items>
+					</FlexBox>
+				</items>
+			</VBox>
+			<IconTabBar id="idIconTabBarMulti" expanded="{device>/isNoPhone}"
+				class="sapUiResponsiveContentPadding">
+				<items>
+					<IconTabFilter icon="sap-icon://hint">
+						<core:Fragment fragmentName="mvideo.cafe.view.step1"
+							type="XML" />
+					</IconTabFilter>
+					<IconTabFilter icon="sap-icon://attachment" count="2">
+						<core:Fragment fragmentName="mvideo.cafe.view.step4"
+							type="XML" />
+					</IconTabFilter>
+					<IconTabFilter id="addInfo" icon="sap-icon://form"
+						visible="{path: 'group', formatter:'mvideo.cafe.util.Formatter.showAddInfo'}">
+						<core:Fragment fragmentName="mvideo.cafe.view.step2"
+							type="XML" />
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
 		</content>
 		<footer>
 			<Toolbar>
-				<Button icon="sap-icon://navigation-left-arrow" text="Назад"/>
+				<Button press="onCancel" visible="{local>/edit}" icon="sap-icon://decline"
+					text="Отменить" />
 				<ToolbarSpacer />
-				<Button icon="sap-icon://navigation-right-arrow" text="Дальше"/>
+				<Button press="onSend" visible="{local>/edit}" icon="sap-icon://begin"
+					text="Отправить" />
 			</Toolbar>
 		</footer>
 	</Page>

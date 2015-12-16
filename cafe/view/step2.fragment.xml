@@ -1,5 +1,50 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"
 	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
-	<Text
-		text="Описание {path:'dummy', formatter:'mvideo.cafe.util.Formatter.getBlahBlah'}" />
+	<f:SimpleForm maxContainerCols="2"
+		visible="{local>/edit_f}" editable="true" layout="ResponsiveGridLayout"
+		title="Выгодоприобретатель" labelSpanL="4" labelSpanM="4" emptySpanL="2"
+		emptySpanM="2" columnsL="1" columnsM="1" class="myForm editableForm">
+		<f:content>
+			<Label text="Процент" />
+			<Input value="{/beneficiary2/percent}" placeholder="Введите процент" />
+			<Label text="Фамилия" />
+			<Input value="{/beneficiary2/second_name}" />
+			<Label text="Имя" />
+			<Input value="{/beneficiary2/first_name}" />
+			<Label text="Отчество" />
+			<Input value="{/beneficiary2/middle_name}" />
+			<Label text="Отношение к Застрахованному лицу" />
+			<Input value="{/beneficiary2/relation}" />
+			<Label text="Паспортные данные" />
+			<Input value="{/beneficiary2/document}" />
+			<Label text="Адрес проживания" />
+			<Input value="{/beneficiary2/address}" />
+			<Label text="Телефон" />
+			<Input value="{/beneficiary2/phone}" />
+		</f:content>
+	</f:SimpleForm>
+
+	<f:SimpleForm maxContainerCols="2"
+		visible="{local>/nedit_f}" editable="false" layout="ResponsiveGridLayout"
+		title="Выгодоприобретатель" labelSpanL="4" labelSpanM="4" emptySpanL="2"
+		emptySpanM="2" columnsL="1" columnsM="1" class="myForm">
+		<f:content>
+			<Label text="Процент" />
+			<Text text="{/beneficiary/percent}" />
+			<Label text="Фамилия" />
+			<Text text="{/beneficiary/second_name}" />
+			<Label text="Имя" />
+			<Text text="{/beneficiary/first_name}" />
+			<Label text="Отчество" />
+			<Text text="{/beneficiary/middle_name}" />
+			<Label text="Отношение к Застрахованному лицу" />
+			<Text text="{/beneficiary/relation}" />
+			<Label text="Паспортные данные" />
+			<Text text="{/beneficiary/document}" />
+			<Label text="Адрес проживания" />
+			<Text text="{/beneficiary/address}" />
+			<Label text="Телефон" />
+			<Text text="{/beneficiary/phone}" />
+		</f:content>
+	</f:SimpleForm>
 </core:FragmentDefinition>

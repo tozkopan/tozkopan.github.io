@@ -10,12 +10,24 @@ sap.ui.controller("mvideo.cafe.view.Master", {
 	// },
 	// onExit: function() {
 	// }
-	onCreate : function() {
-		this.app.toDetail("Create");
+	"onSend" : function() {
+//		sap.m.MessageBox.information("sdsdsd");
+		MB = sap.m.MessageBox;
+		MT = sap.m.MessageToast;
+		MB.confirm("Вы действительно хотите отправить все льготы в корзине на согласование?"
+				+ " Дальнейшие изменения возможны только через специалиста поддержки!",{
+			title:"Подтверждение",
+			onClose: function(action){
+				if(action == MB.Action.OK){
+					MT.show("Успешно отправлено!");
+					this.app.backDetail();
+				}
+			}.bind(this)
+		});
 	},
 
 	onListPress : function(evt) {
-		this.app.handleDetail(evt.getSource().getBindingContext(), false);
+		this.app.handleDetail(evt.getSource().getBindingContext(), "Detail", false);
 	},
 
 	getGroupHeader : function(oGroup) {
@@ -32,23 +44,8 @@ sap.ui.controller("mvideo.cafe.view.Master", {
 			value : 12000
 		});
 		header.addStyleClass("sapMGHLI");
+		header.attachPress(function(){console.log("ssss")});
 		return header;
-		// var header2 = new sap.m.CustomListItem( {
-		// content:[
-		// new sap.m.HBox({
-		// justifyContent:"SpaceBetween",
-		// item:[
-		// new sap.m.HBox({
-		// item:[
-		// new sap.ui.core.Icon({src:"sap-icon://add"}),
-		// new sap.m.Text({text:"AAAA"}),
-		// ]
-		// }),
-		// new sap.m.Text({text:"BBBB"})
-		// ]
-		// })
-		// ]
-		// } );
 	},
 
 });

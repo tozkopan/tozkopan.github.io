@@ -1,5 +1,28 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"
-	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
-	<Text
-		text="Описание {path:'dummy', formatter:'mvideo.cafe.util.Formatter.getBlahBlah'}" />
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+	<HBox visible="{local>/edit}">
+		<u:FileUploader name="myFileUpload" placeholder="Выберите файл"
+			uploadUrl="upload/" width="400px" uploadComplete="handleUploadComplete" />
+	</HBox>
+	<List>
+		<CustomListItem>
+			<content>
+				<HBox justifyContent="SpaceBetween" alignItems="Center">
+					<Link class="sapMSLITitleOnly" text="Паспорт.pdf" />
+					<core:Icon src="sap-icon://sys-cancel" visible="{local>/edit}"
+						activeColor="red" color="#cc1919" size="24px" press="deleteAttach" />
+				</HBox>
+			</content>
+		</CustomListItem>
+		<CustomListItem>
+			<content>
+				<HBox justifyContent="SpaceBetween" alignItems="Center">
+					<Link class="sapMSLITitleOnly" text="Заявление.jpg" />
+					<core:Icon src="sap-icon://sys-cancel" visible="{local>/edit}"
+						activeColor="red" color="#cc1919" size="24px" press="deleteAttach" />
+				</HBox>
+			</content>
+		</CustomListItem>
+	</List>
 </core:FragmentDefinition>
