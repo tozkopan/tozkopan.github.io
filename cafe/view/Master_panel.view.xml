@@ -56,23 +56,35 @@
 		.sapMLIB.sapMSLI{
 		padding: 0 0.5rem 0 1rem;
 		}
+		.myRedText *{
+		color: red;
+		}
+		.myGreenText *{
+		color: green;
+		}
 	</html:style>
 	<Page title="Мои лsьготы">
 		<customHeader>
 			<Bar>
 				<contentLeft>
-					<Image height="32px" src="img/mvideo_logo.png"/>
+					<Image height="32px" src="img/mvideo_logo.png" />
 				</contentLeft>
 				<contentMiddle>
-					<Text class="sapMTitleStyleAuto" text="Мои льготы"/>
+					<Text class="sapMTitleStyleAuto" text="Мои льготы" />
 				</contentMiddle>
 			</Bar>
 		</customHeader>
 		<content>
 			<List mode="None" class="limitList">
 				<items>
-					<DisplayListItem label="Доступно" value="12000" />
-					<DisplayListItem label="Перерасход" value="0" />
+					<DisplayListItem label="Общий лимит"
+						value="{ path: '/limit/total', formatter: 'mvideo.cafe.util.Formatter.formatMoney'}" />
+					<DisplayListItem label="Остаток" class="myGreenText"
+						value="{ path: '/limit/available', formatter: 'mvideo.cafe.util.Formatter.formatMoney'}" />
+ 					<DisplayListItem label="Макс. удержание"
+						value="{ path: '/limit/overdraft_limit', formatter: 'mvideo.cafe.util.Formatter.formatMoney'}" />	
+ 					<DisplayListItem label="Удержание" class="myRedText"
+						value="{ path: '/limit/overdraft', formatter: 'mvideo.cafe.util.Formatter.formatMoney'}" />	
 				</items>
 			</List>
 
@@ -93,17 +105,18 @@
 									<Text
 										text="{path: 'group', formatter: 'mvideo.cafe.util.Formatter.tileInfo'}" />
 									<ToolbarSpacer />
-									<Text text="{path: 'content', formatter: 'mvideo.cafe.util.Formatter.getGroupSum'}" />
+									<Text
+										text="{path: 'content', formatter: 'mvideo.cafe.util.Formatter.getGroupSum'}" />
 								</Toolbar>
 							</headerToolbar>
 							<content>
-								<List
+								<List delete="onDelete"
 									mode="{path: 'group', formatter: 'mvideo.cafe.util.Formatter.getListMode'}"
 									items="{content}">
 									<items>
 										<StandardListItem title="{name}"
 											description="{ path: 'group', formatter: 'mvideo.cafe.util.Formatter.getGroupHeader' }"
-											adaptTitleSize="true" type="Active" press="onListPress"
+											adaptTitleSize="true" type="Active" press="onListPress" 
 											info="{ path: 'price', formatter: 'mvideo.cafe.util.Formatter.formatMoney' 
 									}" />
 									</items>
@@ -118,7 +131,8 @@
 
 		<footer>
 			<Toolbar>
-				<Button icon="sap-icon://cart-approval" text="Отправить на согласование" press="onSend" />
+				<Button icon="sap-icon://cart-approval" text="Отправить на согласование"
+					press="onSend" />
 				<ToolbarSpacer />
 			</Toolbar>
 		</footer>

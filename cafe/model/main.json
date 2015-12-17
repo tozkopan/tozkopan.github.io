@@ -1,4 +1,10 @@
 {
+  "limit":{
+    "total":"50000",
+    "available":"18000",
+    "overdraft":"0",
+    "overdraft_limit":"6000"
+  },
   "benifits": [  
     {
       "name": "Больничный лист",

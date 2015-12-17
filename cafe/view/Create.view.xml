@@ -56,13 +56,13 @@
 		}
 		.myCustomTile .myCTFront{
 		z-index: 1;
-		padding: 10px;
+		padding: 10px 8px;
 		}
 		.myCTPrice{
-		font-size: 2rem;
+		font-size: 1.5rem;
 		}
 		.myCTName{
-		font-size: 1.1rem;
+		font-size: 1.2rem;
 		padding-top:
 		10px;
 		}
@@ -83,7 +83,8 @@
 		font-size: 17px;
 		}
 		.myCreateInfo .sapMFlexItem{
-		padding: 5px;
+		padding:
+		5px;
 		}
 	</html:style>
 	<m:Page title="Кафетерий льгот">
@@ -121,7 +122,8 @@
 														<m:HBox justifyContent="SpaceBetween">
 															<core:Icon class="sapMStdTileIconDiv" size="32px"
 																src="sap-icon://{icon}" />
-															<m:Text class="myCTPrice myWhiteShadow" text="{price}" />
+															<m:Text class="myCTPrice myWhiteShadow"
+																text="{path: 'price', formatter: 'mvideo.cafe.util.Formatter.formatMoney'}" />
 														</m:HBox>
 														<m:Text class="myCTName myWhiteShadow" text="{name}" />
 													</m:VBox>
