@@ -2,4 +2,9 @@
 	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
 	<Text text="{name}" />
 	<Text text="{/lorem}{/lorem}{/lorem}" />
+	<VBox>
+		<Text text="" />
+		<Link href="doc/Менеджмент.docx" text="Описание программы - Менеджмент" />
+		<Link href="doc/Мидл.docx" text="Описание программы - Мидл" />
+	</VBox>
 </core:FragmentDefinition>
