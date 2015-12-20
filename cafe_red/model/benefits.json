@@ -1,0 +1,235 @@
+[
+  {
+    "id": 1,
+    "group": "dms",
+    "icon": "add",
+    "price": "35000",
+    "overdraft": true,
+    "name": "ДМС сотрудника МИДЛ",
+    "img": "img/ins.png"
+  },
+  {
+    "id": 2,
+    "group": "dms",
+    "icon": "pharmacy",
+    "price": "20000",
+    "overdraft": true,
+    "name": "ДМС сотрудника Менеджмент"
+  },
+  {
+    "id": 3,
+    "group": "dms",
+    "icon": "accidental-leave",
+    "price": "20000",
+    "overdraft": true,
+    "name": "ДМС сотрудника регионы"
+  },
+  {
+    "id": 4,
+    "group": "dms",
+    "icon": "electrocardiogram",
+    "price": "45000",
+    "name": "ДМС  родственника 100%",
+    "templates": [
+      {
+        "name": "Согласие на передачу информациии (шаблон).pdf",
+        "link": ""
+      }
+    ],
+    "files": [
+      {
+        "name": "Согласие на передачу информациии"
+      }
+    ],
+    "fields": [
+      {
+        "id": "price",
+        "name": "Стоимость (рублей)",
+        "comment": "Зависит от даты рождения",
+        "value":1000,
+        "calc": true
+      },
+      {
+        "id": "dob",
+        "name": "Дата рождения",
+        "comment": " ",
+        "type":"date",
+        "calc": false
+      },
+      {
+        "id": "surname",
+        "name": "Фамилия",
+        "comment": "",
+        "calc": false
+      },
+      {
+        "id": "name",
+        "name": "Имя",
+        "comment": "",
+        "calc": false
+      },
+      {
+        "id": "middlename",
+        "name": "Отчество",
+        "comment": "",
+        "calc": false
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "group": "dms",
+    "icon": "syringe",
+    "price": "22500",
+    "name": "ДМС  родственника 50%"
+  },
+  {
+    "id": 6,
+    "group": "cell",
+    "icon": "phone",
+    "price": "30000",
+    "name": "2500 в месяц"
+  },
+  {
+    "id": 7,
+    "group": "cell",
+    "icon": "phone",
+    "price": "12000",
+    "name": "1000 в месяц"
+  },
+  {
+    "id": 8,
+    "group": "cell",
+    "icon": "phone",
+    "price": "6000",
+    "name": "500 в месяц"
+  },
+  {
+    "id": 9,
+    "group": "cell",
+    "icon": "phone",
+    "price": "3000",
+    "name": "250 в месяц"
+  },
+  {
+    "id": 10,
+    "group": "enslife",
+    "icon": "insurance-life",
+    "price": "9000",
+    "name": "5 млн.руб.",
+    "templates": [
+      {
+        "name": "Согласие на передачу информациии (шаблон).pdf",
+        "link": ""
+      },
+      {
+        "name": "Шаблон согласия на согласие.pdf",
+        "link": ""
+      }
+    ],
+    "files": [
+      {
+        "name": "Согласие на передачу информациии"
+      },
+      {
+        "name": "Согласие на согласие"
+      }
+    ],
+    "fields": [
+      {
+        "id": "percent",
+        "name": "Процент",
+        "comment": "Введите процент",
+        "calc": false
+      },
+      {
+        "id": "surname",
+        "name": "Фамилия",
+        "comment": "",
+        "calc": false
+      },
+      {
+        "id": "name",
+        "name": "Имя",
+        "comment": "",
+        "calc": false
+      },
+      {
+        "id": "middlename",
+        "name": "Отчество",
+        "comment": "",
+        "calc": false
+      },
+      {
+        "id": "relation",
+        "name": "Отношение к Застрахованному лицу",
+        "comment": "",
+        "calc": false
+      },
+      {
+        "id": "pasport",
+        "name": "Паспортные данные",
+        "comment": "",
+        "calc": false
+      },
+      {
+        "id": "address",
+        "name": "Адрес проживания",
+        "comment": "",
+        "calc": false
+      },
+      {
+        "id": "phone",
+        "name": "Телефон",
+        "comment": "",
+        "calc": false
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "group": "enslife",
+    "icon": "insurance-life",
+    "price": "2500",
+    "name": "2 млн.руб."
+  },
+  {
+    "id": 12,
+    "group": "enslife",
+    "icon": "insurance-life",
+    "price": "1000",
+    "name": "1 млн.руб."
+  },
+  {
+    "id": 13,
+    "group": "enslife",
+    "icon": "insurance-life",
+    "price": "500",
+    "name": "500 тыс.руб."
+  },
+  {
+    "id": 14,
+    "group": "fix",
+    "name": "Больничный лист",
+    "price": "5000"
+  },
+  {
+    "id": 15,
+    "group": "fix",
+    "name": "Дисконт на товары компании (10%)",
+    "price": "8000"
+  },
+  {
+    "id": 16,
+    "group": "fix",
+    "name": "Бонусные рубли к праздникам",
+    "price": "18000"
+  },
+  {
+    "id": 17,
+    "group": "fix",
+    "active": false,
+    "name": "Дисконт на товары компании (5%)",
+    "price": "5000"
+  }
+]

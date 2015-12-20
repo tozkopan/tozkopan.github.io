@@ -1,0 +1,75 @@
+{
+  "benefits": [
+    {
+      "id": 1,
+      "status": "cart"
+    },
+    {
+      "id": 7,
+      "status": "cart"
+    },
+    {
+      "id": 5,
+      "status": "cart"
+    },
+    {
+      "id": 11,
+      "status": "cart"
+    }
+  ],
+  "limit": 50000,
+  "history": [
+    {
+      "year": "2014",
+      "benefits": [
+        {
+          "id": 1,
+          "status": "approval"
+        },
+        {
+          "id": 7,
+          "status": "ready"
+        },
+        {
+          "id": 5,
+          "status": "ready"
+        },
+        {
+          "id": 15,
+          "status": "fix"
+        },
+        {
+          "id": 16,
+          "status": "fix"
+        }
+      ],
+      "limit": 45000
+    },
+    {
+      "year": "2013",
+      "benefits": [
+        {
+          "id": 1,
+          "status": "ready"
+        },
+        {
+          "id": 7,
+          "status": "ready"
+        },
+        {
+          "id": 5,
+          "status": "ready"
+        },
+        {
+          "id": 11,
+          "status": "ready"
+        },
+        {
+          "id": 17,
+          "status": "fix"
+        }
+      ],
+      "limit": 40000
+    }
+  ]
+}

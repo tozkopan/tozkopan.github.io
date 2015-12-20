@@ -1,0 +1,47 @@
+.myDetailMain {
+	margin: 10px 15px;
+}
+
+.myDetailMain>* {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.myDetailMainLeft {
+	font-size: 18px;
+}
+
+.myDetailMainRight {
+	font-size: 18px;
+}
+
+.myForm2.sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont>.sapUiFormResGridLbl:not
+	(.sapUiRespGridSpanM12 )>.sapMLabel {
+	text-align: left !important;
+}
+
+.myForm2 .sapUiForm .sapMLabel:after {
+	content: "";
+}
+
+.myIconTabBar .sapMITBSelected .sapMITBFilterDefault{
+	background: #E31E25;
+}
+
+.myIconTabBar .sapMITBFilterDefault{
+	color: #E31E25;
+}
+
+.myIconTabBar .sapMITBSelected .sapMITBFilterDefault{
+	color: white;
+}
+
+.myIconTabBar .sapMITBFilterDefault{
+	border-color: #E31E25;
+}
+
+.myIconTabBar .sapMITBSelected>.sapMITBContentArrow{
+	border-bottom-color: #E31E25;
+}
+
+

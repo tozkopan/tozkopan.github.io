@@ -1,0 +1,33 @@
+.sapMLnk.sapMSLITitleOnly {
+	padding: 10px;
+}
+
+.myText {
+	font-size: 1rem;
+}
+
+.myWizard .sapMInputBaseReadonlyInner, .myWizard .sapMInputBaseReadonly
+	{
+	height: auto;
+}
+
+.myWizard .sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"]>.sapMWizardProgressNavAnchor
+	{
+	background: #E31E25;
+}
+
+.myWizard .sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"]::after
+	{
+	background: #E31E25;
+}
+
+.myWizard .sapMWizardProgressNavSeparator::after {
+	border-color: #E31E25;
+}
+
+.myWizard .sapMWizardProgressNavAnchor{
+	border-color: #E31E25;
+}
+.myWizard .sapMWizardProgressNav{
+	font-size: 22px;
+}

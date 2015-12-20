@@ -1,0 +1,18 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+	<List items="{files}">
+		<CustomListItem>
+			<content>
+				<HBox height="50px" justifyContent="SpaceBetween" alignItems="Center">
+					<Link visible="{= !${local>/edit}}" class="myText" text="{name}" />
+					<Text visible="{local>/edit}" class="myText" text="{name}" />
+					<u:FileUploader name="myFileUpload" placeholder="Выберите файл"
+						visible="{local>/edit}" width="400px" change="onFileChange"
+						uploadComplete="handleUploadComplete" />
+				</HBox>
+			</content>
+		</CustomListItem>
+	</List>
+	
+</core:FragmentDefinition>

@@ -1,0 +1,48 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+	<f:SimpleForm maxContainerCols="2" editable="true" visible="false"
+		layout="ResponsiveGridLayout" title="Выгодоприобретатель" labelSpanL="4"
+		labelSpanM="4" emptySpanL="2" emptySpanM="2" columnsL="1" columnsM="1"
+		class="myForm editableForm" content="{fields}">
+		<f:content>
+			<Label text="{name}" />
+			<Text visible="{= !${local>/edit_f}}" text="{/beneficiary/percent}" />
+			<Input visible="{edit_f}" name="{id}" value="{/beneficiary2/percent}"
+				placeholder="{comment}" />
+		</f:content>
+	</f:SimpleForm>
+	<!-- visible="{local>/edit_f}" -->
+	
+	<VBox items="{fields}">
+		<HBox alignItems="Center">
+			<Label width="200px" text="{name}"/>
+			<Text visible="{= !${local>/edit_f}}" text="{/beneficiary/percent}" />
+			<Input visible="{edit_f}" name="{id}" value="{/beneficiary2/percent}"
+				placeholder="{comment}" />
+		</HBox>
+	</VBox>
+
+	<f:SimpleForm maxContainerCols="2" visible="false"
+		editable="false" layout="ResponsiveGridLayout" title="Выгодоприобретатель"
+		labelSpanL="4" labelSpanM="4" emptySpanL="2" emptySpanM="2" columnsL="1"
+		columnsM="1" class="myForm">
+		<f:content>
+			<Label text="Процент" />
+			<Text text="{/beneficiary/percent}" />
+			<Label text="Фамилия" />
+			<Text text="{/beneficiary/second_name}" />
+			<Label text="Имя" />
+			<Text text="{/beneficiary/first_name}" />
+			<Label text="Отчество" />
+			<Text text="{/beneficiary/middle_name}" />
+			<Label text="Отношение к Застрахованному лицу" />
+			<Text text="{/beneficiary/relation}" />
+			<Label text="Паспортные данные" />
+			<Text text="{/beneficiary/document}" />
+			<Label text="Адрес проживания" />
+			<Text text="{/beneficiary/address}" />
+			<Label text="Телефон" />
+			<Text text="{/beneficiary/phone}" />
+		</f:content>
+	</f:SimpleForm>
+</core:FragmentDefinition>

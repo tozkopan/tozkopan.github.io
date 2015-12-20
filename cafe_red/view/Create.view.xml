@@ -1,0 +1,64 @@
+<core:View controllerName="mvideo.cafe.view.Create"
+	xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:m="sap.m" xmlns="sap.uxap"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<html:link rel="stylesheet" type="text/css" href="css/style_Create.css" />	
+	
+	<m:Page title="Кафетерий льгот">
+		<m:content>
+
+			<ObjectPageLayout id="ObjectPageLayout" class="myObjectPageLayout"
+				enableLazyLoading="false" sections="{/tileGroup}">
+				<headerTitle>
+					<ObjectPageHeader objectTitle="Добавление льгот"
+						isObjectIconAlwaysVisible="true" objectImageURI="img/mug_logo_48.png" />
+				</headerTitle>
+
+				<headerContent>
+					<m:HBox class='myCreateInfo' items="{/instruction}">
+						<core:HTML
+							content="&lt;p &gt;&lt;img src='img/{img}' align='left' height='100' hspace='5' vspace='5'/&gt;{text}&lt;/p&gt;">
+						</core:HTML>
+					</m:HBox>
+				</headerContent>
+				<sections>
+					<ObjectPageSection subSections="">
+						<subSections>
+							<ObjectPageSubSection title="{name}" mode="Collapsed">
+								<blocks>
+									<l:HorizontalLayout content="{tiles}"
+										allowWrapping="true">
+										<m:CustomTile class="sapMTile myCustomTile"
+											press="onTilePress">
+											<m:content>
+												<m:VBox class="myCTContainer">
+													<m:VBox class="myCTFront">
+														<m:HBox justifyContent="SpaceBetween">
+															<core:Icon class="sapMStdTileIconDiv" size="32px"
+																src="sap-icon://{icon}" />
+															<m:Text class="myCTPrice myWhiteShadow"
+																text="{path: 'price', formatter: 'mvideo.cafe.util.Formatter.formatMoney'}" />
+														</m:HBox>
+														<m:Text class="myCTName myWhiteShadow" text="{name}" />
+													</m:VBox>
+													<m:HBox class="myCTBack">
+														<m:Image src="{img}" />
+													</m:HBox>
+												</m:VBox>
+											</m:content>
+										</m:CustomTile>
+
+									</l:HorizontalLayout>
+								</blocks>
+							</ObjectPageSubSection>
+						</subSections>
+					</ObjectPageSection>
+				</sections>
+			</ObjectPageLayout>
+
+		</m:content>
+	</m:Page>
+
+
+</core:View>
+

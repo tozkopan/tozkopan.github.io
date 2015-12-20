@@ -1,0 +1,101 @@
+.mainList .sapMSLITitleOnly, .sapMSLITitle {
+	font-size: 1rem;
+}
+
+.mySubHeader .sapMText {
+	font-size: 1rem;
+}
+
+.mySubHeader>.sapMBarLeft {
+	padding-left: 10px;
+}
+
+.mySubHeader>.sapMBarRight {
+	padding-right: 10px;
+}
+
+.mainList .sapMDLIValue {
+	font-size: 1rem;
+}
+
+.mainList .sapMDLILabel {
+	font-size: 1rem;
+	color: #007cc0;
+}
+
+.limitList .sapMDLIValue {
+	font-size: 1.3rem;
+}
+
+.limitList .sapMDLILabel {
+	font-size: 1rem;
+	font-weight: bold;
+	color: #005483;
+}
+
+.limitList .sapMDLI {
+	height: 2rem;
+}
+
+.mainList .sapMPanelContent {
+	padding: 0;
+}
+
+.mainList .sapMPanelWrappingDivTb {
+	box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.75);
+	border-bottom: initial;
+	z-index: 1;
+	margin-top: 4px;
+}
+
+.mainList .sapMPanelWrappingDivTb .sapMText,
+.mainList .sapMPanelWrappingDivTb .sapMPanelExpandableIcon,
+.sapMHeader-CTX.sapMBar .sapMBarChild .sapMBtnIcon,
+.sapMHeader-CTX.sapMBar .sapMBarChild .sapUiIcon,
+.sapMHeader-CTX.sapMBar .sapMBarChild,
+.sapMBtnBack .sapMBtnIcon
+{
+	text-shadow: 1px 1px 3px black;
+	color: white;
+}
+
+.sapMDialog>header.sapMDialogTitle .sapMTitle{
+	color: white;
+}
+
+.sapMBtnActive .sapMBtnIcon{
+	background-color: #E31E25;
+}
+
+.mainList .sapMPanelWrappingDivTb{
+	background-color: #E31E25;
+}
+
+.mainList .sapMPanelContent {
+	border-bottom-style: none;
+}
+
+.mainList .sapMStdTileIconDiv {
+	padding: 0px 5px;
+}
+
+.mainList .sapMLIB.sapMSLI {
+	padding: 0 0.5rem 0 1rem;
+}
+
+.sapMText[data-mycolor="red"] {
+	color: red;
+}
+
+.sapMText[data-mycolor="green"] {
+	color: limegreen;
+}
+
+.mainList>ul>li {
+	border-bottom: none;
+}
+
+.limitPadding {
+	margin-right: 5px;
+	margin-left: 10px;
+}

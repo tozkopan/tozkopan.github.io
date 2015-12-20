@@ -1,0 +1,45 @@
+<core:View controllerName="mvideo.cafe.view.Wizard"
+	xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:u="sap.ui.unified"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<html:link rel="stylesheet" type="text/css" href="css/style_Wizard.css" />	
+	
+	<Page id="pageWizard" title="{name}" showNavButton="true" navButtonPress="handleBack">
+		<content>
+			<Wizard id="myWizard" class="myWizard" showNextButton="false">
+<!-- 				<WizardStep id="step1" title="Общая информация"> -->
+<!-- 					<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step1" /> -->
+<!-- 				</WizardStep> -->
+<!-- 				<WizardStep id="step2" title="Введите данные"> -->
+<!-- 					<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step2" /> -->
+<!-- 				</WizardStep> -->
+<!-- 				<WizardStep id="step3" title="Шаблоны документов"> -->
+<!-- 					<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step3" /> -->
+<!-- 				</WizardStep> -->
+<!-- 				<WizardStep id="step4" title="Прикрепление файлов"> -->
+<!-- 					<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step4" /> -->
+<!-- 				</WizardStep> -->
+<!-- 				<WizardStep id="step5" title="Подтверждение"> -->
+<!-- 					<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step5" /> -->
+<!-- 					<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step2" /> -->
+<!-- 					<Text class="sapUiFormTitle sapUiFormTitleH3" text="Документы:" /> -->
+<!-- 					<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step4" /> -->
+<!-- 				</WizardStep> -->
+			</Wizard>
+		</content>
+		<footer>
+			<Toolbar id="wizardButtons">
+				<Button id="btnPrev" icon="sap-icon://navigation-left-arrow" visible="false"
+					class="myButton" iconFirst="true" text="Назад" press="onPrev" />
+				<ToolbarSpacer />
+				<Button id="btnStart" icon="sap-icon://navigation-right-arrow" visible="true"
+					class="myButton" iconFirst="false" text="Начать оформление" press="onNext" />
+				<Button id="btnNext" icon="sap-icon://navigation-right-arrow" visible="false"
+					class="myButton" iconFirst="false" text="Дальше" press="onNext" />
+				<Button id="btnComplete" icon="sap-icon://cart" visible="false"
+					class="myButton" iconFirst="true" text="Добавить в корзину" press="onComplete" />
+			</Toolbar>
+		</footer>
+	</Page>
+</core:View>

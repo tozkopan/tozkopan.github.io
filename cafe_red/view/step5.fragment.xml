@@ -1,0 +1,7 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+	<VBox>
+		<Text text="Подтвердите добавление льготы в корзину" />
+		<Text text="Внимательно проверьте введенные данные и приложенные документы!" />
+	</VBox>
+</core:FragmentDefinition>

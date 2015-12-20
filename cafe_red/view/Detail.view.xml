@@ -1,0 +1,64 @@
+<core:View controllerName="mvideo.cafe.view.Detail"
+	xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:u="sap.ui.unified"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<html:link rel="stylesheet" type="text/css" href="css/style_Detail.css" />
+
+	<Page title="{name}" showNavButton="true" navButtonPress="handleBack">
+		<content>
+			<VBox class="myDetailMain" width="50%">
+				<items>
+					<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+						<items>
+							<Text class="myDetailMainLeft" text="Группа" />
+							<Text class="myDetailMainRight"
+								text="{path: 'group', formatter:'mvideo.cafe.util.Formatter.getGroupHeader'}" />
+						</items>
+					</FlexBox>
+					<FlexBox alignItems="Start" justifyContent="SpaceBetween"
+						visible="{ path: 'price', formatter: 'mvideo.cafe.util.Formatter.isNotEmpty'}">
+						<items>
+							<Text class="myDetailMainLeft" text="Стоимость" />
+							<Text class="myDetailMainRight" text="{price} рублей" />
+						</items>
+					</FlexBox>
+					<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+						<items>
+							<Text class="myDetailMainLeft" text="Статус" />
+							<Text class="myDetailMainRight"
+								text="{ path: 'available', formatter: 'mvideo.cafe.util.Formatter.tileInfo' }" />
+						</items>
+					</FlexBox>
+				</items>
+			</VBox>
+			<IconTabBar id="myIconTabBar" expanded="{device>/isNoPhone}"
+				class="myIconTabBar sapUiResponsiveContentPadding">
+				<items>
+					<IconTabFilter icon="sap-icon://hint">
+						<core:Fragment fragmentName="mvideo.cafe.view.step1"
+							type="XML" />
+					</IconTabFilter>
+					<IconTabFilter icon="sap-icon://attachment">
+						<core:Fragment fragmentName="mvideo.cafe.view.step4"
+							type="XML" />
+					</IconTabFilter>
+					<IconTabFilter id="addInfo" icon="sap-icon://form"
+						visible="{path: 'group', formatter:'mvideo.cafe.util.Formatter.showAddInfo'}">
+						<core:Fragment fragmentName="mvideo.cafe.view.step2"
+							type="XML" />
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+		<footer>
+			<Toolbar>
+				<Button press="onCancel" visible="{local>/edit}" icon="sap-icon://decline"
+					text="Отменить" />
+				<ToolbarSpacer />
+				<Button press="onSend" visible="{local>/edit}" icon="sap-icon://begin"
+					text="Отправить" />
+			</Toolbar>
+		</footer>
+	</Page>
+</core:View>

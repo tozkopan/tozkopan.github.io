@@ -1,0 +1,108 @@
+<core:View controllerName="mvideo.cafe.view.Master"
+	xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<html:link rel="stylesheet" type="text/css" href="css/style_Master.css" />
+
+	<Page>
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<!-- <Image height="32px" src="img/mvideo_logo.png" /> -->
+					<Image height="45px" src="img/logo_45.png" />
+				</contentLeft>
+				<contentMiddle>
+					<Text id="masterHeader" class="sapMTitleStyleAuto" text="Мои льготы" />
+				</contentMiddle>
+				<contentRight>
+					<!-- <Button icon="sap-icon://time-entry-request" /> -->
+					<Select icon="sap-icon://time-entry-request" width="3rem"
+						type="IconOnly" change="onYearSelect" selectedKey="0">
+						<core:Item key="0" text="Текущий" />
+						<core:Item key="2014" text="2014 год" />
+						<core:Item key="2013" text="2013 год" />
+					</Select>
+				</contentRight>
+			</Bar>
+		</customHeader>
+		<content>
+			<List mode="None" class="limitList" showSeparators="Inner"
+				items="{limitTypes>/}">
+				<items>
+					<CustomListItem
+						visible="{ parts: [ {path: 'limitTypes>id'}, {path: 'limit'}, {path: 'benefits'} ],
+									formatter: 'mvideo.cafe.util.Formatter.getLimitVisible'}">
+						<HBox height="35px" justifyContent="SpaceBetween" alignItems="Center"
+							class="limitPadding">
+							<Text class="sapMDLILabel" text="{limitTypes>name}" />
+							<HBox alignItems="Center">
+								<Text class="sapMDLIValue" textAlign="End"
+									text="{ parts: [ {path: 'limitTypes>id'}, {path: 'limit'}, {path: 'benefits'} ],
+									formatter: 'mvideo.cafe.util.Formatter.getLimit'}">
+									<customData>
+										<core:CustomData key="mycolor" value="{limitTypes>color}"
+											writeToDom="true" />
+									</customData>
+								</Text>
+								<HBox width="25px" justifyContent="End">
+									<core:Icon src="sap-icon://sys-help" press="onLimitHelp">
+										<core:customData>
+											<core:CustomData key="text" value="{limitTypes>info}"/>
+										</core:customData>
+									</core:Icon>
+								</HBox>
+							</HBox>
+						</HBox>
+					</CustomListItem>
+				</items>
+			</List>
+
+			<List id="mainList" class="mainList" mode="None"
+				items="{ path : 'benefits' ,
+					sorter: { path: 'available', descending: false, group: true }}">
+				<items>
+					<CustomListItem>
+						<Panel
+							visible="{path: 'content', formatter: 'mvideo.cafe.util.Formatter.isArrayNotEmpty'}"
+							expandable="true" expanded="true">
+							<!-- content="{content}" -->
+							<headerToolbar>
+								<Toolbar>
+									<core:Icon class="sapMStdTileIconDiv" size="24px"
+										src="{icon}" color="white" />
+									<Text text="{name}" />
+									<ToolbarSpacer />
+									<Text
+										text="{path: 'content', formatter: 'mvideo.cafe.util.Formatter.getGroupSum'}" />
+								</Toolbar>
+							</headerToolbar>
+							<content>
+								<List delete="onDelete" showSeparators="Inner"
+									mode="{path: 'id', formatter: 'mvideo.cafe.util.Formatter.getListMode'}"
+									items="{content}">
+									<items>
+										<StandardListItem title="{name}"
+											description="{ path: 'group', formatter: 'mvideo.cafe.util.Formatter.getGroupHeader' }"
+											adaptTitleSize="true" type="Active" press="onListPress"
+											info="{ path: 'price', formatter: 'mvideo.cafe.util.Formatter.formatMoney' }" />
+									</items>
+								</List>
+							</content>
+						</Panel>
+					</CustomListItem>
+				</items>
+			</List>
+		</content>
+
+
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer />
+				<Button id="btnSend" icon="sap-icon://cart-approval" text="Отправить на согласование"
+					press="onSend" class="myButton" />
+				<ToolbarSpacer />
+			</Toolbar>
+		</footer>
+	</Page>
+</core:View>
+

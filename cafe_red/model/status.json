@@ -1,0 +1,22 @@
+[
+  {
+    "id": "cart",
+    "name": "В корзине",
+    "icon": "sap-icon://cart-3"
+  },
+  {
+    "id": "approval",
+    "name": "На согласовании",
+    "icon": "sap-icon://lateness"
+  },
+  {
+    "id": "ready",
+    "name": "Оформлена",
+    "icon": "sap-icon://sys-enter"
+  },
+  {
+    "id": "fix",
+    "name": "Вне лимита",
+    "icon": "sap-icon://supplier"
+  }
+]

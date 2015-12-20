@@ -1,0 +1,39 @@
+.sap-desktop .sapMIBar.sapMFooter-CTX,
+.sap-desktop .sapMIBar.sapMHeader-CTX {
+	background-image: url('../img/footer.png');
+}
+
+.sapMShellBrandingBar {
+	background-color: #E31E25;
+}
+
+.sapMSplitContainerMaster:before{
+	border-right: initial;
+}
+
+.sapMTitleStyleAuto {
+    font-size: 1.4rem;
+}
+
+.myButton {
+	border: solid white 3px;
+	border-radius: 15px;
+	height: 40px;
+	vertical-align: middle;
+	background-color: #E31E25;
+}
+
+.myButton>.sapMBtnInner {
+	height: initial;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border: 0px;
+}
+
+.myButton:not(.sapMBtnDisabled)>.sapMBtnInner.sapMBtnActive {
+	background: initial;	
+}
+
+.myButton>.sapMBtnInner>span {
+	line-height: 26px;
+}

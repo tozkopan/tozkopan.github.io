@@ -1,0 +1,126 @@
+.myTileGroupText {
+	padding: 2px;
+	margin-left: 10px;
+	margin-top: 5px;
+	border-bottom-style: solid;
+	font-size: 20px;
+	font-style: italic;
+}
+
+.myTile .sapMStdTileTopRow {
+	margin-bottom: 0px;
+}
+
+.myTile .sapMStdTileInfo {
+	margin-top: 0px;
+}
+
+.myTile.sapMTile {
+	height: 8rem;
+}
+
+.myTile>.sapMTileContent {
+	height: 8rem;
+}
+
+.myTile>.sapMTileContent>.sapMStdTileTopRow {
+	height: 3rem;
+}
+
+.myTile>.sapMTileContent>.sapMStdTileBottomRow {
+	height: 3rem;
+}
+
+.myTile>.sapMTileContent>.sapMStdTileTopRow>.sapMStdTileNumDiv {
+	height: 3rem;
+}
+
+.myObjectPageLayout .sapUxAPObjectPageHeaderIdentifier .sapUxAPObjectPageHeaderIdentifierContainer
+	{
+	padding-top: 1rem;
+	padding-bottom: 0.5rem;
+}
+
+.myObjectPageLayout .sapUxAPAnchorBar.sapMTB {
+	background-color: #E31E25;
+}
+
+.myObjectPageLayout .sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMBtnContent
+	{
+	color: black;
+}
+
+.myObjectPageLayout .sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected .sapMBtnContent
+	{
+	border-bottom-color: black;
+	text-shadow: 1px 1px 3px black;
+	color: white;
+}
+
+.myCustomTile {
+	width: 192px;
+	height: 128px;
+}
+
+.myCustomTile .myCTContainer {
+	position: relative;
+}
+
+.myCustomTile .myCTBack {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 0;
+}
+
+.myCustomTile .myCTFront {
+	z-index: 1;
+	padding: 10px 8px;
+}
+
+.myCustomTile .sapMStdTileIconDiv {
+	color: #E31E25;
+}
+.myCustomTile.sapMTileActive-CTX .sapMStdTileIconDiv {
+	color: white;
+}
+.sapMTile.sapMTileActive-CTX {
+    background: #E31E25;
+}
+
+.myCTPrice {
+	font-size: 1.5rem;
+}
+
+.myCTName {
+	font-size: 1.2rem;
+	padding-top: 10px;
+}
+
+.myWhiteShadow {
+	text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+}
+
+.myObjectPageLayout	.sapUxAPObjectPageHeaderContentDesign-Light,
+	.myObjectPageLayout	.sapUxAPObjectPageHeaderIdentifier {
+	background-color: white;
+}
+
+.myCreateInfo p {
+	font-size: 17px;
+}
+
+.myCreateInfo .sapMFlexItem {
+	padding: 5px;
+}
+
+.myObjectPageLayout .sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMBtnContent{
+	font-size: 1rem;
+}
+
+.myObjectPageLayout .sapUxAPAnchorBarButton>div>span{
+	padding-left: 2px;
+	padding-right: 2px;
+} 

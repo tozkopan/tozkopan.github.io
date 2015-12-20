@@ -1,0 +1,11 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Popover
+		title=""
+		showHeader="false" contentWidth="200px"
+		class="sapUiContentPadding"
+		placement="Right">
+		<Text text="{/limit_help/info}"/>
+	</Popover>
+</core:FragmentDefinition>
