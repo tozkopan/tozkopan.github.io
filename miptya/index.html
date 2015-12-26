@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="paint.js"></script>
+
+<script>
+	function addEvent(elem, type, handler) {
+		if (elem.addEventListener) {
+			elem.addEventListener(type, handler, false)
+		} else {
+			elem.attachEvent("on" + type, handler)
+		}
+	};
+</script>
+<style>
+.control>* {
+	width: 100%;
+	margin: 2px;
+	display: inline-block;
+}
+
+.control>div>*:last-child {
+	float: right;
+}
+
+.control input {
+	width: 50px;
+}
+.jscolor{
+    width: 70px;
+}
+#points>div{
+    vertical-align: middle;
+    display: flex;
+}
+#points>div>*{
+margin: 2px;
+}
+</style>
+</head>
+<body>
+
+	<div>
+		<div class="control" style="width: 50%; max-width: 300px">
+			<button onclick="fnDraw(a)">Отрисовать</button>
+			<div>
+				<span>Внешний радиус</span><input onchange='fnDraw()' id="R" type='number' min='0' max='500' value="300" />
+			</div>
+			<div>
+				<span>Толщина</span><input onchange='fnDraw()' id="r" type='number' min='0' max='300' value="20" />
+			</div>
+			<div>
+				<span>Сглаживание края</span><input onchange='fnDraw()' type='number' min='0' max='20' id="blur" value="1" />
+			</div>
+		</div>
+		<div id="points" style="width: 50%; max-width: 300px"/>
+	</div>
+	<canvas id="canvas" style="border: dotted 2px gray" onclick="onCanvas()" ondblclick="addPoint()">
+			<p>Ваш браузер не поддерживает рисование.</p>
+		</canvas>
+	</div>
+		<script src="jscolor.js"></script>
+	
+</body>
+</html>
