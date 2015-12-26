@@ -1,6 +1,11 @@
 window.onload = onLoad;
 
-var a = [];
+var defaultColors = [
+	{ red: 255, green: 255, blue: 255, 	angle: 0 },
+	{ red: 255, green: 0, 	blue: 0, 	angle: Math.PI / 2 },
+	{ red: 0, 	green: 0, 	blue: 0, 	angle: Math.PI },
+	{ red: 0, 	green: 0, 	blue: 255, 	angle: 3 * Math.PI / 2 }
+];
 
 var colors = [];
 
@@ -8,11 +13,7 @@ function onLoad() {
 
 	colors = JSON.parse(localStorage.getItem("aColors"));
 	if(!colors)
-		colors = [
-			{ red: 0, green: 0, blue: 0, angle: 0 },
-			{ red: 255, green: 0, blue: 0, angle: Math.PI },
-			{ red: 0, green: 255, blue: 0, angle: Math.PI / 2 }
-		];
+		colors = defaultColors;
 	
 	colors.forEach(function(item){
 		renderPoint(item.red, item.green, item.blue, item.angle);
@@ -21,12 +22,25 @@ function onLoad() {
 	fnDraw();
 };
 
+function reset(){
+	var oCont = document.getElementById('points');
+	while (oCont.firstChild) {
+		oCont.removeChild(oCont.firstChild);
+	}
+
+	
+	defaultColors.forEach(function(item){
+		renderPoint(item.red, item.green, item.blue, item.angle);
+	});	
+	fnDraw();
+};
+
 function renderPoint(red, green, blue, angle) {
 	var sPoint = "<input class='jscolor' value='' onchange='fnDraw()'/>"
-		+ "<input class='slider' type='range' oninput='slider()' min='0' max='359' step='1' value='XXX'>"
-		+ "<span style='width:30px' class='sliderText'>XXX</span>"
-		+ "<button onclick='deletePoint()'>X</span>";
-	var oCont = document.getElementById('points')
+		+ "<input class='slider' oninput='slider()' min='0' max='359' step='1' value='XXX' type='range' >"
+		+ "<input class='slider' oninput='slider()' min='0' max='359' step='1' value='XXX' type='number' style='width:40px' />"
+		+ "<button onclick='deletePoint()'>X</button>";
+	var oCont = document.getElementById('points');
 	var div = document.createElement('div');
 	div.innerHTML = sPoint.replace(/XXX/g, Math.floor(angle*180/Math.PI));
 	var colorPicker = $('.jscolor', div)[0]; 
@@ -103,10 +117,12 @@ function hexToRgb(hex) {
 }
 
 function slider(){
-	var x = window.event.srcElement;
-	console.log(x.value);
-	q = window.event.path[1].getElementsByClassName("sliderText")[0];
-	q.textContent = x.value;
+	var val = window.event.srcElement.value;
+	console.log(val);
+	var arr = window.event.path[1].getElementsByClassName("slider");
+	for (var i = 0; i < arr.length; i++) {
+		arr[i].value = val;
+	}
 	fnDraw();
 };
 
@@ -144,9 +160,6 @@ function drawByPixel(R, r, colors) {
 	    imgData.data[i+2] = pixel.blue;
 	    imgData.data[i+3] = pixel.alpha;
 	};
-	a.sort(function(a1,a2) {
-		return (a1.angle > a2.angle) ? 1 : -1;
-	});	
 	ctx.putImageData(imgData, 0, 0);
 	
 	function getPixel(rad, angle, r, R, colors){
