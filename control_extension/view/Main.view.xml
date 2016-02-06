@@ -1,0 +1,18 @@
+<core:View controllerName="evola.view.Main"
+	xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:ev="evola.controls">
+
+	<Page title="Пример переопределения контролов">
+		<content>
+
+			<FlexBox alignItems="Start" class="myFB" width="600px">
+				<ev:ReadMore maxLines="5" text="{/text1}" />
+				<ev:ReadMore maxLines="5" text="{/text2}" />
+			</FlexBox>
+
+			<ev:Button textA="{/btn_text1}" textB="{/btn_text2}" />
+			<ev:Button textA="{/btn_text3}" />
+			<ev:Button textA="{/btn_text4}" />
+
+		</content>
+	</Page>
+</core:View>
