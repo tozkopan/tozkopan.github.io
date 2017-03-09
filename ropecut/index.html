@@ -3,27 +3,66 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+		<style>
+			.myBlock{
+				display: inline-block;
+				vertical-align: top;
+				box-shadow: 1px 1px 6px black;
+				margin: 5px !important;
+			}
+		</style>
 
 		<script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
-				id="sap-ui-bootstrap"
-				data-sap-ui-libs="sap.m"
-				data-sap-ui-theme="sap_belize"
-			    data-sap-ui-xx-bindingSyntax="complex"
-				data-sap-ui-resourceroots='{
-				   "ropecut": "./"
-				}'
+			id="sap-ui-bootstrap"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-xx-bindingSyntax="complex"
+			data-sap-ui-resourceroots='{
+			   "ropecut": "./"
+			}'
 		>
 		</script>
 		
         <script id="mainView" type="ui5/xmlview">
-            <mvc:View
+            <mvc:View class="sapUiSizeCompact"
 			controllerName="MyController"
 			xmlns="sap.m"
 			xmlns:core="sap.ui.core"
-			xmlns:mvc="sap.ui.core.mvc">
-				<Text text="123"/>
- 
-            </mvc:View>
+			xmlns:mvc="sap.ui.core.mvc"><Page enableScrolling="false"><content>
+				<List items="{/source}" mode="Delete" delete="onDelete" class="myBlock" width="20rem"><headerToolbar>
+					<Toolbar>
+						<Title text="Given parts"/>
+						<ToolbarSpacer/>
+						<Input value="{/newSource}" width="5rem"/>
+						<Button press="onAddSource" text="Add part" icon="sap-icon://add"/>
+					</Toolbar>
+				</headerToolbar><items>
+					<StandardListItem title="{}"/>
+				</items></List>
+				<List items="{/target}" mode="Delete" delete="onDelete" class="myBlock" width="20rem"><headerToolbar>
+					<Toolbar>
+						<Title text="Desired parts"/>
+						<ToolbarSpacer/>
+						<Input value="{/newTarget}" width="5rem"/>
+						<Button press="onAddTarget" text="Add part" icon="sap-icon://add"/>
+					</Toolbar>
+				</headerToolbar><items>
+					<StandardListItem title="{}"/>
+				</items></List>				
+				<List items="{/result}" class="myBlock" width="20rem"><headerToolbar>
+					<Toolbar>
+						<Title text="Result"/>
+						<ToolbarSpacer/>
+					</Toolbar>
+				</headerToolbar><items>
+					<StandardListItem title="{}"/>
+				</items></List>				
+            </content><footer>
+				<Toolbar>
+					<ToolbarSpacer/>
+					<Button text="Calculate" press="calculate"/>
+				</Toolbar>			
+			</footer></Page></mvc:View>
         </script>
 		
         <script>
@@ -34,11 +73,41 @@
                     "sap/ui/core/mvc/Controller"
                 ], function (Controller, ODataModel) {
                     "use strict";
- 
                     return Controller.extend("MyController", {
                         onInit : function () {
-						var oModel = new sap.ui.model.json.JSONModel({});
-                        }
+							var oModel = new sap.ui.model.json.JSONModel({
+								source: ["166","108","89","98","104","88","62","112","116","121","43","112","29"],
+								target: ["37","37","37","26","26","15","31","31","32","32","23","23","98","98","100","100","55","55","34","34","34","34","33","33","33","33","37","37","23"],
+								newSource: 0,
+								newTarget: 0
+							});
+							this.getView().setModel(oModel);
+                        },
+						onDelete: function(evt){
+							var sItemsPath = evt.getSource().getBindingPath("items"),
+								oModel = this.getView().getModel(),
+								aItems = oModel.getProperty(sItemsPath),
+								iDeleteIndex = +evt.getParameter("listItem").getBindingContextPath().split("/").pop();
+							aItems.splice(iDeleteIndex,1);
+							oModel.setProperty(sItemsPath, aItems);							
+						},
+						onAddSource: function(evt){
+							this._onAdd("source", "newSource");
+						},
+						onAddTarget: function(evt){
+							this._onAdd("target", "newTarget");
+						},
+						_onAdd: function(sItems, sNewPart){
+							var oModel = this.getView().getModel(),
+								aSource = oModel.getProperty("/" + sItems),
+								iNewSource = parseInt(oModel.getProperty("/" + sNewPart));
+							if(iNewSource > 0){
+								aSource.unshift(iNewSource);
+								oModel.setProperty("/" + sItems, aSource);
+							}else{
+								sap.m.MessageToast.show("You should add only positive integers");
+							}
+						}
                     });
                 });
  
