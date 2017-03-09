@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-theme="sap_belize"
+			    data-sap-ui-xx-bindingSyntax="complex"
+				data-sap-ui-resourceroots='{
+				   "ropecut": "./"
+				}'
+		>
+		</script>
+		
+        <script id="mainView" type="ui5/xmlview">
+            <mvc:View
+			controllerName="MyController"
+			xmlns="sap.m"
+			xmlns:core="sap.ui.core"
+			xmlns:mvc="sap.ui.core.mvc">
+				<Text text="123"/>
+ 
+            </mvc:View>
+        </script>
+		
+        <script>
+            sap.ui.getCore().attachInit(function () {
+                "use strict";
+                 //### Controller ###
+                sap.ui.define([
+                    "sap/ui/core/mvc/Controller"
+                ], function (Controller, ODataModel) {
+                    "use strict";
+ 
+                    return Controller.extend("MyController", {
+                        onInit : function () {
+						var oModel = new sap.ui.model.json.JSONModel({});
+                        }
+                    });
+                });
+ 
+                //### THE APP: place the XMLView somewhere into DOM ###
+				sap.ui.xmlview({
+					viewContent : jQuery("#mainView").html()
+				}).placeAt("content");
+ 
+            });
+        </script>		
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>
