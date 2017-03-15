@@ -36,7 +36,11 @@
 						<Input value="{/newSource}" width="5rem"/>
 						<Button press="onAddSource" text="Add part" icon="sap-icon://add"/>
 					</Toolbar>
-				</headerToolbar><items>
+				</headerToolbar><infoToolbar>
+					<Toolbar>
+						<Text text="Sum: {path: '/source', formatter: '.sum'}"/>
+					</Toolbar>
+				</infoToolbar><items>
 					<StandardListItem title="{}"/>
 				</items></List>
 				<List items="{/target}" mode="Delete" delete="onDelete" class="myBlock" width="20rem"><headerToolbar>
@@ -76,13 +80,18 @@
                     return Controller.extend("MyController", {
                         onInit : function () {
 							var oModel = new sap.ui.model.json.JSONModel({
-								source: ["166","108","89","98","104","88","62","112","116","121","43","112","29"],
-								target: ["37","37","37","26","26","15","31","31","32","32","23","23","98","98","100","100","55","55","34","34","34","34","33","33","33","33","37","37","23"],
+								source: [29, 43, 62, 88, 89, 98, 104, 108, 112, 112, 116, 121, 166],
+								target: [15, 23, 23, 23, 26, 26, 31, 31, 32, 32, 33, 33, 33, 33, 34, 34, 34, 34, 37, 37, 37, 37, 37, 55, 55, 98, 98, 100, 100],
 								newSource: 0,
 								newTarget: 0
 							});
 							this.getView().setModel(oModel);
                         },
+						sum: function(aList){
+							return (aList || []).reduce(function(sum, current){
+								return sum + +current;
+							}, 0);
+						},
 						onDelete: function(evt){
 							var sItemsPath = evt.getSource().getBindingPath("items"),
 								oModel = this.getView().getModel(),
@@ -107,6 +116,12 @@
 							}else{
 								sap.m.MessageToast.show("You should add only positive integers");
 							}
+						},						
+						calculate: function(){
+							var oModel = this.getView().getModel(),
+								aSource = oModel.getProperty("/source")
+									.map(function(x){ return +x; })
+									.sort(function(a,b){ return a - b; })
 						}
                     });
                 });
