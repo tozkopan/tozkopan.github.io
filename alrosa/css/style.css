@@ -1,0 +1,36 @@
+/* form labels */
+.sapMLabel{
+    white-space: normal;
+}
+.sapUiForm .sapUiFormElementLbl>.sapMLabel:after{
+    top: 0;
+}
+
+
+/*.sapUiForm .sapUiFormElementLbl>.sapMLabel:after{*/
+/*    right: 0.6em !important;*/
+/*}*/
+/*.sapMLabelRequired:before {*/
+/*    content: "*";*/
+/*    color: #c14646;*/
+/*    font-size: 1.25rem;*/
+/*    font-weight: bold;*/
+/*    line-height: 0;*/
+/*    position: absolute;*/
+/*	top: 0.4em;*/
+/*    right: 0.2em;*/
+/*}*/
+/*.sapUiForm .sapUiFormElementLbl>.sapMLabel{*/
+/*    padding-right: 0.9em;*/
+/*}*/
+
+
+
+
+/* 001 wizard */
+.wiz001step02 .sapUiForm .sapUiFormTitle{
+	font-weight: bold;
+}
+.wiz001 .sapMWizardProgressNavStep::after{
+	
+}

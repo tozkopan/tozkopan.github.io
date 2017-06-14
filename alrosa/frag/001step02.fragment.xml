@@ -1,0 +1,160 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<l:Grid defaultSpan="XL4 L6 M12 S12" vSpacing="0" hSpacing="1" binding="{model:'util',path:'/form'}">
+		<f:SimpleForm editable="true" layout="ResponsiveGridLayout" breakpointM="{util>breakpointM}" breakpointL="{util>breakpointL}"
+			labelSpanXL="{util>labelSpanXL}" labelSpanL="{util>labelSpanL}" labelSpanM="{util>labelSpanM}" labelSpanS="{util>labelSpanS}"
+			adjustLabelSpan="false" emptySpanXL="{util>emptySpanXL}" emptySpanL="{util>emptySpanL}" emptySpanM="{util>emptySpanM}"
+			emptySpanS="{util>emptySpanS}" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+			<f:content>
+				<core:Title text="Общая информация"/>
+				<Label text="Краткое наименование организации" required="true"/>
+				<Input value="{01}"/>
+				<Label text="Полное наименование организации" required="true"/>
+				<Input value="{02}"/>
+				<Label text="ОКОПФ" required="true"/>
+				<Input value="{03}" showValueHelp="true"/>
+				<Label text="Дата основания организации" required="true"/>
+				<DatePicker value="{04}" placeholder=" "/>
+				<Label text="Орган государственной регистрации" required="true"/>
+				<Input value="{05}"/>
+				<Label text="Дата регистрации" required="true"/>
+				<DatePicker value="{06}" placeholder=" "/>
+				<Label text="Регистрационный номер (ОГРН/ОГРНИП)" required="true"/>
+				<Input value="{07}"/>
+				<Label text="ИНН" required="true"/>
+				<Input value="{08}"/>
+				<Label text="КПП" required="true"/>
+				<Input value="{09}"/>
+				<Label text="ОКПО" required="true"/>
+				<Input value="{10}"/>
+				<Label text="ОКТМО" required="false"/>
+				<Input value="{11}"/>
+				<Label text="Основные учредители" required="true"/>
+				<TextArea value="{12}" cols="999" rows="3"/>
+				<Label text="Уставный капитал" required="true"/>
+				<Input value="{13}"/>
+				<Label text="Номер лицензии" required="false"/>
+				<Input value="{14}"/>
+				<Label text="Дата выдачи лицензии" required="false"/>
+				<DatePicker value="{15}" placeholder=" "/>
+				<Label text="Наименование органа, выдавшего лицензию" required="false"/>
+				<Input value="{16}"/>
+				<Label text="Сведения об участии в саморегулируемых организациях" required="false"/>
+				<TextArea value="{17}" cols="999" rows="3"/>
+			</f:content>
+		</f:SimpleForm>
+		<f:SimpleForm editable="true" layout="ResponsiveGridLayout" breakpointM="{util>breakpointM}" breakpointL="{util>breakpointL}"
+			labelSpanXL="{util>labelSpanXL}" labelSpanL="{util>labelSpanL}" labelSpanM="{util>labelSpanM}" labelSpanS="{util>labelSpanS}"
+			adjustLabelSpan="false" emptySpanXL="{util>emptySpanXL}" emptySpanL="{util>emptySpanL}" emptySpanM="{util>emptySpanM}"
+			emptySpanS="{util>emptySpanS}" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+			<f:content>
+				<core:Title text="Контактные данные предприятия"/>
+				<Label text="Телефон" required="true"/>
+				<VBox>
+					<Input value="{18}"/>
+					<Text text="Укажите номер одного контактного телефона без кода страны (для России +7). Например 4951234567"/>
+				</VBox>
+				<Label text="Факс" required="false"/>
+				<Input value="{19}"/>
+				<Label text="Адрес электронной почты" required="true"/>
+				<Input value="{20}"/>
+				<Label text="Веб-сайт" required="false"/>
+				<Input value="{21}"/>
+				<core:Title text="Контактное лицо"/>
+				<Label text="Обращение" required="true"/>
+				<Select selectedKey="{22}">
+					<items>
+						<core:Item text="" key="0"/>
+						<core:Item text="Господин" key="1"/>
+						<core:Item text="Госпожа" key="2"/>
+					</items>
+				</Select>
+				<Label text="Фамилия" required="true"/>
+				<Input value="{23}"/>
+				<Label text="Имя" required="true"/>
+				<Input value="{24}"/>
+				<Label text="Отчество" required="false"/>
+				<Input value="{25}"/>
+				<Label text="Скопировать данные организации" required="false"/>
+				<CheckBox selected="{26}"/>
+				<Label text="Телефон" required="true"/>
+				<Input value="{27}"/>
+				<Label text="Факс" required="false"/>
+				<Input value="{28}"/>
+				<Label text="Адрес электронной почты" required="true"/>
+				<Input value="{29}"/>
+			</f:content>
+		</f:SimpleForm>
+		<f:SimpleForm title="Адреса" editable="true" layout="ResponsiveGridLayout" breakpointM="{util>breakpointM}" breakpointL="{util>breakpointL}"
+			labelSpanXL="{util>labelSpanXL}" labelSpanL="{util>labelSpanL}" labelSpanM="{util>labelSpanM}" labelSpanS="{util>labelSpanS}"
+			adjustLabelSpan="false" emptySpanXL="{util>emptySpanXL}" emptySpanL="{util>emptySpanL}" emptySpanM="{util>emptySpanM}"
+			emptySpanS="{util>emptySpanS}" columnsXL="1" columnsL="2" columnsM="1" singleContainerFullSize="false">
+			<f:content>
+				<core:Title text="Фактический адрес"/>
+				<Label text=" " required="false"/>
+				<Text text=" "/>
+				<Label text="Страна" required="true"/>
+				<Select selectedKey="{30}">
+					<items>
+						<core:Item text="" key="0"/>
+						<core:Item text="Россия" key="1"/>
+						<core:Item text="Казахстан" key="2"/>
+					</items>
+				</Select>
+				<Label text="Регион" required="true"/>
+				<Select selectedKey="{31}">
+					<items>
+						<core:Item text="" key="0"/>
+						<core:Item text="Москва" key="1"/>
+						<core:Item text="Не москва" key="2"/>
+					</items>
+				</Select>
+				<Label text="Почтовый индекс/Город" required="true"/>
+				<HBox renderType="Bare">
+					<Input value="{32}" width="6rem" class="sapUiTinyMarginEnd"/>
+					<Input value="{33}"/>
+				</HBox>
+				<Label text="Район" required="false"/>
+				<Input value="{34}"/>
+				<Label text="Улица/Номер дома" required="true"/>
+				<HBox renderType="Bare">
+					<Input value="{35}" class="sapUiTinyMarginEnd"/>
+					<Input value="{36}" width="6rem"/>
+				</HBox>
+				<core:Title text="Юридический адрес"/>
+				<Label text="Совпадает с фактическим адресом" required="false"/>
+				<CheckBox selected="{37}"/>
+				<Label text="Страна" required="true"/>
+				<Select selectedKey="{38}">
+					<items>
+						<core:Item text="" key="0"/>
+						<core:Item text="Россия" key="1"/>
+						<core:Item text="Казахстан" key="2"/>
+					</items>
+				</Select>
+				<Label text="Регион" required="true"/>
+				<Select selectedKey="{39}">
+					<items>
+						<core:Item text="" key="0"/>
+						<core:Item text="Москва" key="1"/>
+						<core:Item text="Не москва" key="2"/>
+					</items>
+				</Select>
+				<Label text="Почтовый индекс/Город" required="true"/>
+				<HBox renderType="Bare">
+					<Input value="{40}" width="6rem" class="sapUiTinyMarginEnd"/>
+					<Input value="{41}"/>
+				</HBox>
+				<Label text="Район" required="false"/>
+				<Input value="{42}"/>
+				<Label text="Улица/Номер дома" required="true"/>
+				<HBox renderType="Bare">
+					<Input value="{43}" class="sapUiTinyMarginEnd"/>
+					<Input value="{44}" width="6rem"/>
+				</HBox>
+			</f:content>
+			<f:layoutData>
+				<l:GridData span="XL12 L12 M12 S12" linebreakL="true" linebreakM="true" linebreakS="true"/>
+			</f:layoutData>
+		</f:SimpleForm>
+	</l:Grid>
+</core:FragmentDefinition>

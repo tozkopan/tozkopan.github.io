@@ -1,0 +1,8 @@
+<mvc:View controllerName="alrosa.controller.002" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Page title="002" showNavButton="true" showHeader="true" showSubHeader="true" navButtonPress="navBack">
+		<content>
+			<Text text="002"/>
+		</content>
+	</Page>
+</mvc:View>

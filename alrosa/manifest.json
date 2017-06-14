@@ -1,0 +1,127 @@
+{
+	"_version": "1.5.0",
+	"sap.app": {
+		"id": "alrosa",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [ "sap_hcb", "sap_belize" ]
+	},
+
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "alrosa.view.App",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.collaboration": {},
+				"sap.ui.comp": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/data.json"
+			},
+			"util": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/util.json"
+			},
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "alrosa.i18n.i18n"
+				}
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "alrosa.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"bypassed": {
+					"target": "notFound"
+				},
+				"async": true
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "Default",
+				"target": "default"
+			}, {
+				"pattern": "001",
+				"name": "001",
+				"target": "001"
+			}, {
+				"pattern": "002",
+				"name": "002",
+				"target": "002"
+			}, {
+				"pattern": "003",
+				"name": "003",
+				"target": "003"
+			}],
+			"targets": {
+				"default": {
+					"viewName": "Launcher",
+					"viewLevel": 1
+				},
+				"001": {
+					"viewName": "001",
+					"viewLevel": 2
+				},
+				"002": {
+					"viewName": "002",
+					"viewLevel": 2
+				},
+				"003": {
+					"viewName": "003",
+					"viewLevel": 2
+				}
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		}
+	}
+}

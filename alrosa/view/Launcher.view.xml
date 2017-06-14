@@ -1,0 +1,12 @@
+<mvc:View controllerName="alrosa.controller.App" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Page title="Выберите приложение" showNavButton="false" showHeader="true" showSubHeader="true">
+		<content>
+			<l:Grid defaultSpan="XL12 L12 M12 S12" class="sapUiSmallMarginTop" vSpacing="2">
+				<Button text="001" press="navFromButton" data:target="001"/>
+				<Button text="002" press="navFromButton" data:target="002"/>
+				<Button text="003" press="navFromButton" data:target="003"/>
+			</l:Grid>
+		</content>
+	</Page>
+</mvc:View>

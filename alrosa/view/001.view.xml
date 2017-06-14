@@ -1,0 +1,43 @@
+<mvc:View controllerName="alrosa.controller.001" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	 xmlns:core="sap.ui.core">
+	<Page title="Регистрация поставщика" showNavButton="true" showHeader="true" showSubHeader="true" navButtonPress="navBack" floatingFooter="false">
+		<content>
+			<Wizard id="wiz001" class="wiz001" complete="wizardComplete">
+				<!--<WizardStep id="wiz001step01" title="Приветствие" validated="true">-->
+				<!--	<core:Fragment fragmentName="alrosa.frag.001step01" type="XML" />-->
+				<!--</WizardStep>-->
+				<WizardStep id="wiz001step02" class="wiz001step02" title="Общая информация" validated="true">
+					<core:Fragment fragmentName="alrosa.frag.001step02" type="XML"  binding="{path:'/001'}" />
+				</WizardStep>
+				<WizardStep id="wiz001step03" title="Банковские реквизиты" validated="true">
+					<Text text="TODO" class="sapUiSmallMarginBottom"/>
+				</WizardStep>
+				<WizardStep id="wiz001step04" title="Лица, имеющие право подписи" validated="true">
+					<Text text="TODO" class="sapUiSmallMarginBottom"/>
+				</WizardStep>
+				<WizardStep id="wiz001step05" title="Категория продукции" validated="true">
+					<Text text="TODO" class="sapUiSmallMarginBottom"/>
+				</WizardStep>
+				<WizardStep id="wiz001step06" title="Приложения" validated="true">
+					<Text text="TODO" class="sapUiSmallMarginBottom"/>
+				</WizardStep>
+				<WizardStep id="wiz001step07" title="Анкета поставщика" validated="true">
+					<Text text="TODO" class="sapUiSmallMarginBottom"/>
+				</WizardStep>
+				<WizardStep id="wiz001step08" title="Дополнительная информация" validated="true">
+					<Text text="TODO" class="sapUiSmallMarginBottom"/>
+				</WizardStep>
+			</Wizard>
+		</content>
+		<footer>
+			<Toolbar>
+				<Button text="Проверить"/>
+				<Button text="Зарегистрироваться"/>
+				<ToolbarSpacer/>
+				<Button text="Назад" iconFirst="true" icon="sap-icon://navigation-left-arrow"/>
+				<Button text="Вперед" iconFirst="false" icon="sap-icon://navigation-right-arrow"/>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>
