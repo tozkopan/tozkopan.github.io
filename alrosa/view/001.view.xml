@@ -4,9 +4,9 @@
 	<Page title="Регистрация поставщика" showNavButton="true" showHeader="true" showSubHeader="true" navButtonPress="navBack" floatingFooter="false">
 		<content>
 			<Wizard id="wiz001" class="wiz001" complete="wizardComplete">
-				<!--<WizardStep id="wiz001step01" title="Приветствие" validated="true">-->
-				<!--	<core:Fragment fragmentName="alrosa.frag.001step01" type="XML" />-->
-				<!--</WizardStep>-->
+				<WizardStep id="wiz001step01" title="Приветствие" validated="true">
+					<core:Fragment fragmentName="alrosa.frag.001step01" type="XML" />
+				</WizardStep>
 				<WizardStep id="wiz001step02" class="wiz001step02" title="Общая информация" validated="true">
 					<core:Fragment fragmentName="alrosa.frag.001step02" type="XML"  binding="{path:'/001'}" />
 				</WizardStep>
