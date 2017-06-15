@@ -3,7 +3,7 @@
 	<Page title="Регистрация поставщика" showNavButton="true" showHeader="true" showSubHeader="true" navButtonPress="navBack"
 		floatingFooter="false">
 		<content>
-			<Wizard id="wiz001" class="wiz001" complete="wizardComplete">
+			<Wizard id="wiz001" class="wiz001" complete="wizardComplete" showNextButton="false">
 				<WizardStep id="wiz001step01" title="Приветствие" validated="true">
 					<core:Fragment fragmentName="alrosa.frag.001step01" type="XML"/>
 				</WizardStep>
