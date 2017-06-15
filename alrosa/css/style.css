@@ -25,8 +25,6 @@
 /*}*/
 
 
-
-
 /* 001 wizard */
 .wiz001step02 .sapUiForm .sapUiFormTitle{
 	font-weight: bold;
@@ -34,3 +32,21 @@
 .wiz001 .sapMWizardProgressNavStep::after{
 	
 }
+/* 002 */
+.sapMITBHead{
+	margin-top: 0;
+}
+.sapMITBArrowScroll {
+    top: 0;
+}
+.sapUiSizeCompact .sapMITH .sapMBtn,
+.sapUiSizeCompact .sapMITH .sapMBtn.sapMBtnInline,
+.sapUiSizeCompact .sapMITH .sapMBtn.sapMBtnTextOnly,
+.sapUiSizeCompact .sapMITH .sapMBtn.sapMBtnNoText {
+    top: 0.5rem;
+}
+.sapMITBTextOnly .sapMITBFilter{
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+

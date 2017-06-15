@@ -1,8 +1,36 @@
-<mvc:View controllerName="alrosa.controller.002" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
-	<Page title="002" showNavButton="true" showHeader="true" showSubHeader="true" navButtonPress="navBack">
+<mvc:View controllerName="alrosa.controller.002" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:core="sap.ui.core">
+	<Page title="Отчеты" showNavButton="true" showHeader="true" showSubHeader="true" navButtonPress="navBack">
 		<content>
-			<Text text="002"/>
+			<IconTabBar expanded="true" class="sapUiNoContentPadding" selectedKey="{util>/002/tab}" showOverflowSelectList="true"
+				binding="{model:'util',path:'/form2'}">
+				<items>
+					<IconTabFilter text="Отчет по мелким закупкам" key="1">
+						<Text text="TODO"/>
+					</IconTabFilter>
+					<IconTabFilter text="Отчет по исполнению плана" key="2">
+						<Text text="TODO"/>
+					</IconTabFilter>
+					<IconTabFilter text="Отчет об электронных торгах" key="3">
+						<core:Fragment fragmentName="alrosa.frag.002tab03" type="XML"/>
+					</IconTabFilter>
+					<IconTabFilter text="Монитор закупочных процедур" key="4">
+						<Text text="TODO"/>
+					</IconTabFilter>
+					<IconTabFilter text="Отчет ответственного исполнителя" key="5">
+						<Text text="TODO"/>
+					</IconTabFilter>
+					<IconTabFilter text="Отчет о заключенных договорах" key="6">
+						<Text text="TODO"/>
+					</IconTabFilter>
+					<IconTabFilter text="Отчет о закупочной деятельности" key="7">
+						<Text text="TODO"/>
+					</IconTabFilter>
+					<IconTabFilter text="Отчет о ценовых характеристиках закупок" key="8">
+						<Text text="TODO"/>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
 		</content>
 	</Page>
 </mvc:View>

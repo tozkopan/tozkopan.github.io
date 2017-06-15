@@ -1,7 +1,8 @@
 {
 	"form": {
+		"breakpointXL": 2000,
 		"breakpointL": 1024,
-		"breakpointM": 590,
+		"breakpointM": 560,
 		"labelSpanXL": 4,
 		"labelSpanL": 4,
 		"labelSpanM": 4,
@@ -13,5 +14,27 @@
 		"columnsXL": 1,
 		"columnsL": 1,
 		"columnsM": 1
+	},
+	"form2": {
+		"breakpointXL": 2000,
+		"breakpointL": 1024,
+		"breakpointM": 560,
+		"labelSpanXL": 5,
+		"labelSpanL": 5,
+		"labelSpanM": 5,
+		"labelSpanS": 12,
+		"emptySpanXL": 0,
+		"emptySpanL": 0,
+		"emptySpanM": 0,
+		"emptySpanS": 0,
+		"columnsXL": 1,
+		"columnsL": 1,
+		"columnsM": 1
+	},
+	"001":{
+		"step": 1
+	},
+	"002":{
+		"tab": "3"
 	}
 }

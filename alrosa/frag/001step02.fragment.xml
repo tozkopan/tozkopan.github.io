@@ -1,9 +1,9 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
-	<l:Grid defaultSpan="XL4 L6 M12 S12" vSpacing="0" hSpacing="1" binding="{model:'util',path:'/form'}">
+	<l:Grid defaultSpan="XL6 L6 M12 S12" vSpacing="0" hSpacing="1" binding="{model:'util',path:'/form'}">
 		<f:SimpleForm editable="true" layout="ResponsiveGridLayout" breakpointM="{util>breakpointM}" breakpointL="{util>breakpointL}"
-			labelSpanXL="{util>labelSpanXL}" labelSpanL="{util>labelSpanL}" labelSpanM="{util>labelSpanM}" labelSpanS="{util>labelSpanS}"
-			adjustLabelSpan="false" emptySpanXL="{util>emptySpanXL}" emptySpanL="{util>emptySpanL}" emptySpanM="{util>emptySpanM}"
-			emptySpanS="{util>emptySpanS}" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+			breakpointXL="{util>breakpointXL}" labelSpanXL="{util>labelSpanXL}" labelSpanL="{util>labelSpanL}" labelSpanM="{util>labelSpanM}"
+			labelSpanS="{util>labelSpanS}" adjustLabelSpan="false" emptySpanXL="{util>emptySpanXL}" emptySpanL="{util>emptySpanL}"
+			emptySpanM="{util>emptySpanM}" emptySpanS="{util>emptySpanS}" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
 			<f:content>
 				<core:Title text="Общая информация"/>
 				<Label text="Краткое наименование организации" required="true"/>
@@ -43,9 +43,9 @@
 			</f:content>
 		</f:SimpleForm>
 		<f:SimpleForm editable="true" layout="ResponsiveGridLayout" breakpointM="{util>breakpointM}" breakpointL="{util>breakpointL}"
-			labelSpanXL="{util>labelSpanXL}" labelSpanL="{util>labelSpanL}" labelSpanM="{util>labelSpanM}" labelSpanS="{util>labelSpanS}"
-			adjustLabelSpan="false" emptySpanXL="{util>emptySpanXL}" emptySpanL="{util>emptySpanL}" emptySpanM="{util>emptySpanM}"
-			emptySpanS="{util>emptySpanS}" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+			breakpointXL="{util>breakpointXL}" labelSpanXL="{util>labelSpanXL}" labelSpanL="{util>labelSpanL}" labelSpanM="{util>labelSpanM}"
+			labelSpanS="{util>labelSpanS}" adjustLabelSpan="false" emptySpanXL="{util>emptySpanXL}" emptySpanL="{util>emptySpanL}"
+			emptySpanM="{util>emptySpanM}" emptySpanS="{util>emptySpanS}" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
 			<f:content>
 				<core:Title text="Контактные данные предприятия"/>
 				<Label text="Телефон" required="true"/>
@@ -85,9 +85,9 @@
 			</f:content>
 		</f:SimpleForm>
 		<f:SimpleForm title="Адреса" editable="true" layout="ResponsiveGridLayout" breakpointM="{util>breakpointM}" breakpointL="{util>breakpointL}"
-			labelSpanXL="{util>labelSpanXL}" labelSpanL="{util>labelSpanL}" labelSpanM="{util>labelSpanM}" labelSpanS="{util>labelSpanS}"
-			adjustLabelSpan="false" emptySpanXL="{util>emptySpanXL}" emptySpanL="{util>emptySpanL}" emptySpanM="{util>emptySpanM}"
-			emptySpanS="{util>emptySpanS}" columnsXL="1" columnsL="2" columnsM="1" singleContainerFullSize="false">
+			breakpointXL="{util>breakpointXL}" labelSpanXL="{util>labelSpanXL}" labelSpanL="{util>labelSpanL}" labelSpanM="{util>labelSpanM}"
+			labelSpanS="{util>labelSpanS}" adjustLabelSpan="false" emptySpanXL="{util>emptySpanXL}" emptySpanL="{util>emptySpanL}"
+			emptySpanM="{util>emptySpanM}" emptySpanS="{util>emptySpanS}" columnsXL="1" columnsL="2" columnsM="1" singleContainerFullSize="false">
 			<f:content>
 				<core:Title text="Фактический адрес"/>
 				<Label text=" " required="false"/>

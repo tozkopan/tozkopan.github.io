@@ -1,0 +1,120 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<Panel headerText="Параметры выбора" class="sapUiNoContentPadding" expandable="true" expanded="true">
+		<headerToolbar>
+			<Toolbar>
+				<Title text="Параметры выбора"/>
+				<ToolbarSpacer/>
+				<Button text="Сбросить фильтры" icon="sap-icon://clear-filter" class="sapUiSmallMarginEnd"/>
+				<Button text="Найти" type="Emphasized" icon="sap-icon://search" class="sapUiSmallMarginEnd"/>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<l:Grid defaultSpan="XL6 L6 M12 S12" vSpacing="0" hSpacing="1" binding="{path:'/002/filter'}">
+				<f:SimpleForm editable="true" layout="ResponsiveGridLayout" breakpointM="{util>breakpointM}" breakpointL="{util>breakpointL}"
+					breakpointXL="{util>breakpointXL}" labelSpanXL="{util>labelSpanXL}" labelSpanL="{util>labelSpanL}" labelSpanM="{util>labelSpanM}"
+					labelSpanS="{util>labelSpanS}" adjustLabelSpan="false" emptySpanXL="{util>emptySpanXL}" emptySpanL="{util>emptySpanL}"
+					emptySpanM="{util>emptySpanM}" emptySpanS="{util>emptySpanS}" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+					<f:content>
+						<Label text="Номер конкурса"/>
+						<MultiInput tokens="{01}" valueHelpRequest="onValueHelpRequest">
+							<tokens><Token key="{key}" text="{text}"/></tokens>
+						</MultiInput>
+						<Label text="Подразделение закупок"/>
+						<MultiInput tokens="{02}" valueHelpRequest="onValueHelpRequest">
+							<tokens><Token key="{key}" text="{text}"/></tokens>
+						</MultiInput>
+						<Label text="Закупочная организация"/>
+						<MultiInput tokens="{03}" valueHelpRequest="onValueHelpRequest">
+							<tokens><Token key="{key}" text="{text}"/></tokens>
+						</MultiInput>
+						<Label text="Группа закупок"/>
+						<MultiInput tokens="{04}" valueHelpRequest="onValueHelpRequest">
+							<tokens><Token key="{key}" text="{text}"/></tokens>
+						</MultiInput>
+						<Label text="Категория"/>
+						<MultiInput tokens="{05}" valueHelpRequest="onValueHelpRequest">
+							<tokens><Token key="{key}" text="{text}"/></tokens>
+						</MultiInput>
+						<Label text="Код ОКПД-2"/>
+						<MultiInput tokens="{06}" valueHelpRequest="onValueHelpRequest">
+							<tokens><Token key="{key}" text="{text}"/></tokens>
+						</MultiInput>
+					</f:content>
+				</f:SimpleForm>
+				<f:SimpleForm editable="true" layout="ResponsiveGridLayout" breakpointM="{util>breakpointM}" breakpointL="{util>breakpointL}"
+					breakpointXL="{util>breakpointXL}" labelSpanXL="{util>labelSpanXL}" labelSpanL="{util>labelSpanL}" labelSpanM="{util>labelSpanM}"
+					labelSpanS="{util>labelSpanS}" adjustLabelSpan="false" emptySpanXL="{util>emptySpanXL}" emptySpanL="{util>emptySpanL}"
+					emptySpanM="{util>emptySpanM}" emptySpanS="{util>emptySpanS}" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+					<f:content>
+						<Label text="Дата создания"/>
+						<DateRangeSelection dateValue="{07a}" secondDateValue="{07b}" placeholder=" "/>
+						<Label text="Период"/>
+						<DateRangeSelection dateValue="{08a}" secondDateValue="{08b}" placeholder=" "/>
+						<Label text="Квартал для сводной формы"/>
+						<MultiInput tokens="{09}" valueHelpRequest="onValueHelpRequest">
+							<tokens><Token key="{key}" text="{text}"/></tokens>
+						</MultiInput>
+						<Label text="Расчёт суммы предложений"/>
+						<Select selectedKey="{10}">
+							<items>
+								<core:Item text="" key="0"/>
+								<core:Item text="Пример 1" key="1"/>
+								<core:Item text="Пример 2" key="2"/>
+							</items>
+						</Select>
+						<Label text="Отчет по группе"/>
+						<CheckBox selected="{11}"/>
+						<Label text="Только состоявшиеся закупки"/>
+						<CheckBox selected="{12}"/>
+					</f:content>
+				</f:SimpleForm>
+			</l:Grid>
+		</content>
+	</Panel>
+	<Table inset="false" items="{/002/table}">
+		<headerToolbar>
+			<Toolbar>
+				<Title text="Найдено ({= ${/002/table}.length})" level="H2"/>
+				<ToolbarSpacer/>
+				<Button icon="sap-icon://excel-attachment" text="Форма УТМС"/>
+				<Button icon="sap-icon://excel-attachment" text="Сводная форма"/>
+			</Toolbar>
+		</headerToolbar>
+		<columns>
+			<Column width="8rem">
+				<Text text="Номер конкурса"/>
+			</Column>
+			<Column width="8rem">
+				<Text text="Статус закупки"/>
+			</Column>
+			<Column width="6rem">
+				<Text text="Тип закупки"/>
+			</Column>
+			<Column>
+				<Text text="Продукция"/>
+			</Column>
+			<Column>
+				<Text text="ОКПД-2"/>
+			</Column>
+			<Column>
+				<Text text="Предмет договора"/>
+			</Column>
+			<Column width="10rem">
+				<Text text="Период"/>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<Text text="{01}"/>
+					<ObjectStatus text="{02a}" state="{02b}"/>
+					<Text text="{03}"/>
+					<ObjectIdentifier title="{04a}" text="{04b}"/>
+					<ObjectIdentifier title="{05a}" text="{05b}"/>
+					<Text text="{06}"/>
+					<Text text="{07}"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</core:FragmentDefinition>

@@ -4,8 +4,8 @@
 		<content>
 			<l:Grid defaultSpan="XL12 L12 M12 S12" class="sapUiSmallMarginTop" vSpacing="2">
 				<Button text="Регистрация поставщика" press="navFromButton" data:target="001"/>
-				<Button text="002" press="navFromButton" data:target="002"/>
-				<Button text="003" press="navFromButton" data:target="003"/>
+				<Button text="Отчеты" press="navFromButton" data:target="002"/>
+				<!--<Button text="003" press="navFromButton" data:target="003"/>-->
 			</l:Grid>
 		</content>
 	</Page>

@@ -3,12 +3,12 @@ sap.ui.define([
 ], function(Controller) {
 	"use strict";
 
-	return Controller.extend("alrosa.controller.001", {
+	return Controller.extend("alrosa.controller.Base", {
 		byId: function(sName){
 			return this.getView().byId(sName);
 		},
 		getModel: function(sName){
-			return this.getModel(sName) || this.getOwnerComponent().getModel(sName);
+			return this.getView().getModel(sName) || this.getOwnerComponent().getModel(sName);
 		},
 		getText: function(sName){
 			return this.getModel("i18n").getResourceBundle().getText(sName);
@@ -23,7 +23,6 @@ sap.ui.define([
 		navFromButton: function(evt){
 			var sTarget = evt.getSource().data("target");
 			this.getRouter().navTo(sTarget);
-			
 		}
 	});
 });
