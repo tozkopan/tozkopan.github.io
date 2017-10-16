@@ -1,0 +1,153 @@
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>SAPUI5 single file template | nabisoft</title>
+			<script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-theme="sap_belize"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-bindingSyntax="complex"
+				data-sap-ui-compatVersion="edge"
+				data-sap-ui-preload="async"></script>
+	
+			<!-- XMLView -->
+			<script id="myXmlView" type="ui5/xmlview">
+				<mvc:View
+					controllerName="MyController"
+					xmlns="sap.m"
+					xmlns:core="sap.ui.core"
+					xmlns:mvc="sap.ui.core.mvc"
+					xmlns:custom="mynamespace">
+					
+					<VBox class="sapUiSmallMargin sapUiSizeCompact">
+						<Title text="Autocomplete Demo" titleStyle="H1"/>
+						<HBox alignItems="Center">
+							<Label text="First:" width="4rem"/>
+							<custom:AutocompleteInput id="firstInput" name="first" showSuggestion="true" startSuggestion="0" width="10rem"/>
+						</HBox>
+						<HBox alignItems="Center">
+						<Label text="Second:" width="4rem"/>
+							<custom:AutocompleteInput id="secondInput" name="second" showSuggestion="true" startSuggestion="0" width="10rem"/>
+						</HBox>
+						<Button text="Save input" press="onInputSave"/>
+					</VBox>
+					
+				</mvc:View>
+			</script>
+			
+			<script>
+				sap.ui.getCore().attachInit(function () {
+					"use strict";
+	
+					//### Autocomplete Control ###
+					sap.ui.define("mynamespace/AutocompleteInput",[
+						"sap/m/Input",
+						"sap/ui/core/Item"
+					], function(BaseControl, Item) {
+						"use strict";
+						var oControl = BaseControl.extend("mynamespace.AutocompleteInput",{
+							metadata: {
+								properties: { },
+								events: { }
+							},
+							renderer: { }
+						});
+						
+						oControl._LOCAL_STORAGE_NAME = "ui5_autocomplete";
+						
+						oControl.prototype.init = function(){
+							if(BaseControl.prototype.init){
+								var oResult = BaseControl.prototype.init.apply(this, arguments);
+							}
+							
+							this.loadSuggestionItems();
+							
+							this.setFilterFunction(function(sValue, oItem) {
+								return !sValue || jQuery.sap.startsWithIgnoreCase(oItem.getText(), sValue);
+							});
+							
+							return oResult;
+						};
+						
+						oControl.prototype.setName = function(){
+							if(BaseControl.prototype.setName){
+								var oResult = BaseControl.prototype.setName.apply(this, arguments);
+							}
+							
+							this.loadSuggestionItems();
+							
+							return oResult;
+						};
+						
+						oControl.prototype.loadSuggestionItems = function(){
+							var oRaw = window.localStorage.getItem(oControl._LOCAL_STORAGE_NAME),
+								oParsed = oRaw ? JSON.parse(oRaw) : {},
+								sName = this.getName();
+							this.removeAllAggregation("suggestionItems");
+							// console.log("removeAll SuggestionItem for " + this.getId());
+							if(sName && oParsed[sName] && oParsed[sName].length){
+								oParsed[sName].forEach(function(sItem){
+									// console.log("add SuggestionItem for " + this.getId() + ":  " + sItem);
+									this.addSuggestionItem(new Item({
+										key: sItem,
+										text: sItem
+									}));
+								}.bind(this));
+							}
+						};
+						
+						oControl.prototype.saveSuggestionItems = function(){
+							var oRaw = window.localStorage.getItem(oControl._LOCAL_STORAGE_NAME),
+								oParsed = oRaw ? JSON.parse(oRaw) : {},
+								sName = this.getName(),
+								sValue = this.getValue();
+							if(!this.getValue()){ return; }
+							if(!oParsed[sName]){
+								oParsed[sName] = [];
+							}
+							if(!~oParsed[sName].indexOf(sValue)){
+								// console.log("save SuggestionItem for " + sName + ":  " + sValue);
+								oParsed[sName].push(sValue);
+								window.localStorage.setItem(oControl._LOCAL_STORAGE_NAME, JSON.stringify(oParsed));
+								this.addSuggestionItem(new Item({
+									key: sValue,
+									text: sValue
+								}));
+							}
+						};
+						
+						return oControl;
+					
+					}, /* bExport= */ true);	
+					
+					//### Controller ###
+					sap.ui.define([
+						"sap/ui/core/mvc/Controller"
+					], function (Controller, ODataModel) {
+						"use strict";
+	
+						return Controller.extend("MyController", {
+							onInit: function () { },
+							onInputSave: function () {
+								["firstInput", "secondInput"].forEach(function(sId){
+									this.getView().byId(sId).saveSuggestionItems();
+								}.bind(this));
+							}
+						});
+					});
+	
+					//### THE APP: place the XMLView somewhere into DOM ###
+					sap.ui.xmlview({
+						viewContent : jQuery("#myXmlView").html()
+					}).placeAt("content");
+	
+				});
+			</script>
+	
+		</head>
+	
+		<body class="sapUiBody">
+			<div id="content"></div>
+		</body>
+	</html>
