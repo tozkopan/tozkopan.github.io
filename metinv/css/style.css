@@ -1,0 +1,13 @@
+/* Enter your custom styles here */
+.sapMListTblCell{
+	border-left: 1px solid #e5e5e5;
+}
+.mainTable .tdNN{
+	background: tomato;
+}
+.mainTable .tdSelected{
+	box-shadow: inset 0 0 5px black;
+}
+.noPadCells>.mainTable .sapMListTblCell{
+	padding: 2px;
+}

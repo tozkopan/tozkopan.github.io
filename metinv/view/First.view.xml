@@ -1,0 +1,151 @@
+<mvc:View controllerName="metinv.table.controller.First" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core"
+	xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:ext="metinv.table.util">
+	<Page navButtonPress="navBack" showNavButton="true" title="Табель рабочего времени">
+		<l:Splitter height="100%">
+			<VBox height="100%">
+				<layoutData><l:SplitterLayoutData size="auto" resizable="true"/></layoutData>
+				<Toolbar>
+					<SearchField placeholder="Поиск по ФИО, должности и отделу" liveChange="onSearch"/>
+					<HBox alignItems="Center">
+						<Button icon="sap-icon://{= ${local>/smallSpacing} ? 'increase' : 'decrease' }-line-height" press="changeSpacing" tooltip="Высота строк"/>
+						<Button icon="sap-icon://{= ${local>/noPadCells} ? 'color-fill' : 'grid' }" press="changeNoPadCells" tooltip="Границы ячеек"/>
+					</HBox>
+				</Toolbar>
+				<Table id="mainTable" class="mainTable" inset="false" items="{/list}" updateFinished="colorCells">
+					<headerToolbar>
+						<Toolbar>
+							<content>
+								<Button icon="sap-icon://navigation-left-arrow" press="onFirstDayChange" data:delta="-7"/>
+								<ToolbarSpacer/>
+								<Title text="{path:'local>/firstDay', formatter:'.formatWeekRange'}"/>
+								<ToolbarSpacer/>
+								<Button icon="sap-icon://navigation-right-arrow" press="onFirstDayChange" data:delta="7"/>
+							</content>
+						</Toolbar>
+					</headerToolbar>
+					<columns>
+						<Column hAlign="Begin">
+							<Text text="Сотрудник"/>
+						</Column>
+						<Column hAlign="Center" vAlign="Middle" width="{path:'local>/smallSpacing',formatter:'.colWidth'}">
+							<Text text="{parts:['local>/firstDay','echo>0'], formatter:'.dayFromFirst'}"/>
+						</Column>
+						<Column hAlign="Center" vAlign="Middle" width="{path:'local>/smallSpacing',formatter:'.colWidth'}">
+							<Text text="{parts:['local>/firstDay','echo>1'], formatter:'.dayFromFirst'}"/>
+						</Column>
+						<Column hAlign="Center" vAlign="Middle" width="{path:'local>/smallSpacing',formatter:'.colWidth'}">
+							<Text text="{parts:['local>/firstDay','echo>2'], formatter:'.dayFromFirst'}"/>
+						</Column>
+						<Column hAlign="Center" vAlign="Middle" width="{path:'local>/smallSpacing',formatter:'.colWidth'}">
+							<Text text="{parts:['local>/firstDay','echo>3'], formatter:'.dayFromFirst'}"/>
+						</Column>
+						<Column hAlign="Center" vAlign="Middle" width="{path:'local>/smallSpacing',formatter:'.colWidth'}">
+							<Text text="{parts:['local>/firstDay','echo>4'], formatter:'.dayFromFirst'}"/>
+						</Column>
+						<Column hAlign="Center" vAlign="Middle" width="{path:'local>/smallSpacing',formatter:'.colWidth'}">
+							<Text text="{parts:['local>/firstDay','echo>5'], formatter:'.dayFromFirst'}"/>
+						</Column>
+						<Column hAlign="Center" vAlign="Middle" width="{path:'local>/smallSpacing',formatter:'.colWidth'}">
+							<Text text="{parts:['local>/firstDay','echo>6'], formatter:'.dayFromFirst'}"/>
+						</Column>
+					</columns>
+					<items>
+						<ext:ColumnListItem cellPress="onCellPress">
+							<ext:cells>
+								<!--<ObjectIdentifier title="{Name}" text="{= ${local>/smallSpacing} ? '' : ${Plans} + '\n' + ${Orgeh} }"/>-->
+								<VBox>
+									<ObjectIdentifier title="{Name}"/>
+									<Text text="{Plans}\n{Orgeh}" visible="{= !${local>/smallSpacing}}"/>
+								</VBox>
+								
+								<Text text="{parts:['Week/0','local>/smallSpacing','Week/0/Type'], formatter: '.dayCell'}">
+									<customData>
+										<core:CustomData key="type" value="{= ${Week/0/Type} || ''}" writeToDom="true"/>
+										<core:CustomData key="date" value="{= ${Week/0/Date} || ''}" writeToDom="true"/>
+										<core:CustomData key="pernr" value="{= ${Pernr} || ''}" writeToDom="true"/>
+									</customData>
+								</Text>
+								<Text text="{parts:['Week/1','local>/smallSpacing','Week/1/Type'], formatter: '.dayCell'}">
+									<customData>
+										<core:CustomData key="type" value="{= ${Week/1/Type} || ''}" writeToDom="true"/>
+										<core:CustomData key="date" value="{= ${Week/1/Date} || ''}" writeToDom="true"/>
+										<core:CustomData key="pernr" value="{= ${Pernr} || ''}" writeToDom="true"/>
+									</customData>
+								</Text>
+								<Text text="{parts:['Week/2','local>/smallSpacing','Week/2/Type'], formatter: '.dayCell'}">
+									<customData>
+										<core:CustomData key="type" value="{= ${Week/2/Type} || ''}" writeToDom="true"/>
+										<core:CustomData key="date" value="{= ${Week/2/Date} || ''}" writeToDom="true"/>
+										<core:CustomData key="pernr" value="{= ${Pernr} || ''}" writeToDom="true"/>
+									</customData>
+								</Text>
+								<Text text="{parts:['Week/3','local>/smallSpacing','Week/3/Type'], formatter: '.dayCell'}">
+									<customData>
+										<core:CustomData key="type" value="{= ${Week/3/Type} || ''}" writeToDom="true"/>
+										<core:CustomData key="date" value="{= ${Week/3/Date} || ''}" writeToDom="true"/>
+										<core:CustomData key="pernr" value="{= ${Pernr} || ''}" writeToDom="true"/>
+									</customData>
+								</Text>
+								<Text text="{parts:['Week/4','local>/smallSpacing','Week/4/Type'], formatter: '.dayCell'}">
+									<customData>
+										<core:CustomData key="type" value="{= ${Week/4/Type} || ''}" writeToDom="true"/>
+										<core:CustomData key="date" value="{= ${Week/4/Date} || ''}" writeToDom="true"/>
+										<core:CustomData key="pernr" value="{= ${Pernr} || ''}" writeToDom="true"/>
+									</customData>
+								</Text>
+								<Text text="{parts:['Week/5','local>/smallSpacing','Week/5/Type'], formatter: '.dayCell'}">
+									<customData>
+										<core:CustomData key="type" value="{= ${Week/5/Type} || ''}" writeToDom="true"/>
+										<core:CustomData key="date" value="{= ${Week/5/Date} || ''}" writeToDom="true"/>
+										<core:CustomData key="pernr" value="{= ${Pernr} || ''}" writeToDom="true"/>
+									</customData>
+								</Text>
+								<Text text="{parts:['Week/6','local>/smallSpacing','Week/6/Type'], formatter: '.dayCell'}">
+									<customData>
+										<core:CustomData key="type" value="{= ${Week/6/Type} || ''}" writeToDom="true"/>
+										<core:CustomData key="date" value="{= ${Week/6/Date} || ''}" writeToDom="true"/>
+										<core:CustomData key="pernr" value="{= ${Pernr} || ''}" writeToDom="true"/>
+									</customData>
+								</Text>
+							</ext:cells>
+						</ext:ColumnListItem>
+					</items>
+				</Table>
+			</VBox>
+			<VBox height="100%">
+				<layoutData><l:SplitterLayoutData size="200px"/></layoutData>
+				<f:SimpleForm visible="{= !!${local>/selected/row}}" binding="{local>/selected}" editable="false" layout="ResponsiveGridLayout"
+					title="{path:'local>day', formatter:'.DU.formatDate'}" labelSpanXL="3" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false"
+					emptySpanXL="2" emptySpanL="2" emptySpanM="0" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false"
+					breakpointM="400">
+					<f:content>
+						<Label text="Действия"/>
+						<ToggleButton text="Отсутствовал" pressed="{= ${local>time/Type} === 'NN'}" press="onToggleNN"/>
+						<Label text="Начало работы"/>
+						<Text text="{path:'local>time/From',formatter:'.DU.formatTime'}" visible="{= !!${local>time/From}}"/>
+						<Label text="Окончание работы"/>
+						<Text text="{path:'local>time/To',formatter:'.DU.formatTime'}" visible="{= !!${local>time/To}}"/>
+					</f:content>
+				</f:SimpleForm>
+				<f:SimpleForm visible="{= !!${local>/selected/row}}" binding="{local>/selected}" editable="false" layout="ResponsiveGridLayout"
+					title="Сотрудник" labelSpanXL="3" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="2" emptySpanL="2"
+					emptySpanM="0" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" breakpointM="400"
+					class="sapUiSmallMarginTop">
+					<f:content>
+						<Label text="ФИО"/>
+						<Text text="{local>row/Name}"/>
+						<Label text="Должность"/>
+						<Text text="{local>row/Plans}"/>
+						<Label text="Подразделение"/>
+						<Text text="{local>row/Orgeh}"/>
+						<Label text="Табельный номер"/>
+						<Text text="{local>row/Pernr}"/>
+					</f:content>
+				</f:SimpleForm>
+				<Text visible="{= !${local>/selected/row}}" class="sapUiSmallMargin"
+					text="Здесь будет отображаться информация по выбранному дню и сотруднику, если вы выберете соответствующую ячейку"/>
+			</VBox>
+		</l:Splitter>
+	</Page>
+</mvc:View>

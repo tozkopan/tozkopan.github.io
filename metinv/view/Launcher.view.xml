@@ -1,0 +1,14 @@
+<mvc:View controllerName="metinv.table.controller.Launcher" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Page>
+		<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Первый вариант" subheader="Неделя" press="press" data:to="First"/>
+		<!--<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Sales Fulfillment Application Title" subheader="Subtitle"-->
+		<!--	press="press">-->
+		<!--<tileContent>-->
+		<!--	<TileContent unit="EUR" footer="Current Quarter">-->
+		<!--		<ImageContent src="sap-icon://home-share"/>-->
+		<!--	</TileContent>-->
+		<!--</tileContent>-->
+		<!--</GenericTile>-->
+	</Page>
+</mvc:View>
