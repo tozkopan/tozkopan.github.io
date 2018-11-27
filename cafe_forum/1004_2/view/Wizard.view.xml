@@ -1,0 +1,116 @@
+<core:View controllerName="mvideo.cafe.view.Wizard"
+	xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:u="sap.ui.unified"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<Page title="{Benefit2}" showNavButton="true" navButtonPress="handleBack">
+		<subHeader>
+			<Toolbar class="myWizardHeader">
+				<content>
+					<HBox id="wizHead1" alignItems="Center">
+						<core:Icon src="sap-icon://hint" />
+						<VBox visible="{device>/mv_wide}">
+							<Text width="100px" text="{i18n>WIZARD_TITLE_STEP1}" />
+						</VBox>
+					</HBox>
+					<ToolbarSpacer id="wizHead2a" visible="{local>/step2enabled}" />
+					<HBox id="wizHead2" alignItems="Center" visible="{local>/step2enabled}">
+						<core:Icon src="sap-icon://document-text" />
+						<VBox visible="{device>/mv_wide}">
+							<Text width="60px" text="{i18n>WIZARD_TITLE_STEP2}" />
+						</VBox>
+					</HBox>
+					<ToolbarSpacer id="wizHead3a" visible="{local>/step3enabled}" />
+					<HBox id="wizHead3" alignItems="Center" class="myIconDeact"
+						visible="{local>/step3enabled}">
+						<core:Icon src="sap-icon://attachment" />
+						<VBox visible="{device>/mv_wide}">
+							<Text width="85px" text="{i18n>WIZARD_TITLE_STEP3}" />
+						</VBox>
+					</HBox>
+					<ToolbarSpacer id="wizHead4" />
+					<HBox id="wizHead4a" alignItems="Center" class="myIconDeact">
+						<core:Icon src="sap-icon://approvals" />
+						<VBox visible="{device>/mv_wide}">
+							<Text width="120px" text="{i18n>WIZARD_TITLE_STEP4}" />
+						</VBox>
+					</HBox>
+				</content>
+			</Toolbar>
+		</subHeader>
+		<content>
+			<VBox class="wizContent">
+				<VBox id="wizBody1" class="wizBody"
+					visible="{= ${local>/currentStep} >= 1 &amp;&amp; ${local>/currentStep} !== 4 }">
+					<Text class="myWizStepTitle" text="{i18n>WIZARD_TITLE_STEP1}" />
+					<VBox class="overPriceStep1"
+						visible="{parts:[ {path:'/limits'}, {path:'Price'}, 
+							{path:'local>/currentStep'}, {path:'MaxDedFlag'} ],
+							formatter:'mvideo.cafe.util.Formatter.overPriceAny1'}">
+						<Text text="{i18n>WIZARD_OVERFLOW}"
+							visible="{parts:[ {path:'/limits'}, {path:'Price'} ],
+								formatter:'mvideo.cafe.util.Formatter.overPriceUsual'}" />
+						<Text text="{i18n>WIZARD_OVERFLOW_CRITICAL}"
+							visible="{parts:[ {path:'/limits'}, {path:'Price'} ],
+								formatter:'mvideo.cafe.util.Formatter.overPriceCritical'}" />
+					</VBox>
+					<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step1" />
+				</VBox>
+				<VBox id="wizBody2" class="wizBody wizBody2"
+					visible="{= ${local>/currentStep} >= 2 &amp;&amp; ${local>/currentStep} !== 4 
+						&amp;&amp; ${local>/step2enabled} === true }">
+					<Text class="myWizStepTitle" text="{i18n>WIZARD_TITLE_STEP2}" />
+					<VBox class="overPriceStep1"
+						visible="{parts:[ {path:'/limits'}, {path:'Price'},
+							{path:'local>/currentStep'}, {path:'MaxDedFlag'}, {path:'local>/step2/calc'} ],
+							formatter:'mvideo.cafe.util.Formatter.overPriceAny2'}">
+						<Text text="{i18n>WIZARD_OVERFLOW}"
+							visible="{parts:[ {path:'/limits'}, {path:'Price'} ],
+								formatter:'mvideo.cafe.util.Formatter.overPriceUsual'}" />
+						<Text text="{i18n>WIZARD_OVERFLOW_CRITICAL}"
+							visible="{parts:[ {path:'/limits'}, {path:'Price'} ],
+								formatter:'mvideo.cafe.util.Formatter.overPriceCritical'}" />
+					</VBox>
+					<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step2_pre" />
+					<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step2" />
+				</VBox>
+				<VBox id="wizBody3" class="wizBody"
+					visible="{= ${local>/currentStep} >= 3 &amp;&amp; ${local>/currentStep} !== 4 }">
+					<Text class="myWizStepTitle" text="{i18n>WIZARD_TITLE_STEP3}" />
+<!-- 					<Text class="myWizSubTitle" text="{i18n>WIZARD_DOC_TEMPLATE}" /> -->
+					<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step3_pre" />
+					<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step3" />
+				</VBox>
+				<VBox id="wizBody4" class="wizBody" visible="{= ${local>/currentStep} === 4 }">
+					<Text class="myWizStepTitle" text="{i18n>WIZARD_TITLE_STEP4}" />
+					<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step4" />
+					<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step4_descr" />
+					<Panel class="myWizPanel" expandable="true" expanded="false" expand="onStep4Expand"
+						headerText="{i18n>WIZARD_STEP4_DESCRIPTION}">
+						<content>
+							<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step1" />
+						</content>
+					</Panel>
+					<VBox visible="{local>/step2enabled}">
+<!-- 						<Text class="myWizSubTitle" text="{i18n>WIZARD_STEP4_FIELDS}" /> -->
+						<core:Fragment type="XML" fragmentName="mvideo.cafe.view.step2" />
+					</VBox>
+				</VBox>
+			</VBox>
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer />
+				<Button id="btnPrev" icon="sap-icon://navigation-left-arrow"
+					visible="{= ${local>/currentStep} > 1 }" iconFirst="true"
+					text="{i18n>WIZARD_BTN_PREV}" press="onPrev" />
+				<Button id="btnNext" icon="sap-icon://navigation-right-arrow" type="Reject" class="mvNextBtn"
+					visible="{= ${local>/currentStep} !== 4 }" iconFirst="false"
+					text="{i18n>WIZARD_BTN_NEXT}" press="onNext" />
+				<Button id="btnComplete" icon="sap-icon://cart" type="Reject" class="mvNextBtn"
+					visible="{= ${local>/currentStep} === 4 }" iconFirst="true"
+					text="{i18n>WIZARD_BTN_COMPLETE}" press="onComplete" />
+			</Toolbar>
+		</footer>
+	</Page>
+</core:View>

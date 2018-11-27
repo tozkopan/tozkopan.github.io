@@ -1,0 +1,568 @@
+.MVideo_cafe.MVideo_cafe_tablet.MVideo_cafe_portrait .mvTabletSwipeSign {
+    position: absolute;
+    z-index: 1999;
+    width: 4px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 0 5px black;
+}
+.MVideo_cafe:not(.MVideo_cafe_tablet) .mvTabletSwipeSign,
+.MVideo_cafe:not(.MVideo_cafe_portrait) .mvTabletSwipeSign,
+.MVideo_cafe.MVideo_cafe_master_open .mvTabletSwipeSign{
+	display: none;
+}
+.MVideo_cafe.MVideo_cafe_tablet.MVideo_cafe_portrait .mvTabletSwipeSign::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: white;
+    top: 50%;
+    transform: rotate(45deg);
+    box-shadow: 0 0 1px black;
+    left: -100px;
+}
+.MVideo_cafe.MVideo_cafe_tablet.MVideo_cafe_portrait .mvTabletSwipeSign::after {
+    content: "";
+    background: white;
+    width: 4px;
+    height: 100%;
+    position: absolute;
+}
+
+
+
+.MVideo_cafe .sapUxAPObjectPageSectionHeader {
+    border-bottom: 2px solid #e7e7e7;
+}
+
+.sapUiMedia-Std-Tablet .sapUxAPAnchorBar.sapMTB, .sapUiMedia-Std-Desktop .sapMSplitContainerDetail .sapUxAPAnchorBar.sapMTB{
+    padding-left: 24px;
+}
+
+html[data-sap-ui-animation="on"].sapUiMedia-Std-Desktop .MVideo_cafe .sapUxAPAnchorBar.sapUxAPAnchorBarScrollLeft .anchorBarArrow .sapMBtn,
+html[data-sap-ui-animation="on"].sapUiMedia-Std-Desktop .MVideo_cafe .sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrow .sapMBtn{
+	opacity: 1;
+}
+.MVideo_cafe .sapUxAPAnchorBar.sapUxAPAnchorBarScrollLeft .anchorBarArrow .sapMBtnIcon,
+.MVideo_cafe .sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrow .sapMBtnIcon{
+	font-size: 1rem;	
+}
+
+/* 0 Common*/
+/*.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection {*/
+/*    position: relative;*/
+/*    z-index: 1;*/
+/*}*/
+
+/*.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection::before {*/
+/*	content: "";*/
+/*	position: absolute;*/
+/*	bottom: -48px;*/
+/*	right: 0;*/
+/*	width: 100%;*/
+/*	height: 100%;*/
+/*	opacity: 0.1;*/
+/*	z-index: -1;*/
+/*	background-position: bottom right;*/
+/*	background-repeat: no-repeat;*/
+/*	background-size: 500px;*/
+/*}*/
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection>.sapUxAPObjectPageSectionContainer {
+	background-position: right top;
+	/*background-repeat: no-repeat;*/
+	background-size: 50px;
+}
+
+/* 1 #0090D6 */
+.sapUxAPAnchorBarScrollContainer>div>button:nth-child(1) .sapMBtnContent,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(1) .sapUxAPObjectPageSubSectionHeaderTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(1) .sapUxAPObjectPageSectionTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(1) .myCTButtonCart .sapMBtnIcon {
+	color: #0090D6 !important;
+}
+.sapUxAPAnchorBarScrollContainer>div>button.mvideoButton.sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected:nth-child(1){
+	border-bottom: 3px solid #0090D6;
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(1)>.sapUxAPObjectPageSectionContainer{
+	background-image: url(../img/section/back01.png);
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(1) .myCustomTile {
+	box-shadow: 0 0 8px -2px #0090D6;
+}
+
+/* 2 #01ADAF */
+.sapUxAPAnchorBarScrollContainer>div>button:nth-child(2) .sapMBtnContent,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(2) .sapUxAPObjectPageSubSectionHeaderTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(2) .sapUxAPObjectPageSectionTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(2) .myCTButtonCart .sapMBtnIcon {
+	color: #01ADAF !important;
+}
+.sapUxAPAnchorBarScrollContainer>div>button.mvideoButton.sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected:nth-child(2){
+	border-bottom: 3px solid #01ADAF;
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(2)>.sapUxAPObjectPageSectionContainer{
+	background-image: url(../img/section/back02.png);
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(2) .myCustomTile {
+	box-shadow: 0 0 8px -2px #01ADAF;
+}
+
+/* 3 #03CA89 */
+.sapUxAPAnchorBarScrollContainer>div>button:nth-child(3) .sapMBtnContent,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(3) .sapUxAPObjectPageSubSectionHeaderTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(3) .sapUxAPObjectPageSectionTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(3) .myCTButtonCart .sapMBtnIcon {
+	color: #03CA89 !important;
+}
+.sapUxAPAnchorBarScrollContainer>div>button.mvideoButton.sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected:nth-child(3){
+	border-bottom: 3px solid #03CA89;
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(3)>.sapUxAPObjectPageSectionContainer{
+	background-image: url(../img/section/back03.png);
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(3) .myCustomTile {
+	box-shadow: 0 0 8px -2px #03CA89;
+}
+
+/* 4 #04E762 */
+.sapUxAPAnchorBarScrollContainer>div>button:nth-child(4) .sapMBtnContent,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(4) .sapUxAPObjectPageSubSectionHeaderTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(4) .sapUxAPObjectPageSectionTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(4) .myCTButtonCart .sapMBtnIcon {
+	color: #04E762 !important;
+}
+.sapUxAPAnchorBarScrollContainer>div>button.mvideoButton.sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected:nth-child(4){
+	border-bottom: 3px solid #04E762;
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(4)>.sapUxAPObjectPageSectionContainer{
+	background-image: url(../img/section/back04.png);
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(4) .myCustomTile {
+	box-shadow: 0 0 8px -2px #04E762;
+}
+
+
+/* 5 #54D841 */
+.sapUxAPAnchorBarScrollContainer>div>button:nth-child(5) .sapMBtnContent,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(5) .sapUxAPObjectPageSubSectionHeaderTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(5) .sapUxAPObjectPageSectionTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(5) .myCTButtonCart .sapMBtnIcon {
+	color: #54D841 !important;
+}
+.sapUxAPAnchorBarScrollContainer>div>button.mvideoButton.sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected:nth-child(5){
+	border-bottom: 3px solid #54D841;
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(5)>.sapUxAPObjectPageSectionContainer{
+	background-image: url(../img/section/back05.png);
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(5) .myCustomTile {
+	box-shadow: 0 0 8px -2px #54D841;
+}
+
+/* 6 #A5CA21 */
+.sapUxAPAnchorBarScrollContainer>div>button:nth-child(6) .sapMBtnContent,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(6) .sapUxAPObjectPageSubSectionHeaderTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(6) .sapUxAPObjectPageSectionTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(6) .myCTButtonCart .sapMBtnIcon {
+	color: #A5CA21 !important;
+}
+.sapUxAPAnchorBarScrollContainer>div>button.mvideoButton.sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected:nth-child(6){
+	border-bottom: 3px solid #A5CA21;
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(6)>.sapUxAPObjectPageSectionContainer{
+	background-image: url(../img/section/back06.png);
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(6) .myCustomTile {
+	box-shadow: 0 0 8px -2px #A5CA21;
+}
+
+/* 7 #F5BB00 */
+.sapUxAPAnchorBarScrollContainer>div>button:nth-child(7) .sapMBtnContent,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(7) .sapUxAPObjectPageSubSectionHeaderTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(7) .sapUxAPObjectPageSectionTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(7) .myCTButtonCart .sapMBtnIcon {
+	color: #F5BB00 !important;
+}
+.sapUxAPAnchorBarScrollContainer>div>button.mvideoButton.sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected:nth-child(7){
+	border-bottom: 3px solid #F5BB00;
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(7)>.sapUxAPObjectPageSectionContainer{
+	background-image: url(../img/section/back07.png);
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(7) .myCustomTile {
+	box-shadow: 0 0 8px -2px #F5BB00;
+}
+
+/* 8 #F59F08 */
+.sapUxAPAnchorBarScrollContainer>div>button:nth-child(8) .sapMBtnContent,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(8) .sapUxAPObjectPageSubSectionHeaderTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(8) .sapUxAPObjectPageSectionTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(8) .myCTButtonCart .sapMBtnIcon {
+	color: #F59F08 !important;
+}
+.sapUxAPAnchorBarScrollContainer>div>button.mvideoButton.sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected:nth-child(8){
+	border-bottom: 3px solid #F59F08;
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(8)>.sapUxAPObjectPageSectionContainer{
+	background-image: url(../img/section/back08.png);
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(8) .myCustomTile {
+	box-shadow: 0 0 8px -2px #F59F08;
+}
+
+/* 9 #F6820F */
+.sapUxAPAnchorBarScrollContainer>div>button:nth-child(9) .sapMBtnContent,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(9) .sapUxAPObjectPageSubSectionHeaderTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(9) .sapUxAPObjectPageSectionTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(9) .myCTButtonCart .sapMBtnIcon {
+	color: #F6820F !important;
+}
+.sapUxAPAnchorBarScrollContainer>div>button.mvideoButton.sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected:nth-child(9){
+	border-bottom: 3px solid #F6820F;
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(9)>.sapUxAPObjectPageSectionContainer{
+	background-image: url(../img/section/back09.png);
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(9) .myCustomTile {
+	box-shadow: 0 0 8px -2px #F6820F;
+}
+
+/* 10 #F66617 */
+.sapUxAPAnchorBarScrollContainer>div>button:nth-child(10) .sapMBtnContent,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(10) .sapUxAPObjectPageSubSectionHeaderTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(10) .sapUxAPObjectPageSectionTitle,
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(10) .myCTButtonCart .sapMBtnIcon {
+	color: #F66617 !important;
+}
+.sapUxAPAnchorBarScrollContainer>div>button.mvideoButton.sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected:nth-child(10){
+	border-bottom: 3px solid #F66617;
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(10)>.sapUxAPObjectPageSectionContainer{
+	background-image: url(../img/section/back10.png);
+}
+.sapUxAPObjectPageContainer>.sapUxAPObjectPageSection:nth-child(10) .myCustomTile {
+	box-shadow: 0 0 8px -2px #F66617;
+}
+
+
+
+.MVideo_cafe .sapUxAPBlockContainer>.sapUiRespGrid>div{
+	margin-bottom: 0;
+}
+
+.MVideo_cafe .sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrowRight,
+.MVideo_cafe .sapUxAPAnchorBar.sapUxAPAnchorBarScrollLeft .anchorBarArrowLeft{
+	box-shadow: none;
+}
+
+.CreatePage>header.sapMIBar{
+	/*width: calc(100% + 320px);*/
+ /*   margin-left: -320px;*/
+ /*   background: red;*/
+}
+
+.MVideo_cafe .sapUxAPObjectPageSubSection{
+	border-bottom: none;
+}
+.myCustomTileContent{
+	padding: 5px;
+}
+.myCTButton{
+	color: white !important;
+    text-shadow: 0 0 10px black;
+    height: 2rem;
+    padding: 0;
+}
+.myCTButton .sapMBtnInner{
+    height: 2rem;
+    min-width: 2rem;
+}
+.myCTButton .sapMBtnIcon{
+	font-size: 1.25rem;
+    line-height: 1.75rem;
+    width: 1.75rem;
+    max-height: 1.75rem;
+}
+.myCreateTitle{
+	color: #48bf7b!important;
+    text-shadow: 0 0 1px #96b194 !important;
+}
+.myCreateSubGroup{
+	max-width: 220px;	
+}
+.myCreateSubGroupTitle{
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+.myCustomTile {
+	/*width: 220px !important;*/
+	/*height: 90px !important;*/
+	width: 170px !important;
+	height: 110px !important;
+	background-color: #ffffff;
+	display: inline-flex;
+}
+.myCustomTile .myCTPrice {
+	font-size: 32px;
+    white-space: normal;
+    color: black;
+    white-space: nowrap;
+}
+.myCustomTile .myCTName {
+    font-size: 15px;
+    line-height: 19px;
+    color: black;
+    padding-left: 5px;
+    height: 60px; /* possible ipad mini fix */
+}
+
+.myCustomTile, .myCustomTile * {
+	cursor: pointer;
+}
+.myCustomTile.sapMTile.sapMTileActive{
+	background-color: #389f64;
+}
+
+.MVideo_cafe .myObjectPageLayout .sapMTB {
+	background: #FFFFFF !important;
+	box-shadow: 0px 5px 5px rgb(233, 234, 236);
+	border-bottom: none;
+/* 	border-top: rgb(233, 234, 236) solid 1px; */
+	border-right: #e9eaec solid 1px;
+}
+
+.myObjectPageLayout .sapUxAPBlockContainer{
+    margin-left: 0;
+}
+
+/* Custom ObjectPage AnchorBar button
+		*/
+.MVideo_cafe .mvideoButton .sapMBtnInner {
+	height: 1.5rem;
+	/*display: table !important;*/
+	font-size: 6px;
+}
+
+.MVideo_cafe .mvInnerBtn .sapMBtnInner {
+    font-family: MVideo;
+    /*font-weight: bold;*/ 
+    color: black;
+    font-size: 1.2rem;
+}
+.sapContrast .sapMIBar-CTX.sapMHeader-CTX :not(.sapMBtnDisabled) > .sapMBtnActive, .sapMIBar-CTX.sapMHeader-CTX.sapContrast :not(.sapMBtnDisabled) > .sapMBtnActive, .sapContrast .sapMIBar-CTX.sapMFooter-CTX :not(.sapMBtnDisabled) > .sapMBtnActive, .sapMIBar-CTX.sapMFooter-CTX.sapContrast :not(.sapMBtnDisabled) > .sapMBtnActive{
+	color: #ffffff;
+}
+.MVideo_cafe .sapMPanelExpandableIcon{
+	color: #747F7F;
+}
+.MVideo_cafe .sapMBtnDefault .sapMBtnInner{
+	color: #ffffff;
+}
+.MVideo_cafe .myObjectPageLayout .sapUxAPAnchorBar .mvideoButton.sapUxAPAnchorBarButton .sapMBtnContent,
+.MVideo_cafe .myObjectPageLayout .sapUxAPAnchorBar .mvideoButton.sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected .sapMBtnContent,
+.MVideo_cafe .myObjectPageLayout .sapUxAPAnchorBar .mvideoButton.sapUxAPAnchorBarButton .sapMBtnInner .sapMBtnContent{
+/* .mvideoButton span { */
+	line-height: 1.1rem;
+    height: 0;
+    display: table-header-group;
+    font-family: MVideo;
+    /*font-weight: bold;*/ 
+    color: black;
+    font-size: 18px;
+}
+.MVideo_cafe .sapUxAPObjectPageSectionTitle{
+    font-size: 18px;
+}
+
+.MVideo_cafe .sapUxAPAnchorBar .mvideoButton.sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected{
+	border-bottom: 3px solid black;
+	font-weight: bold;
+}
+.MVideo_cafe .sapUxAPAnchorBar .mvideoButton.sapUxAPAnchorBarButton.sapMBtn:hover>.sapMBtnHoverable .sapMBtnContent{	
+    color: black;
+}
+
+.MVideo_cafe .mvideoButton.sapMBtn {
+	height: 3.0rem;
+	/*border-left: solid 1px #DADADA;*/
+}
+
+.MVideo_cafe .myFBheaderContent {
+	margin-top: 5px;
+	margin-bottom: 1px;
+}
+
+.myFBheaderContent>div {
+	width: 100%;
+}
+.myFBheaderContent>div:nth-last-child(n+2) {
+    margin-right: 1rem;
+}
+
+.myCreateDescrAdd {
+	font-size: 1rem;
+}
+
+.myCreateDescrText {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding-left: 1rem;
+}
+
+.myCreateDescrNum {
+    padding-left: 0.5rem;
+    font-size: 3rem;
+    color: #E31E25;
+}
+
+.main_help button{
+    background-color: red;
+    margin: 0px;
+}
+
+.mvTileSearch{
+	margin-top: 3px;
+}
+
+.mvLogoImg{
+	margin-top: 3px;
+}
+
+.MVideo_cafe .myObjectPageLayout .sapUxAPAnchorBarButton:last-child{
+    margin-right: 1rem;
+}
+
+.MVideo_cafe .mvTileSearch>form.sapMSFF,
+.MVideo_cafe .mvTileSearch>form.sapMSFF:hover{
+	border-left: 1px solid #ddd;
+	border-top: 1px solid #c3c3c3;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #f2f2f2;
+	margin: 1px;
+}
+.MVideo_cafe .mvTileSearch.sapMFocus>form.sapMSFF{
+	border: 2px solid #747f7f;
+    box-shadow: 0 0 0 0 transparent inset;
+    margin: 0px;
+}
+.MVideo_cafe .mvTileSearch.sapMFocus>.sapMSFF>.sapMSFB{
+	color: #747f7f;
+}
+.MVideo_cafe .mvTileSearch .sapMSFB:active,
+.MVideo_cafe .mvTileSearch .sapMSFB:hover{
+	background-color: transparent;
+}
+
+/* .myObjectPageLayout>.sapUxAPObjectPageWrapper{	 */
+/*     background-image: url(../img/cafe_logo_cup.svg); */
+/*     background-position: right bottom; */
+/*     background-repeat: no-repeat; */
+/* } */
+/* .myObjectPageLayout .sapUxAPObjectPageSectionHeader{ */
+/* 	background: linear-gradient(to right, #f2f2f2, transparent); */
+/* } */
+
+.MVideo_cafe #Create .sapMTB.sapMPageHeader{
+/* 	height: 4rem; */
+}
+.MVideo_cafe #Create .sapMPage>.sapMPageHeader + section,
+.MVideo_cafe #Create .sapMPage>.sapMPageSubHeader + section,
+.MVideo_cafe #Create .sapMPage>.sapMPageHeader + .sapUiHiddenPlaceholder + section{
+/* 	top: 4rem;	 */
+}
+
+.mvCup{
+	margin-top: 2px;
+}
+
+
+.MVideo_cafe :not(.sapUxAPAnchorBarButton) :not(.sapMBtnDisabled)>.sapMBtnInner.sapMBtnActive {
+	background-color: #26ad81;
+    border-color: #327144;
+}
+.sapMPopover.sapUxAPAnchorBarPopover .sapMBtn.sapUxAPAnchorBarButton > .sapMBtnActive .sapMBtnText{
+	color: #ffffff;
+}
+
+/**after 1.40**/
+.MVideo_cafe .sapUxAPAnchorBar.sapUxAPAnchorBarScrollLeft .anchorBarArrowLeft{
+    /*background-image: linear-gradient(to right, #f9d2d2 0px, #f9d2d2 75%, rgba(242, 248, 252, 0) 100%);*/
+    background: white;
+    width: 2rem;
+    left: 0;
+}
+.MVideo_cafe .sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrowRight{
+    /*background-image: linear-gradient(to left, #f9d2d2 0px, #f9d2d2 75%, rgba(242, 248, 252, 0) 100%);*/
+    background: white;
+    width: 2rem;
+}
+.MVideo_cafe .sapMIBar.sapMTB .sapMBarChild{
+	margin-right: 0;
+	font-size: 18px;
+}
+.MVideo_cafe .sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMBtnInner{
+	height: auto;
+}
+.MVideo_cafe .sapUxAPHierarchicalSelect{
+	visibility: hidden;
+}
+.sapUiMedia-Std-Tablet .MVideo_cafe .sapUxAPAnchorBarOverflow,
+.sapUiMedia-Std-Desktop .MVideo_cafe .sapUxAPAnchorBarOverflow{
+	/*padding-right: 1rem;*/
+}
+
+.MVideo_cafe .sapMSplitContainerDetail .sapUxAPObjectPageNavigation>.sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrowRight{
+    right: 0.5rem;
+}
+.MVideo_cafe .sapMSplitContainerDetail .sapUxAPObjectPageNavigation.sapUxAPObjectPageStickyAnchorBar>.sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrowRight {
+	right: 1rem;
+}
+
+/** notifications button **/
+.mvideoBellButton .sapUiIcon:after{
+	content: attr(data-sap-ui-bellbutton-content);
+    speak: none;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+	padding-left: 3px;
+}
+.mvideoBellButton .sapUiIcon{
+	width: auto;
+    color: #e33945;
+}
+.mvideoBellButton>.sapMBtnInner{
+    margin-left: 4px;
+}
+.notifArea .sapMNLB{
+	cursor: pointer;
+}
+
+/**mobile test**/
+.MVideo_cafe_mobile .sapUxAPBlockContainer {
+	margin: 0rem!important;
+}
+.MVideo_cafe_mobile .sapUxAPBlockContainer>.sapUiRespGrid{
+	padding: 0;
+}
+.MVideo_cafe_mobile .sapUxAPBlockContainer>.sapUiRespGrid>div{
+	margin: 0;
+}
+.MVideo_cafe_mobile .mvTileSearchParent{
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+.myCustomMobileTile.myCustomTile{
+	width: 160px !important;
+	height: 160px !important;
+}
+.myCustomMobileTile.myCustomTile .myCTPrice{
+	font-size: 1.125rem;
+}
+.myCustomMobileTile.myCustomTile .myCTName{
+	font-size: 1.1rem;
+}

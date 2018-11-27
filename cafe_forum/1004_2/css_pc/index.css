@@ -1,0 +1,81 @@
+@-webkit-keyframes pulsing {
+  0% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+  }
+  50% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+  100% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+  }
+}
+/*transform: translateX(85vw) translateY(-15vh) rotate(-45deg) scale(0.8, 0.8);*/
+@keyframes pulsing {
+  0% {
+    -webkit-transform:  scale(0.6, 0.6);
+    transform:  scale(0.6, 0.6) translateY(-0.5vh);
+  }
+  30% {
+    -webkit-transform:  scale(0.8, 0.8);
+    transform: scale(0.8, 0.8) translateY(-0.5vh);
+  }
+  50% {
+    -webkit-transform: scale(0.7, 0.7);
+    transform:   scale(0.7, 0.7) translateY(-0.5vh);
+  }
+  70% {
+    -webkit-transform: scale(0.8, 0.8);
+    transform:  scale(0.8, 0.8) translateY(-0.5vh);
+  }
+  90% {
+    -webkit-transform: scale(0.6, 0.6);
+    transform: scale(0.6, 0.6) translateY(-0.5vh);
+  }
+  100% {
+    -webkit-transform: scale(0.6, 0.6);
+    transform:  scale(0.6, 0.6) translateY(-0.5vh);
+  }
+}
+.indexHeader{
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 48px;
+	background: url('../img/header.png');
+	background-color: white;
+	background-size: 100% 100%;
+}
+.indexHeart{
+	height: 48px;
+	display: inline;
+	-webkit-animation: pulsing 2s infinite;
+	animation: pulsing 2s infinite;
+}
+.indexTitle{
+	height: 100%;
+	display: inline;
+	position: absolute;
+	top: 10px;
+    left: 30px;
+	font-weight: bold;
+	color: white;
+	font-family: Segoeui;
+	font-size: 24px;
+}
+@font-face {
+    font-family: 'Segoeui';
+    src: url(font/segoeui.ttf);
+    font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'SegoeuiB';
+	src: url(font/segoeuib.ttf);
+    font-weight: bold;
+	font-style: normal;
+}

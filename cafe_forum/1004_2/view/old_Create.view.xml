@@ -1,0 +1,70 @@
+<core:View controllerName="mvideo.cafe.view.Create"
+	xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:m="sap.m" xmlns="sap.uxap"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mv="mvideo.cafe.controls">
+
+	<m:Page title="{i18n>CREATE_TITLE}">
+		<m:customHeader>
+			<m:Toolbar>
+				<m:Button class="mvLogoImg" icon="sap-icon://nav-back" press="onMobileBackToMaster" visible="{device>/mv_mobile}"/>
+				<m:ToolbarSpacer/>
+				<m:Image class="mvCup" height="40px" src="{/sRootPath}img/cafe_logo_new_40.png" visible="{device>/mv_desktop}"/>
+				<m:Image class="mvCup" height="40px" src="{/sRootPath}img/cafe_logo_cup.png" visible="{device>/mv_mobile}"/>
+				<m:ToolbarSpacer visible="{device>/mv_desktop}"/>
+				<m:HBox class="mvTileSearchParent">
+					<m:SearchField class="mvTileSearch" liveChange="onTileSearch"/>
+					<m:Button class="mvLogoImg" icon="sap-icon://sys-help-2" press="onMainHelp" visible="{device>/mv_desktop}"/>
+				</m:HBox>
+			</m:Toolbar>
+		</m:customHeader>
+		<m:content>
+			<mv:ObjectPageLayout id="ObjectPageLayout" class="myObjectPageLayout" subSectionLayout="TitleOnTop"
+				showAnchorBar="true" upperCaseAnchorBar="false"
+				enableLazyLoading="false" sections="{path:'/tileGroup', templateShareable:'true'}">
+				<!--showAnchorBar="{device>/mv_desktop}"-->
+				<mv:sections>
+					<ObjectPageSection title="{name} {name2}" subSections="{path:'tiles', templateShareable:'true'}">
+						<customAnchorBarButton>
+							<mv:Button textA="{name}" textB="{name2}"/>
+						</customAnchorBarButton>
+
+						<subSections>
+							<ObjectPageSubSection title="{name} {name2}">
+								<customAnchorBarButton>
+									<mv:Button class="mvInnerBtn" textA="{name} {name2}"/>
+								</customAnchorBarButton>
+								<blocks>
+									<l:HorizontalLayout visible="{device>/mv_desktop}" content="{path:'tiles',templateShareable:'true'}"
+										allowWrapping="true">
+										<!-- desktop tile -->
+										<mv:CustomTile class="sapMTile myCustomTile"
+											press="onTilePress"
+											myEnabled="{parts:[{path:''},{path:'/benifits_g'},{path:'/tileGroup'},{path:'/PersInfo/MaxDmsRel'},{path:'/PersInfo/Persk'}],
+												formatter: 'mvideo.cafe.util.Formatter.tileEnabled'}">
+											<mv:content>
+												<m:VBox class="myCTContainer">
+													<m:VBox class="myCTFront">
+														<m:HBox justifyContent="SpaceBetween">
+															<m:Image src="{FullUrlicon}" class="myCustomTileImage"
+																height="55px" width="55px" />
+																<!-- height="60px" width="60px" /> -->
+															<m:Text class="myCTPrice myWhiteShadow"
+																text="{parts:[{path:'DynFlag'},{path: 'Price'}],
+																formatter: 'mvideo.cafe.util.Formatter.formatMoneyDyn'}" />
+														</m:HBox>
+														<m:FlexBox class="myCTNameParent" alignItems="Center" justifyContent="Start" height="60px">
+															<m:Text class="myCTName myWhiteShadow" text="{Benefit2}" />
+														</m:FlexBox>
+													</m:VBox>
+												</m:VBox>
+											</mv:content>
+										</mv:CustomTile>
+									</l:HorizontalLayout>
+								</blocks>
+							</ObjectPageSubSection>
+						</subSections>
+					</ObjectPageSection>
+				</mv:sections>
+			</mv:ObjectPageLayout>
+		</m:content>
+	</m:Page>
+</core:View>

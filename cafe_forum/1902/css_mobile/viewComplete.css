@@ -1,0 +1,24 @@
+.completeRest {
+    margin-right: 1rem;
+    margin-bottom: 30px;
+    border-style: dotted;
+    border-radius: 10px;
+    padding: 15px;
+    border-width: 1px;
+}
+.completeRestRed{
+    border-color: red;
+}
+
+.completeRestHeader{
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.completeDeduct{
+	margin-top: 0.5rem;
+}
+
+div[id*="uploader"].sapMInputBaseMessage {
+    visibility: hidden !important;
+}

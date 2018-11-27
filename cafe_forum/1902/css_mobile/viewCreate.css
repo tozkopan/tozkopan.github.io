@@ -1,0 +1,260 @@
+.MVideo_cafe .myCustomTile {
+	width: 200px !important;
+	height: 132px !important;
+	background-color: #F2F2F2;
+	border-color: #D9D9D9;
+	padding: 6px;
+}
+/*.sapUxAPObjectPageSubSectionHeaderTitle{
+    font-size: 0.875rem;
+    font-weight: bold;
+}*/
+.MVideo_cafe .myCustomTile .myCTPrice {
+	font-size: 1.4rem;
+	padding-top: 5px;
+    white-space: normal;
+}
+
+/*.myCustomTile .myCTName { OLD
+	font-size: 1.2rem;
+	padding-top: 5px;
+}*/
+.MVideo_cafe .myCustomTile .myCTName {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    margin-top: -0.5rem;
+    max-height: 60px;
+}
+.MVideo_cafe .myCTNameParent>div {
+    max-height: 60px;
+}
+
+.MVideo_cafe .myCustomTile, .myCustomTile * {
+	cursor: pointer;
+}
+.MVideo_cafe .myCustomTile.sapMTile.sapMTileActive{
+	background-color: #E5282B;
+}
+
+.MVideo_cafe .myObjectPageLayout .sapMTB {
+	background: #FFFFFF !important;
+	box-shadow: 0px 5px 5px rgb(233, 234, 236);
+	border-bottom: none;
+/* 	border-top: rgb(233, 234, 236) solid 1px; */
+	border-right: #e9eaec solid 1px;
+}
+
+.MVideo_cafe .myObjectPageLayout .sapUxAPBlockContainer{
+    margin-left: 0;
+}
+/*.sapMSltPicker .sapMIBar.sapMIBar-CTX{
+	border: 0.0625rem solid #e24949;
+}
+.sapMSltBar::after{
+	background: #e24949;
+}*/
+/* Custom ObjectPage AnchorBar button
+		*/
+.MVideo_cafe .mvideoButton .sapMBtnInner {
+	height: 1.5rem;
+	/*display: table !important;*/
+	font-size: 6px;
+}
+
+.MVideo_cafe .myObjectPageLayout .sapUxAPAnchorBar .mvideoButton.sapUxAPAnchorBarButton .sapMBtnContent,
+.MVideo_cafe .myObjectPageLayout .sapUxAPAnchorBar .mvideoButton.sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected .sapMBtnContent,
+.MVideo_cafe .myObjectPageLayout .sapUxAPAnchorBar .mvideoButton.sapUxAPAnchorBarButton .sapMBtnInner .sapMBtnContent{
+/* .mvideoButton span { */
+	line-height: 1.1rem;
+    height: 0;
+    display: table-header-group;
+    font-family: MVideo;
+    /*font-weight: bold;*/ 
+    color: black;
+    font-size: 1.2rem;
+}
+.MVideo_cafe .sapUxAPAnchorBar .mvideoButton.sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected{
+	top: 0;
+	left: 0;
+	bottom: 0;
+	content: '';
+	z-index: 3;
+	box-shadow: 0 5px 3px #333 inset;
+}
+.MVideo_cafe .sapUxAPAnchorBar .mvideoButton.sapUxAPAnchorBarButton.sapMBtn:hover>.sapMBtnHoverable .sapMBtnContent{	
+    color: black;
+}
+
+.MVideo_cafe .mvideoButton.sapMBtn {
+	height: 3.0rem;
+	border-left: solid 1px #DADADA;
+}
+
+.MVideo_cafe .myFBheaderContent {
+	margin-top: 5px;
+	margin-bottom: 1px;
+}
+
+.MVideo_cafe .myFBheaderContent>div {
+	width: 100%;
+}
+.MVideo_cafe .myFBheaderContent>div:nth-last-child(n+2) {
+    margin-right: 1rem;
+}
+
+.MVideo_cafe .myCreateDescrAdd {
+	font-size: 1rem;
+}
+
+.MVideo_cafe .myCreateDescrText {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding-left: 1rem;
+}
+
+.MVideo_cafe .myCreateDescrNum {
+    padding-left: 0.5rem;
+    font-size: 3rem;
+    color: #E31E25;
+}
+
+.main_help button{
+    background-color: red;
+    margin: 0px;
+}
+
+.mvTileSearch{
+	margin-top: 3px;
+}
+
+.MVideo_cafe .mvLogoImg{
+	margin-top: 3px;
+}
+
+.MVideo_cafe .myObjectPageLayout .sapUxAPAnchorBarButton:last-child{
+    margin-right: 1rem;
+}
+
+.MVideo_cafe .mvTileSearch>form.sapMSFF,
+.MVideo_cafe .mvTileSearch>form.sapMSFF:hover{
+	border-left: 1px solid #ddd;
+	border-top: 1px solid #c3c3c3;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #f2f2f2;
+	border-radius: 2rem;
+	box-shadow: 0 1px 3px rgba(0,0,0,.3) inset;
+	margin: 1px;
+}
+.MVideo_cafe .mvTileSearch.sapMFocus>form.sapMSFF{
+	border: 2px solid #747f7f;
+    box-shadow: 0 0 0 0 transparent inset;
+    margin: 0px;
+}
+.MVideo_cafe .mvTileSearch.sapMFocus>.sapMSFF>.sapMSFB{
+	color: #747f7f;
+}
+.MVideo_cafe .mvTileSearch .sapMSFB:active,
+.MVideo_cafe .mvTileSearch .sapMSFB:hover{
+	background-color: transparent;
+}
+
+/* .myObjectPageLayout>.sapUxAPObjectPageWrapper{	 */
+/*     background-image: url(../img/cafe_logo_cup.svg); */
+/*     background-position: right bottom; */
+/*     background-repeat: no-repeat; */
+/* } */
+/* .myObjectPageLayout .sapUxAPObjectPageSectionHeader{ */
+/* 	background: linear-gradient(to right, #f2f2f2, transparent); */
+/* } */
+
+.MVideo_cafe #Create .sapMTB.sapMPageHeader{
+/* 	height: 4rem; */
+}
+.MVideo_cafe #Create .sapMPage>.sapMPageHeader + section,
+.MVideo_cafe #Create .sapMPage>.sapMPageSubHeader + section,
+.MVideo_cafe #Create .sapMPage>.sapMPageHeader + .sapUiHiddenPlaceholder + section{
+/* 	top: 4rem;	 */
+}
+
+.mvCup{
+	margin-top: 2px;
+}
+
+
+.MVideo_cafe :not(.sapUxAPAnchorBarButton) :not(.sapMBtnDisabled)>.sapMBtnInner.sapMBtnActive {
+    background-color: #E5282B !important;
+    border-color: #E5282B !important;
+}
+
+
+/**after 1.40**/
+.MVideo_cafe .sapUxAPAnchorBar.sapUxAPAnchorBarScrollLeft .anchorBarArrowLeft{
+    /*background-image: linear-gradient(to right, #f9d2d2 0px, #f9d2d2 75%, rgba(242, 248, 252, 0) 100%);*/
+    background-image: none;
+}
+.MVideo_cafe .sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrowRight{
+    /*background-image: linear-gradient(to left, #f9d2d2 0px, #f9d2d2 75%, rgba(242, 248, 252, 0) 100%);*/
+    background-image: none;
+}
+.MVideo_cafe .sapMIBar.sapMTB .sapMBarChild{
+	margin-right: 0;
+}
+.MVideo_cafe .sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMBtnInner{
+	height: auto;
+}
+.MVideo_cafe .sapUxAPHierarchicalSelect{
+	visibility: visible;
+}
+.sapUiMedia-Std-Tablet .MVideo_cafe .sapUxAPAnchorBarOverflow,
+.sapUiMedia-Std-Desktop .MVideo_cafe .sapUxAPAnchorBarOverflow{
+	padding-right: 1rem;
+}
+
+.MVideo_cafe .sapMSplitContainerDetail .sapUxAPObjectPageNavigation>.sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrowRight{
+    right: 0.5rem;
+}
+.MVideo_cafe .sapMSplitContainerDetail .sapUxAPObjectPageNavigation.sapUxAPObjectPageStickyAnchorBar>.sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrowRight {
+	right: 1.5rem;
+}
+
+/** notifications button **/
+.mvideoBellButton .sapUiIcon:after{
+	content: attr(data-sap-ui-bellbutton-content);
+    speak: none;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+	padding-left: 3px;
+}
+.mvideoBellButton .sapUiIcon{
+	width: auto;
+    color: #e33945;
+}
+.notifArea .sapMNLB{
+	cursor: pointer;
+}
+
+/**mobile test**/
+.MVideo_cafe_mobile .sapUxAPBlockContainer {
+	margin: 0rem!important;
+}
+.MVideo_cafe_mobile .sapUxAPBlockContainer>.sapUiRespGrid{
+	padding: 0;
+}
+.MVideo_cafe_mobile .sapUxAPBlockContainer>.sapUiRespGrid>div{
+	margin: 0;
+}
+.MVideo_cafe_mobile .mvTileSearchParent{
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+.myCustomMobileTile.myCustomTile{
+	width: 160px !important;
+	height: 160px !important;
+}
+.myCustomMobileTile.myCustomTile .myCTPrice{
+	font-size: 1.125rem;
+}
+.myCustomMobileTile.myCustomTile .myCTName{
+	font-size: 1.1rem;
+}

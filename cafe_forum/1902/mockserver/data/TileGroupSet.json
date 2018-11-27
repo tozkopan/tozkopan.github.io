@@ -1,0 +1,251 @@
+[{
+	"Tilesupergroup": "HEAL",
+	"GroupDisable": true,
+	"Num": "10",
+	"Tilegroup": "DMS",
+	"Text1sgr": "Здоровье",
+	"Text1": "ДМС",
+	"Text2sgr": "",
+	"Text2": "сотрудника",
+	"Numsgr": "10"
+}, {
+	"Tilesupergroup": "HEAL",
+	"GroupDisable": false,
+	"Num": "15",
+	"Tilegroup": "DMSR",
+	"Text1sgr": "Здоровье",
+	"Text1": "ДМС",
+	"Text2sgr": "",
+	"Text2": "родственника",
+	"Numsgr": "10"
+}, {
+	"Tilesupergroup": "HEAL",
+	"GroupDisable": true,
+	"Num": "30",
+	"Tilegroup": "INV",
+	"Text1sgr": "Здоровье",
+	"Text1": "Мед. исследование",
+	"Text2sgr": "",
+	"Text2": "Инвитро",
+	"Numsgr": "10"
+}, {
+	"Tilesupergroup": "HEAL",
+	"GroupDisable": false,
+	"Num": "40",
+	"Tilegroup": "MED",
+	"Text1sgr": "Здоровье",
+	"Text1": "Медицинская",
+	"Text2sgr": "",
+	"Text2": "диагностика",
+	"Numsgr": "10"
+}, {
+	"Tilesupergroup": "FIT",
+	"GroupDisable": true,
+	"Num": "10",
+	"Tilegroup": "FITR",
+	"Text1sgr": "Фитнес",
+	"Text1": "Фитнес ReСтарт",
+	"Text2sgr": "",
+	"Text2": "",
+	"Numsgr": "15"
+}, {
+	"Tilesupergroup": "FIT",
+	"GroupDisable": true,
+	"Num": "20",
+	"Tilegroup": "FITM",
+	"Text1sgr": "Фитнес",
+	"Text1": "Единый абонемент FITmost",
+	"Text2sgr": "",
+	"Text2": "",
+	"Numsgr": "15"
+}, {
+	"Tilesupergroup": "FIT",
+	"GroupDisable": true,
+	"Num": "30",
+	"Tilegroup": "FITN",
+	"Text1sgr": "Фитнес",
+	"Text1": "Компенсация за фитнес",
+	"Text2sgr": "",
+	"Text2": "",
+	"Numsgr": "15"
+}, {
+	"Tilesupergroup": "EDUC",
+	"GroupDisable": false,
+	"Num": "10",
+	"Tilegroup": "LANG",
+	"Text1sgr": "Обучение",
+	"Text1": "Обучение",
+	"Text2sgr": "",
+	"Text2": "Специалист",
+	"Numsgr": "20"
+}, {
+	"Tilesupergroup": "EDUC",
+	"GroupDisable": false,
+	"Num": "20",
+	"Tilegroup": "EDUR",
+	"Text1sgr": "Обучение",
+	"Text1": "Обучение",
+	"Text2sgr": "",
+	"Text2": "РШУ",
+	"Numsgr": "20"
+}, {
+	"Tilesupergroup": "EDUC",
+	"GroupDisable": false,
+	"Num": "30",
+	"Tilegroup": "TRAI",
+	"Text1sgr": "Обучение",
+	"Text1": "Обучение",
+	"Text2sgr": "",
+	"Text2": "CBSD",
+	"Numsgr": "20"
+}, {
+	"Tilesupergroup": "EDUC",
+	"GroupDisable": false,
+	"Num": "40",
+	"Tilegroup": "ENGL",
+	"Text1sgr": "Обучение",
+	"Text1": "Английский",
+	"Text2sgr": "",
+	"Text2": "онлайн",
+	"Numsgr": "20"
+}, {
+	"Tilesupergroup": "EDUC",
+	"GroupDisable": true,
+	"Num": "50",
+	"Tilegroup": "LIBR",
+	"Text1sgr": "Обучение",
+	"Text1": "Электронная",
+	"Text2sgr": "",
+	"Text2": "библиотека",
+	"Numsgr": "20"
+}, {
+	"Tilesupergroup": "EDUC",
+	"GroupDisable": false,
+	"Num": "60",
+	"Tilegroup": "EDUS",
+	"Text1sgr": "Обучение",
+	"Text1": "Дистанционное",
+	"Text2sgr": "",
+	"Text2": "обучение Eduson",
+	"Numsgr": "20"
+}, {
+	"Tilesupergroup": "EMPL",
+	"GroupDisable": true,
+	"Num": "10",
+	"Tilegroup": "BONU",
+	"Text1sgr": "Популярные",
+	"Text1": "Бонусные",
+	"Text2sgr": "льготы",
+	"Text2": "рубли",
+	"Numsgr": "30"
+}, {
+	"Tilesupergroup": "EMPL",
+	"GroupDisable": true,
+	"Num": "20",
+	"Tilegroup": "VACA",
+	"Text1sgr": "Популярные",
+	"Text1": "Доп. выходной",
+	"Text2sgr": "льготы",
+	"Text2": "",
+	"Numsgr": "30"
+}, {
+	"Tilesupergroup": "EMPL",
+	"GroupDisable": true,
+	"Num": "25",
+	"Tilegroup": "VACB",
+	"Text1sgr": "Популярные",
+	"Text1": "Доп. выходной",
+	"Text2sgr": "льготы",
+	"Text2": "",
+	"Numsgr": "30"
+}, {
+	"Tilesupergroup": "EMPL",
+	"GroupDisable": true,
+	"Num": "40",
+	"Tilegroup": "LOTT",
+	"Text1sgr": "Популярные",
+	"Text1": "Лотерея",
+	"Text2sgr": "льготы",
+	"Text2": "",
+	"Numsgr": "30"
+}, {
+	"Tilesupergroup": "EMPL",
+	"GroupDisable": false,
+	"Num": "50",
+	"Tilegroup": "SOUV",
+	"Text1sgr": "Популярные",
+	"Text1": "Сувениры",
+	"Text2sgr": "льготы",
+	"Text2": "",
+	"Numsgr": "30"
+}, {
+	"Tilesupergroup": "JUR",
+	"GroupDisable": true,
+	"Num": "10",
+	"Tilegroup": "JUR",
+	"Text1sgr": "Юридическая",
+	"Text1": "Юридическая",
+	"Text2sgr": "консультация",
+	"Text2": "консультация",
+	"Numsgr": "50"
+}, {
+	"Tilesupergroup": "PARK",
+	"GroupDisable": true,
+	"Num": "80",
+	"Tilegroup": "PARK",
+	"Text1sgr": "Парковка",
+	"Text1": "Парковка",
+	"Text2sgr": "",
+	"Text2": "",
+	"Numsgr": "60"
+}, {
+	"Tilesupergroup": "ENS",
+	"GroupDisable": true,
+	"Num": "00",
+	"Tilegroup": "ENS1",
+	"Text1sgr": "Страхование",
+	"Text1": "Семейное",
+	"Text2sgr": "жизни",
+	"Text2": "страхование",
+	"Numsgr": "70"
+}, {
+	"Tilesupergroup": "ENS",
+	"GroupDisable": true,
+	"Num": "10",
+	"Tilegroup": "ENS",
+	"Text1sgr": "Страхование",
+	"Text1": "Личное",
+	"Text2sgr": "жизни",
+	"Text2": "страхование",
+	"Numsgr": "70"
+}, {
+	"Tilesupergroup": "MOBL",
+	"GroupDisable": true,
+	"Num": "00",
+	"Tilegroup": "MOBL",
+	"Text1sgr": "Мобильная",
+	"Text1": "Мобильная",
+	"Text2sgr": "связь",
+	"Text2": "связь",
+	"Numsgr": "75"
+}, {
+	"Tilesupergroup": "CHAR",
+	"GroupDisable": false,
+	"Num": "10",
+	"Tilegroup": "CHAR",
+	"Text1sgr": "Социальная",
+	"Text1": "Социальная",
+	"Text2sgr": "ответственность",
+	"Text2": "ответственность",
+	"Numsgr": "90"
+}, {
+	"Tilesupergroup": "BELA",
+	"GroupDisable": false,
+	"Num": "98",
+	"Tilegroup": "BELA",
+	"Text1sgr": "Страхование выезжающих за",
+	"Text1": "Страхование выезжающих за",
+	"Text2sgr": "рубеж",
+	"Text2": "рубеж",
+	"Numsgr": "99"
+}]

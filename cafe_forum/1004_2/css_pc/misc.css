@@ -1,0 +1,70 @@
+.MVideo_cafe .sapMSplitContainerMaster:after{
+    top: 3rem;
+}
+.MVideo_cafe .sapMSplitContainerDetail .sapUiResponsiveMargin {
+    margin: 0rem!important;
+}
+.MVideo_cafe .sapUxAPObjectPageSubSectionHeader{
+    padding: 0.25rem 0 0 3rem;
+}
+.MVideo_cafe .sapUxAPObjectPageSubSectionHeaderTitle{
+    font-size: 18px;
+    line-height: 36px;
+}
+/****************************OLD****************************/
+
+.mobileTable {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.mobileTable td {
+	font-size: 14px;
+	padding: 10px 5px;
+	border-style: solid;
+	border-width: 1px;
+    border-color: black;
+	overflow: hidden;
+	word-break: normal;
+}
+
+.mobileTable th {
+	font-size: 14px;
+	font-weight: normal;
+	padding: 10px 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	overflow: hidden;
+	word-break: normal;
+}
+
+.mobileTable .mobileTable-fez9 {
+	background-color: #755b49;
+	color: #ffffff;
+	text-align: center
+}
+
+.mobileTable .mobileTable-v2y6 {
+	background-color: #ffc000;
+	text-align: center
+}
+
+.mobileTable .mobileTable-ligd {
+	background-color: #755b49;
+	color: #ffffff
+}
+
+.mobileTable .mobileTable-rnod {
+	background-color: #f2f2f2
+}
+
+.mobileTable .mobileTable-dmxn {
+	background-color: #f2f2f2;
+	text-align: center
+}
+
+/** empty view **/
+.emptyMainBox>*{
+	width: 100%;
+}

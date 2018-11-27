@@ -1,0 +1,311 @@
+@font-face {
+    font-family: "MVideo";
+    src: url("font/MVideo_regular_webkit.woff") format('woff');
+    /*src: url("../../../zmv_benefit/css/font/MVideo_regular_webkit.woff");*/
+}
+@font-face {
+    font-family: "MVideo";
+    src: url("font/MVideo_bold_webkit.woff") format('woff');
+    /*src: url("../../../zmv_benefit/css/font/MVideo_bold_webkit.woff");*/
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'icomoon';
+    src: url('font/icomoon.woff?jmdwqk') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.sapMInputBaseReadonlyInner {
+    border-color: transparent;
+    background: transparent;
+}
+.MVideo_cafe .sapUxAPObjectPageLayout,
+.MVideo_cafe .sapUxAPObjectPageContainer{
+    background: #ffffff;
+}
+.MVidep_cafe .sapUiBody{
+    background-color: #ffffff;
+}
+.MVideo_cafe .sapMSlt {
+    height: 2.5rem;
+    margin: 0.25rem 0 0.25rem 0;
+    background: #ffffff;
+}
+.MVideo_cafe .sapMSlt:not(.mySelectStateError) {
+    border: 1px solid #bfbfbf;
+}
+
+
+.MVideo_cafe .sapMBtn:hover > .sapMBtnHoverable.sapMBtnReject:not(.sapMBtnActive){
+    background-color: #cc1919;
+    border: 1px solid transparent;
+}
+html.sap-desktop .sapMSlt:not(.sapMSltDisabled):not(.sapMSltState):focus {
+    border-color: #ffffff;
+}
+.MVideo_cafe :not(.sapMBtnActive) span.sapMBtnInner.sapMBtnReject{
+    color: #ffffff !important;
+}
+.sapMPopover.sapUxAPAnchorBarPopover :not(.sapMBtnDisabled) > .sapMBtnInner.sapMBtnActive{
+	color: #ffffff !important;
+}
+.MVideo_cafe :not(.sapMBtnActive) span.sapMBtnInner.sapMBtnReject{
+    background-image: none;
+    background-color: #cc1919;
+    border-color: transparent !important;
+    border: 1px solid transparent;
+    text-shadow: none;
+}
+html.sap-desktop .sapMIBar.sapMFooter-CTX {
+    background-color: rgba(54,62,67,0.96) !important;
+}
+.MVideo_cafe .sapMSplitContainerMaster .sapMSlt {
+    height: 2.5rem;
+    margin: 0.25rem 0 0.25rem 0;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+}
+.MVideo_cafe .sapMSplitContainerMaster .sapMSltPressed .sapMSltIcon {
+    color: #ffffff;
+}
+.MVideo_cafe .sapMSplitContainerMaster .sapMSltIcon {
+    font-size: 1.375rem;
+    line-height: 2.375rem;
+    padding: 0 0.625rem;
+    color: #666666;
+}
+.MVideo_cafe .sapMSplitContainerMaster .sapMSltLabel {
+    line-height: 2.375rem;
+    color: #000000;
+    font-size: 0.875rem;
+}
+html .sapMSplitContainerMaster .sapMIBar.sapMHeader-CTX, .sapMSplitContainerMaster .sapMIBar .sapMHeader-CTX, 
+html .sapMSplitContainerMaster .sapMIBar.sapMSubHeader-CTX, .sapMSplitContainerMaster .sapMIBar.sapMSubHeader-CTX, 
+.sapMSplitContainerMaster {
+    background-color: #ffffff;
+}
+.MVideo_cafe .sapMFooter-CTX .sapMBtn:hover>.sapMBtnHoverable.sapMBtnReject:not(.sapMBtnActive) {
+    background-color: #b51616;
+    border-color: #b51616;
+}
+a[disabled],
+a.disabled {
+    pointer-events: none;
+}
+.sapMInputBaseReadonlyInner {
+    border-color: transparent;
+    background: transparent;
+}
+.MVideo_cafe .sapMBtn {
+    vertical-align: middle;
+    text-align: center;
+}
+.MVideo_cafe .sapMITBHead {
+    font-family: "MVideo";
+    font-size: 0.7rem;
+}
+.MVideo_cafe .sapMITBFilter .sapMITBText,
+.MVideo_cafe .sapMITBHead{
+    word-wrap: break-word;
+	width: 100%;
+}
+.MVideo_cafe .sapMText {
+    font-family: "MVideo";
+} 
+.MVideo_cafe .mvRawHTML ul.Checklist{
+    list-style: none;
+    padding-left: 1rem;
+}
+.MVideo_cafe .mvRawHTML ul.Checklist>li{
+    padding-left: 1rem;
+    position: relative;
+}
+.MVideo_cafe .mvRawHTML ul.Checklist>li:before {
+    content: '✔';
+    position: absolute; top: 0; left: 0;
+}
+.MVideo_cafe .mvRawHTML ul.Level2{
+    list-style: none;
+    padding-left: 1rem;
+}
+.mvRawHTML ul.Level2>li{
+    padding-left: 1rem;
+    position: relative;
+}
+.MVideo_cafe .mvRawHTML ul.Level2>li:before {
+    content: '-';
+    position: absolute; top: 0; left: 0;
+}
+.MVideo_cafe .sapMSelectListItemBase.sapMSelectListItemBasePressed{
+	background: #E5282B;
+}
+.MVideo_cafe :not(.sapMBtnDisabled)>.sapMBtnInner.sapMBtnActive {
+    background-color: #E5282B;
+}
+.MVideo_cafe .sapMValueStateMessage {
+	max-width: 40% !important;
+	display: block !important;
+}
+.MVideo_cafe .sapMSelectListItemBaseSelected {
+    background: #e7e7e7;
+}
+.MVideo_cafe *,
+.MVideo_cafe .sapMText,
+.MVideo_cafe .sapMTB-Transparent-CTX .sapMText,
+.MVideo_cafe .sapMBtnInner,
+.MVideo_cafe .sapUiBody {
+    font-family: "MVideo";
+}
+.MVideo_cafe .sapMBar{
+    box-shadow: inset 0 -0.0625rem #ebebeb;
+}
+.MVideo_cafe .sapUiMedia-Std-Phone .sapUxAPAnchorBar .sapUxAPAnchorBarScrollContainer {
+    display: block !important;
+}
+.sapMShellBrandingBar {
+    background-color: #808080;
+}
+.MVideo_cafe .sapMSplitContainerMaster:before {
+    border-right-color: #808080;
+}
+.MVideo_cafe .sapMTitleStyleAuto {
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+.MVideo_cafe .masterName>.sapMFlexItem {
+    line-height: 1rem;
+}
+.MVideo_cafe .masterName .sapMTitleStyleAuto {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+.MVideo_cafe .masterName {
+    margin-top: 0.3rem;
+}
+.MVideo_cafe .sapMPageHeader::before {
+    border-top-color: #808080;
+}
+.MVideo_cafe_desktop #Master {
+    max-width: 360px;
+}
+.MVideo_cafe .sapMSplitContainerMaster {
+	width: 340px;
+}
+.MVideo_cafe .sapMBar-CTX:not(.sapMBtnDisabled)>.sapMBtnInner.sapMBtnActive {
+    background-color: #E5282B;
+    border-color: #E5282B;
+}
+/* NavButton Text*/
+
+/* .sapMPageWithHeader>.sapMPageHeader>.sapMBarLeft>.sapMBtn:after{ */
+.MVideo_cafe :not(.sapMBtnDisabled) > .sapMBtnInner.sapMBtnActive{
+    color: #ffffff;
+}    
+.sapMDialog .sapMIBar-CTX .sapMBtnInner,
+.sapMDialog .sapMIBar-CTX .sapMBtn:hover > .sapMBtnHoverable:not(.sapMBtnActive){
+	color: #ffffff;
+	text-shadow: 0 1px 0 none;
+}
+.MVideo_cafe_desktop .sapMPageWithHeader>.sapMPageHeader>.sapMBarLeft>.sapMBtn>.sapMBtnBack:after {
+    content: "\041D\0430\0020\0433\043B\0430\0432\043D\0443\044E";
+    padding-right: 0.5rem;
+    font-size: 1.0rem;
+    font-family: MVideo;
+    color: #666666;
+}
+
+.MVideo_cafe .sapMBtnDefault .sapMBtnInner{
+	color: #ffffff;
+}
+.MVideo_cafe_desktop .sapMPageWithHeader>.sapMPageHeader>.sapMBarLeft>.sapMBtn>.sapMBtnBack.sapMBtnActive:after {
+    color: #ffffff;
+}
+.MVideo_cafe .sapMPageWithHeader>.sapMPageHeader>.sapMBarLeft>.sapMBtn>.sapMBtnBack {
+    display: flex;
+    align-items: center;
+}
+.mvRawHTML {
+    /*overflow-x: scroll;*/
+    overflow-x: auto;
+}
+.mvRawHTML td {
+    padding: 0.5rem;
+}
+.mvRawHTML .tblNoPad td {
+    padding: 0.1rem;
+}
+.mvRawHTML h1 {
+    font-size: 1.17em;
+    /* like in Chrome */
+}
+.mvRawHTML li>ul {
+    padding-top: 0.5rem;
+}
+.mvRawHTML ol>li {
+    padding-bottom: 0.5rem;
+}
+.mvNextBtn {
+    font-weight: bold;
+}
+.MVideo_cafe .sapMIBar-CTX.sapMFooter-CTX:not(.sapMBtnDisabled)>.sapMBtnActive {
+    background-color: #E5282B;
+    color: #ffffff;
+    text-shadow: none
+}
+.MVideo_cafe .sapMDialog.sapMMessageBoxQuestion>header.sapMBar>.sapMBarMiddle>.sapMBarPH>.sapMDialogIcon.sapUiIcon {
+    color: #E5282B;
+}
+.MVideo_cafe .sapMDialog.sapMMessageBoxQuestion>header.sapMBar {
+    box-shadow: inset 0 -0.0625rem #E5282B;
+}
+.MVideo_cafe .sapMInputBaseInner:not(.sapMInputBaseReadonlyInner):not(.sapMInputBaseStateInner):focus,
+.MVideo_cafe .sapMInputBaseInner:not(.sapMInputBaseReadonlyInner):not(.sapMInputBaseStateInner):not(.sapMInputBaseDisabledInner):hover,
+.MVideo_cafe .sapMSltPressed:not(.sapMSltDisabled),
+.sap-desktop .MVideo_cafe .sapMSlt:focus,
+.MVideo_cafe .sapMSltHoverable:hover,
+.MVideo_cafe .sapMRbHoverable:hover,
+.MVideo_cafe .sapMRb.sapMRbBTouched .sapMRbBOut {
+    border-color: #E5282B;
+}
+
+.sap-desktop .sapMSplitContainerMaster .MVideo_cafe .sapMSlt:focus{
+    border-color: #ffffff;
+}
+.MVideo_cafe .sapMSltPressed>.sapMSltArrow,
+.MVideo_cafe .sapMInputVH:not(.sapMInputBaseReadonly) .sapMInputValHelp>.sapMInputValHelpInner:active {
+    background: #E5282B;
+}
+.MVideo_cafe .sapMRbSel .sapMRbBInn {
+    background-color: #E5282B;
+}
+.MVideo_cafe .sapMLnk {
+    text-decoration: underline;
+}
+.mv_whitespace {
+    white-space: normal;
+}
+/** mobile test **/
+
+.MVideo_cafe_mobile * {
+    outline: none !important;
+}
+
+/** fixes for new FLP theme **/
+.MVideo_cafe :not(.sapMBtnDisabled) > span.sapMBtnInner.sapMBtnReject > .sapMBtnIcon{
+	color: white;
+}
+/* viewSteps.css - Delete rule: .step2 .sapMInputBase.sapMInputBaseReadonly{ height: 1.5rem; } */
+.sapUshellShell .MVideo_cafe .sapMPageBgStandard,
+.MVideo_cafe .sapMInputBaseReadonlyInner .sapMInputBaseInner,
+html .MVideo_cafe .sapMSplitContainerMaster .sapMIBar.sapMHeader-CTX{
+	background-color: transparent;
+}
+.MVideo_cafe .sapMInputBaseReadonlyInner .sapMInputBaseInner{
+	border-color: transparent;
+}
+.cafeNotificationDialog .sapMDialogScrollCont{
+	margin: 0 1rem;
+}
+.mainList.sapMListBGSolid .sapMLIB:not(.sapMLIBActive):not(.sapMLIBSelected):not(:hover){
+	background: #f2f3f5;	
+}

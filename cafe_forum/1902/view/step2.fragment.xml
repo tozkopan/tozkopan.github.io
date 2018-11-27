@@ -1,0 +1,86 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified"
+	xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:mv="mvideo.cafe.controls">
+
+	<VBox items="{local>/step2/fieldGroups}" class="step2">
+		<VBox class="step2group">
+			<Label text="{local>name}" class="step2subTitle"
+				visible="{path: 'local>name', formatter: 'mvideo.cafe.util.Formatter.isNotEmpty'}" />
+			<VBox items="{local>fields}">
+				<HBox alignItems="Center" justifyContent="SpaceBetween" class="step2fields"
+					visible="{= ${local>Hide} !== true}">
+					<HBox visible="{= ${local>Text} !== '' &amp;&amp; ${device>/mv_desktop} }">
+						<Label text="{local>Text}"/>
+						<core:Icon class="step2fieldCalc" src="sap-icon://simulate"
+							visible="{local>Affect}" />
+					</HBox>
+					<HBox visible="{= ${local>Text} !== '' &amp;&amp; ${device>/mv_mobile} }" width="100%">
+						<Label text="{local>Text}" class="mv_whitespace"/>
+						<core:Icon class="step2fieldCalc" src="sap-icon://simulate"
+							visible="{local>Affect}" />
+					</HBox>
+					<VBox class="step2Inputs" width="{= (${device>/mv_mobile} || ${local>Text} === '') ? '100%' : '40%'}">
+						<!-- Simple type -->
+						<Input class="fieldMark" visible="{= ${local>FieldType} === '' }"
+							name="{local>Techname}" change="onStep2Change" editable="{local>/edit}"
+							value="{local>Value}"
+							maxLength="{path: 'local>MaxLength', formatter: 'mvideo.cafe.util.Formatter.parseInt'}"
+							placeholder="{path: 'local>Explaintext', formatter: 'mvideo.cafe.util.Formatter.sameOrSpace'}" />
+						<!-- Numerical type -->
+						<Input class="fieldMark" visible="{= ${local>FieldType} === 'NUMC' }"
+							liveChange="onlyNumbersLeftAlive" valueLiveUpdate="true"
+							name="{local>Techname}" change="onStep2Change" editable="{local>/edit}"
+							value="{local>Value}"
+							maxLength="{path: 'local>MaxLength', formatter: 'mvideo.cafe.util.Formatter.parseInt'}"
+							placeholder="{path: 'local>Explaintext', formatter: 'mvideo.cafe.util.Formatter.sameOrSpace'}" />
+						<!-- Date type -->
+						<DatePicker class="fieldMark" visible="{= ${local>FieldType} === 'DATE' }"
+							name="{local>Techname}" change="onStep2Change" editable="{local>/edit}"
+							dateValue="{local>DateValue}"
+							placeholder="{path: 'local>Explaintext', formatter: 'mvideo.cafe.util.Formatter.sameOrSpace'}" />
+						<!-- TextDate format -->
+						<MaskInput class="fieldMark" visible="{= ${local>FieldType} === 'DATEF' }"
+							liveChange="changeDateFormat" valueLiveUpdate="true" width="100%"
+							name="{local>Techname}" change="onStep2Change" editable="{local>/edit}"
+							value="{local>Value}" placeholderSymbol="_" mask="99.99.9999"
+							maxLength="{path: 'local>MaxLength', formatter: 'mvideo.cafe.util.Formatter.parseInt'}"
+							placeholder="{path: 'local>Explaintext', formatter: 'mvideo.cafe.util.Formatter.sameOrSpace'}" />
+						<!-- -->
+						<mv:Select class="fieldMark"
+							visible="{= ${local>FieldType} === 'DOM' 
+							 || ${local>FieldType} === 'DCHAR' || ${local>FieldType} === 'DDATE'}"
+							change="onStep2Change" enabled="{local>/edit}" selectedKey="{local>Value}"
+							items="{local>Values/results}" width="100%" forceSelection="false">
+							<core:Item key="{local>Key}" text="{local>Text}" />
+						</mv:Select>
+						<!-- Сustom dictionary with date periods -->
+						<mv:Select class="fieldMark"
+							visible="{= ${local>FieldType} === 'EDU' &amp;&amp; ${local>/edit} }" selectedKey="{local>keyValue}"
+							change="handleMinKeySelect" enabled="{local>/edit}"
+							items="{local>Values/keys}" width="100%" forceSelection="false">
+							<core:Item key="{local>UpperKey}" text="{local>UpperKey}" />
+						</mv:Select>
+						<mv:Select class="fieldMark"
+							visible="{= ${local>FieldType} === 'EDU'}"
+							change="onStep2Change" enabled="{local>/edit}" selectedKey="{local>Value}"
+							items="{local>Values/results}" width="100%" forceSelection="false">
+							<core:Item key="{local>Key}" text="{local>Text}" />
+						</mv:Select>
+						<!-- Integer quantity -->
+						<HBox visible="{= ${local>FieldType} === 'IQUAN' }" class="step2IQUAN">
+							<Button icon="sap-icon://less" visible="{local>/edit}" press="iquanPress" data:iquanPress="-1"/>
+							<Input class="fieldMark" liveChange="integerQuantity"
+								valueLiveUpdate="true" name="{local>Techname}" change="onStep2Change"
+								editable="false" 
+								value="{local>Value}" data:max="{local>IquanMax}"
+								data:min="{local>IquanMin}"
+								placeholder="{path: 'local>Explaintext', formatter: 'mvideo.cafe.util.Formatter.sameOrSpace'}" />
+							<Button icon="sap-icon://add" visible="{local>/edit}" press="iquanPress" data:iquanPress="1"/>
+						</HBox>
+					</VBox>
+				</HBox>
+			</VBox>
+		</VBox>
+	</VBox>
+</core:FragmentDefinition>

@@ -1,0 +1,40 @@
+<core:FragmentDefinition xmlns="sap.ui.table"
+	xmlns:mv="mvideo.cafe.controls" xmlns:u="sap.ui.unified" xmlns:m="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Table rows="{local>/Files}" noData="{i18n>COMPLETE_FILE_NO_DATA}"
+		selectionMode="None" id="completeTable"
+		visibleRowCount="{path: 'local>/Files', formatter: 'mvideo.cafe.util.Formatter.lengthOrOne'}">
+		<columns>
+			<Column width="25%">
+				<m:Label text="{i18n>COMPLETE_FILE_COL_BENNAME}" />
+				<template>
+					<m:Text text="{local>Benefit2}{path:'local>Pskey', formatter:'mvideo.cafe.util.Formatter.seqnrCurls'}"/>
+				</template>
+			</Column>
+			<Column width="50%">
+				<m:Label text="{i18n>COMPLETE_FILE_COL_DOCNAME}" />
+				<template>
+					<m:Link class="sapMSLITitleOnly completeLnkDisabled" text="{local>Name}" press="handleDocPress"
+						data:link="{local>Link}" data:dynamic="{local>Dynamic}" data:type="{local>MimeType}" enabled="{local>Enabled}"/>
+				</template>
+			</Column>
+			<Column width="25%">
+				<m:Label text="{i18n>COMPLETE_FILE_COL_UPLOAD}" />
+				<template>
+					<mv:FileUploader class="myUploader" uploadOnChange="true" showValueStateMessage="false"
+						uploadUrl="{local>/uploadUrl}" useMultipart="false" getToken="onGetToken"
+						sendXHR="true" sameFilenameAllowed="false" valueState="Error"
+						myUploadFail="onMyUploadFail" visible="{= ${local>Optional} === 'false' ? true : false}"
+						uploadComplete="onUploadComplete" uploadAborted="onUploadAborted" change="onChange"
+						techkey="{local>Year}{local>BenefitId}{local>Benefit2Id}{local>Seqnr}{local>Filekey}"
+						friendlyName="{local>Name}"/>
+					<!-- <u:FileUploader uploadOnChange="true" uploadUrl="{local>/uploadUrl}" 
+						useMultipart="false" sameFilenameAllowed="true" valueState="Error" uploadComplete="onUploadComplete" 
+						/> -->
+				</template>
+			</Column>
+		</columns>
+	</Table>
+
+</core:FragmentDefinition>

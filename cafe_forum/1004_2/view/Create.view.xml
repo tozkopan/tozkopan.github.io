@@ -1,0 +1,75 @@
+<core:View controllerName="mvideo.cafe.view.Create" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:m="sap.m" xmlns="sap.uxap"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mv="mvideo.cafe.controls">
+	<m:Page title="{i18n>CREATE_TITLE}" class="CreatePage">
+		<m:customHeader>
+			<m:Toolbar>
+				<m:Button class="mvLogoImg" icon="sap-icon://nav-back" press="onMobileBackToMaster" visible="{device>/mv_mobile}"/>
+				<m:ToolbarSpacer/>
+				<m:Title text="DreamChoice" class="myCreateTitle"/>
+				<m:ToolbarSpacer visible="{device>/mv_desktop}"/>
+				<!--<m:HBox class="mvTileSearchParent sapUiMediumMarginEnd">-->
+				<!--	<m:SearchField class="mvTileSearch" liveChange="onTileSearch"/>-->
+				<!--</m:HBox>-->
+			</m:Toolbar>
+		</m:customHeader>
+		<m:content>
+			<mv:ObjectPageLayout id="ObjectPageLayout" class="myObjectPageLayout" subSectionLayout="TitleOnTop" showAnchorBar="true"
+				upperCaseAnchorBar="false" enableLazyLoading="false" sections="{path:'/tileGroup', templateShareable:'true'}">
+				<!--showAnchorBar="{device>/mv_desktop}"-->
+				<mv:sections>
+					<ObjectPageSection title="{name} {name2}" subSections="{path:'tiles', templateShareable:'true'}">
+						<customAnchorBarButton>
+							<mv:Button textA="{= !!${name} ? ${name}.toUpperCase() : ''}" textB="{= !!${name2} ? ${name2}.toUpperCase() : ''}"/>
+						</customAnchorBarButton>
+						<subSections>
+							<ObjectPageSubSection title="{name} {name2}">
+								<customData>
+									<core:CustomData key="Tilesupergroup" value="{id}" writeToDom="true"/>
+								</customData>
+								<blocks>
+									<l:HorizontalLayout visible="{device>/mv_desktop}" content="{path:'tiles',templateShareable:'true'}" allowWrapping="true">
+										<l:customData>
+											<core:CustomData key="Tilegroup" value="{id}" writeToDom="true"/>
+										</l:customData>
+										<!--press="onTilePress"-->
+										<mv:CustomTile class="sapMTile myCustomTile"
+											myEnabled="{parts:[{path:''},{path:'/benifits_g'},{path:'/TileGroupSet'},{path:'/Tile'},{path:'/limitsRaw'}], formatter: 'mvideo.cafe.util.Formatter.tileEnabled'}"
+											tooltip="{parts:[{path:''},{path:'/benifits_g'},{path:'/TileGroupSet'},{path:'/Tile'},{path:'/limitsRaw'}], formatter: 'mvideo.cafe.util.Formatter.tileTooltip'}"
+											zTooltip="{parts:[{path:''},{path:'/benifits_g'},{path:'/TileGroupSet'},{path:'/Tile'},{path:'/limitsRaw'}], formatter: 'mvideo.cafe.util.Formatter.tileTooltip'}">
+											<mv:content>
+												<m:VBox justifyContent="SpaceBetween" height="100%" class="myCustomTileContent">
+													<m:HBox justifyContent="SpaceBetween" alignItems="Start">
+														<m:Text class="myCTName myWhiteShadow" text="{Benefit2}"/>
+													</m:HBox>
+													<m:HBox justifyContent="SpaceBetween" alignItems="End">
+														<m:HBox justifyContent="SpaceBetween" alignItems="End">
+															<m:Button icon="sap-icon://cart" type="Transparent" class="myCTButton myCTButtonCart sapUiTinyMarginEnd" press="_onAddCartTilePress"/>
+															<m:Button icon="sap-icon://message-information" type="Transparent" class="myCTButton" visible="{= !!${MainDescription}}"
+																press="_onViewInfoPress"/>
+														</m:HBox>
+														<m:Text class="myCTPrice myMoney myWhiteShadow" text="{path: 'Price', formatter: 'mvideo.cafe.util.Formatter.formatMoneyFree'}"/>
+													</m:HBox>
+												</m:VBox>
+												<!--<m:VBox justifyContent="SpaceBetween" height="100%" class="myCustomTileContent">-->
+												<!--	<m:HBox justifyContent="SpaceBetween" alignItems="Start">-->
+												<!--		<m:Text class="myCTName myWhiteShadow" text="{Benefit2}"/>-->
+												<!--		<m:Button icon="sap-icon://message-information" type="Transparent" class="myCTButton" visible="{= !!${MainDescription}}"-->
+												<!--				press="_onViewInfoPress"/>-->
+												<!--	</m:HBox>-->
+												<!--	<m:HBox justifyContent="SpaceBetween" alignItems="End">-->
+												<!--		<m:Button icon="sap-icon://cart" type="Transparent" class="myCTButton myCTButtonCart" press="_onAddCartTilePress"/>-->
+												<!--		<m:Text class="myCTPrice myMoney myWhiteShadow" text="{path: 'Price', formatter: 'mvideo.cafe.util.Formatter.formatMoneyFree'}"/>-->
+												<!--	</m:HBox>-->
+												<!--</m:VBox>-->
+											</mv:content>
+										</mv:CustomTile>
+									</l:HorizontalLayout>
+								</blocks>
+							</ObjectPageSubSection>
+						</subSections>
+					</ObjectPageSection>
+				</mv:sections>
+			</mv:ObjectPageLayout>
+		</m:content>
+	</m:Page>
+</core:View>

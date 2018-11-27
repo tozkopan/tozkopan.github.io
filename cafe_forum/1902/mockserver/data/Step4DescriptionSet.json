@@ -1,0 +1,481 @@
+[{
+	"Year": "0000",
+	"BenefitId": "0010",
+	"Options": "",
+	"Benefit2Id": "0020",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0010",
+	"Options": "",
+	"Benefit2Id": "0040",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0022",
+	"Options": "",
+	"Benefit2Id": "0010",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0022",
+	"Options": "",
+	"Benefit2Id": "0020",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0025",
+	"Options": "",
+	"Benefit2Id": "0010",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0025",
+	"Options": "",
+	"Benefit2Id": "0030",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0030",
+	"Options": "",
+	"Benefit2Id": "0002",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0030",
+	"Options": "",
+	"Benefit2Id": "0010",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0030",
+	"Options": "",
+	"Benefit2Id": "0020",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0031",
+	"Options": "",
+	"Benefit2Id": "0005",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0032",
+	"Options": "",
+	"Benefit2Id": "0010",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0032",
+	"Options": "",
+	"Benefit2Id": "0020",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0032",
+	"Options": "",
+	"Benefit2Id": "0030",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0035",
+	"Options": "",
+	"Benefit2Id": "0010",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0035",
+	"Options": "",
+	"Benefit2Id": "0020",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0035",
+	"Options": "",
+	"Benefit2Id": "0030",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0038",
+	"Options": "",
+	"Benefit2Id": "0010",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0038",
+	"Options": "",
+	"Benefit2Id": "0030",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0038",
+	"Options": "",
+	"Benefit2Id": "0040",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0038",
+	"Options": "",
+	"Benefit2Id": "0060",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0038",
+	"Options": "",
+	"Benefit2Id": "0070",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0038",
+	"Options": "",
+	"Benefit2Id": "0080",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0038",
+	"Options": "",
+	"Benefit2Id": "0090",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0038",
+	"Options": "",
+	"Benefit2Id": "0100",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0038",
+	"Options": "",
+	"Benefit2Id": "0110",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0038",
+	"Options": "",
+	"Benefit2Id": "0130",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0038",
+	"Options": "",
+	"Benefit2Id": "0140",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0040",
+	"Options": "",
+	"Benefit2Id": "0020",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0040",
+	"Options": "",
+	"Benefit2Id": "0030",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0040",
+	"Options": "",
+	"Benefit2Id": "0040",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0040",
+	"Options": "",
+	"Benefit2Id": "0050",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0040",
+	"Options": "",
+	"Benefit2Id": "0060",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0040",
+	"Options": "",
+	"Benefit2Id": "0070",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0040",
+	"Options": "",
+	"Benefit2Id": "0080",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0040",
+	"Options": "",
+	"Benefit2Id": "0090",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0040",
+	"Options": "",
+	"Benefit2Id": "0100",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0040",
+	"Options": "",
+	"Benefit2Id": "0110",
+	"Description": "Для согласования времени проведения обучения с Вами свяжется персональный менеджер"
+}, {
+	"Year": "0000",
+	"BenefitId": "0040",
+	"Options": "",
+	"Benefit2Id": "0130",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0040",
+	"Options": "",
+	"Benefit2Id": "0140",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0040",
+	"Options": "",
+	"Benefit2Id": "0120",
+	"Description": "Для согласования времени проведения обучения с Вами свяжется персональный менеджер"
+}, {
+	"Year": "0000",
+	"BenefitId": "0040",
+	"Options": "",
+	"Benefit2Id": "0150",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0040",
+	"Options": "",
+	"Benefit2Id": "0160",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0040",
+	"Options": "",
+	"Benefit2Id": "0170",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0040",
+	"Options": "",
+	"Benefit2Id": "0180",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0042",
+	"Options": "",
+	"Benefit2Id": "0005",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0042",
+	"Options": "",
+	"Benefit2Id": "0010",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0042",
+	"Options": "",
+	"Benefit2Id": "0020",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0042",
+	"Options": "",
+	"Benefit2Id": "0030",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0042",
+	"Options": "",
+	"Benefit2Id": "0040",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0042",
+	"Options": "",
+	"Benefit2Id": "0050",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0042",
+	"Options": "",
+	"Benefit2Id": "0070",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0042",
+	"Options": "",
+	"Benefit2Id": "0060",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0042",
+	"Options": "",
+	"Benefit2Id": "0080",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0043",
+	"Options": "",
+	"Benefit2Id": "0010",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0050",
+	"Options": "",
+	"Benefit2Id": "0020",
+	"Description": "После получения уведомления об оформлении льготы вам в личный кабинет &laquo;Кафетерия льгот&raquo; будет направлен пароль для доступа к электронной библиотеке."
+}, {
+	"Year": "0000",
+	"BenefitId": "0055",
+	"Options": "",
+	"Benefit2Id": "0010",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0055",
+	"Options": "",
+	"Benefit2Id": "0020",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0055",
+	"Options": "",
+	"Benefit2Id": "0030",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0070",
+	"Options": "",
+	"Benefit2Id": "0020",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0070",
+	"Options": "",
+	"Benefit2Id": "0030",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0070",
+	"Options": "",
+	"Benefit2Id": "0040",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0070",
+	"Options": "",
+	"Benefit2Id": "0050",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0071",
+	"Options": "",
+	"Benefit2Id": "0010",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0072",
+	"Options": "",
+	"Benefit2Id": "0010",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0072",
+	"Options": "",
+	"Benefit2Id": "0020",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0072",
+	"Options": "",
+	"Benefit2Id": "0030",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0075",
+	"Options": "",
+	"Benefit2Id": "0010",
+	"Description": "После оформления льготы в личный кабинет &laquo;Кафетерия&raquo; будет загружен сертификат с инструкцией по использованию льготы."
+}, {
+	"Year": "0000",
+	"BenefitId": "0075",
+	"Options": "",
+	"Benefit2Id": "0020",
+	"Description": "После оформления льготы в личный кабинет &laquo;Кафетерия&raquo; будет загружен сертификат с инструкцией по использованию льготы."
+}, {
+	"Year": "0000",
+	"BenefitId": "0075",
+	"Options": "",
+	"Benefit2Id": "0030",
+	"Description": "После оформления льготы в личный кабинет &laquo;Кафетерия&raquo; будет загружен сертификат с инструкцией по использованию льготы."
+}, {
+	"Year": "0000",
+	"BenefitId": "0080",
+	"Options": "",
+	"Benefit2Id": "0010",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0080",
+	"Options": "",
+	"Benefit2Id": "0020",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0080",
+	"Options": "",
+	"Benefit2Id": "0030",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0080",
+	"Options": "",
+	"Benefit2Id": "0050",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0085",
+	"Options": "",
+	"Benefit2Id": "0010",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0087",
+	"Options": "",
+	"Benefit2Id": "0020",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0087",
+	"Options": "",
+	"Benefit2Id": "0040",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0087",
+	"Options": "",
+	"Benefit2Id": "0050",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0087",
+	"Options": "",
+	"Benefit2Id": "0060",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0087",
+	"Options": "",
+	"Benefit2Id": "0070",
+	"Description": ""
+}, {
+	"Year": "0000",
+	"BenefitId": "0087",
+	"Options": "",
+	"Benefit2Id": "0080",
+	"Description": ""
+}]

@@ -1,0 +1,12 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Popover title="{Name}" class="sapUiContentPadding" placement="HorizontalPreferredRight" initialFocus="close"
+	showHeader="false">
+		<!--<footer>-->
+		<!--	<Toolbar>-->
+		<!--		<ToolbarSpacer/>-->
+		<!--		<Button id="close" text="За"/>-->
+		<!--	</Toolbar>-->
+		<!--</footer>-->
+		<Text text="{MainDescription}"/>
+	</Popover>
+</core:FragmentDefinition>

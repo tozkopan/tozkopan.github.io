@@ -1,0 +1,30 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified"
+	xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<List items="{local>/step3/files}" noDataText="{i18n>CMN_NO_FILES}"
+		visible="{ path: 'local>/step3/files', formatter: 'mvideo.cafe.util.Formatter.isArrayNotEmpty' }">
+		<CustomListItem>
+			<content>
+				<Link class="sapMSLITitleOnly" text="{local>Name}" press="handleStep3Press"
+					data:link="{local>Link}" data:dynamic="{local>Dynamic}" data:type="{local>MimeType}" />
+			</content>
+		</CustomListItem>
+	</List>
+	
+	<VBox class="APPROVE_PERSONAL_DATA_CONT" visible="{local>/step3/approvePersonalData/bShow}">
+		<Text class="APPROVE_PERSONAL_DATA_PRE" text="{i18n>APPROVE_PERSONAL_DATA_PRE}"/>
+		<HBox>
+			<CheckBox class="APPROVE_PERSONAL_DATA_CHECKBOX" selected="{local>/step3/approvePersonalData/bSelected}"/>
+			<VBox>
+				<Text class="APPROVE_PERSONAL_DATA_BODY" text="{i18n>APPROVE_PERSONAL_DATA_BODY}"/>
+				<Link class="APPROVE_PERSONAL_DATA_MORE" text="{i18n>APPROVE_PERSONAL_DATA_MORE}"
+					press="handleStep3Press"
+					data:link="{local>/step3/approvePersonalData/Entity/Link}"
+					data:dynamic="{local>/step3/approvePersonalData/Entity/Dynamic}"
+					data:type="{local>/step3/approvePersonalData/Entity/MimeType}"/>
+			</VBox>
+		</HBox>
+	</VBox>
+
+</core:FragmentDefinition>

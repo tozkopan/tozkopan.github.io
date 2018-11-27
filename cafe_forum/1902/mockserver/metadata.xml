@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema Namespace="ZMV_BEN_MAIN_SRV" xml:lang="ru" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="TileGroup" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Tilegroup"/>
+				</Key>
+				<Property Name="Tilesupergroup" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Группа льгот" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="GroupDisable" Type="Edm.Boolean" Nullable="false" sap:label="Только одна в группе" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Num" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Номер строки" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Tilegroup" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Группа льгот" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Text1sgr" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Группа льгот, текст1" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Text1" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Группа льгот, текст1" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Text2sgr" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Группа льгот, текст2" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Text2" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Группа льгот, текст2" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Numsgr" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Номер строки" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="Tile" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Year"/>
+					<PropertyRef Name="Benefit2Id"/>
+					<PropertyRef Name="BenefitId"/>
+				</Key>
+				<Property Name="Year" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Год" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="MaxNum" Type="Edm.Byte" Nullable="false" sap:label="Максимальное кол-во льгот группы" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Benefit2" Type="Edm.String" Nullable="false" MaxLength="70" sap:label="Программа льгот" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="MaxDedFlag" Type="Edm.Boolean" Nullable="false" sap:label="Макс.удержание: акти" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Benefit2Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Программа идентифик" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="BenefitId" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Идентификатор льготы" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Calc" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Логика расчета стоим" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="DynFlag" Type="Edm.Boolean" Nullable="false" sap:label="Динамическая стоимос" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FixFlag" Type="Edm.Boolean" Nullable="false" sap:label="Постоянная льгота" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FlexFlag" Type="Edm.Boolean" Nullable="false" sap:label="Переменная льгота" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Price" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:label="СуммаПоУмолчанию" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Step2" Type="Edm.Boolean" Nullable="false" sap:label="Шаг ввода данных" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Step3" Type="Edm.Boolean" Nullable="false" sap:label="Шаг шаблонов" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Tilegroup" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Группа льгот" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Urlicon" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Иконка для плитки" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<NavigationProperty Name="Step2Description" Relationship="ZMV_BEN_MAIN_SRV.aStep2Descr" FromRole="FromRole_aStep2Descr"
+					ToRole="ToRole_aStep2Descr"/>
+				<NavigationProperty Name="Files" Relationship="ZMV_BEN_MAIN_SRV.aFiles" FromRole="FromRole_aFiles" ToRole="ToRole_aFiles"/>
+				<NavigationProperty Name="Fields" Relationship="ZMV_BEN_MAIN_SRV.aTileFields" FromRole="FromRole_aTileFields" ToRole="ToRole_aTileFields"/>
+				<NavigationProperty Name="Step3Description" Relationship="ZMV_BEN_MAIN_SRV.aStep3Descr" FromRole="FromRole_aStep3Descr"
+					ToRole="ToRole_aStep3Descr"/>
+				<NavigationProperty Name="BenDescription" Relationship="ZMV_BEN_MAIN_SRV.aBenDescr" FromRole="FromRole_aBenDescr" ToRole="ToRole_aBenDescr"/>
+				<NavigationProperty Name="Step4Description" Relationship="ZMV_BEN_MAIN_SRV.aStep4Descr" FromRole="FromRole_aStep4Descr"
+					ToRole="ToRole_aStep4Descr"/>
+			</EntityType>
+			<EntityType Name="Step2Description" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Year"/>
+					<PropertyRef Name="BenefitId"/>
+					<PropertyRef Name="Benefit2Id"/>
+				</Key>
+				<Property Name="Year" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Рабочий год" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="BenefitId" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Идентификатор льготы" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Benefit2Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Программа идентифик" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Description" Type="Edm.String" Nullable="false" sap:label="Описание (шаг 1)" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="Limit" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Year"/>
+				</Key>
+				<Property Name="Year" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Год" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Total" Type="Edm.Decimal" Nullable="false" Precision="10" Scale="0" sap:label="СуммаПоУмолчанию" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Available" Type="Edm.Decimal" Nullable="false" Precision="10" Scale="0" sap:label="СуммаПоУмолчанию" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="OverdraftLimit" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:label="СуммаПоУмолчанию"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Overdraft" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:label="СуммаПоУмолчанию" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="Fields" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="BenefitId"/>
+					<PropertyRef Name="Benefit2Id"/>
+					<PropertyRef Name="Pos"/>
+				</Key>
+				<Property Name="BenefitId" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Идентификатор льготы" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Benefit2Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Программа идентифик" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Pos" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Номер строки" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Affect" Type="Edm.Boolean" Nullable="false" sap:label="Влияет на стоимость" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FieldType" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Тип поля для шага 2" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Mandatory" Type="Edm.Boolean" Nullable="false" sap:label="Обязательность поля" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Link" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Поле из ИТ9178" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="Название поля" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Techname" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Техническое имя поля" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Grouptext" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="Название группы" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Explaintext" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="Пояснение к полю" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Value" Type="Edm.String" sap:label="VALUE" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="DateValue" Type="Edm.DateTime" Precision="7" sap:label="DATE_VALUE" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="MaxLength" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="FailState" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="ВЕРНО" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="IquanMax" Type="Edm.Int32" Nullable="false" sap:label="Максимум для IQUAN" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="IquanMin" Type="Edm.Int32" Nullable="false" sap:label="Минимум для IQUAN" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<NavigationProperty Name="Values" Relationship="ZMV_BEN_MAIN_SRV.aFieldValues" FromRole="FromRole_aFieldValues" ToRole="ToRole_aFieldValues"/>
+			</EntityType>
+			<EntityType Name="Files" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="BenefitId"/>
+					<PropertyRef Name="Benefit2Id"/>
+					<PropertyRef Name="Filekey"/>
+				</Key>
+				<Property Name="Agreement" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Флаг" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Optional" Type="Edm.Boolean" Nullable="false" sap:label="файл необязательный" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="BenefitId" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Идентификатор льготы" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Deduc" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:label="Сумма удержания" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Seqnr" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="ИТ-№Записи" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Year" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Год" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Benefit2Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Программа идентифик" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Filekey" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Ключ файла для шага" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Dynamic" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Динамич. заполнение" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Название файла" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Extension" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Расширение файла" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Data" Type="Edm.Binary" Nullable="false" sap:label="DATA" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<NavigationProperty Name="Fields" Relationship="ZMV_BEN_MAIN_SRV.aFilesFields" FromRole="FromRole_aFilesFields" ToRole="ToRole_aFilesFields"/>
+			</EntityType>
+			<EntityType Name="Upload" m:HasStream="true" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Name"/>
+				</Key>
+				<Property Name="Name" Type="Edm.String" Nullable="false" sap:label="NAME" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Mimetype" Type="Edm.String" Nullable="false" sap:label="MIMETYPE" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Data" Type="Edm.Binary" Nullable="false" sap:label="DATA" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="Step3Description" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Year"/>
+					<PropertyRef Name="BenefitId"/>
+					<PropertyRef Name="Options"/>
+					<PropertyRef Name="Benefit2Id"/>
+				</Key>
+				<Property Name="Year" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Рабочий год" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="BenefitId" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Идентификатор льготы" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Options" Type="Edm.String" Nullable="false" sap:label="OPTIONS" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Benefit2Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Программа идентифик" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Description" Type="Edm.String" Nullable="false" sap:label="Описание (шаг 1)" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="Customization" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Param"/>
+				</Key>
+				<Property Name="Param" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Ключ параметров" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Значение параметров" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="BenDescription" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Year"/>
+					<PropertyRef Name="BenefitId"/>
+					<PropertyRef Name="Options"/>
+					<PropertyRef Name="Benefit2Id"/>
+				</Key>
+				<Property Name="Year" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Рабочий год" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="BenefitId" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Идентификатор льготы" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Options" Type="Edm.String" Nullable="false" sap:label="OPTIONS" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Benefit2Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Программа идентифик" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Description" Type="Edm.String" Nullable="false" sap:label="Описание (шаг 1)" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="Years" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Year"/>
+				</Key>
+				<Property Name="OnAdmin" Type="Edm.Boolean" Nullable="false" sap:label="Статус пакета" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Year" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Год" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Open" Type="Edm.Boolean" Nullable="false" sap:label="Статус" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<NavigationProperty Name="Limit" Relationship="ZMV_BEN_MAIN_SRV.aLimit" FromRole="FromRole_aLimit" ToRole="ToRole_aLimit"/>
+				<NavigationProperty Name="Obtained" Relationship="ZMV_BEN_MAIN_SRV.aObtained" FromRole="FromRole_aObtained" ToRole="ToRole_aObtained"/>
+			</EntityType>
+			<EntityType Name="Obtained" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Pskey"/>
+					<PropertyRef Name="Year"/>
+					<PropertyRef Name="BenefitId"/>
+					<PropertyRef Name="Benefit2Id"/>
+				</Key>
+				<Property Name="Pskey" Type="Edm.String" Nullable="false" MaxLength="38" sap:label="PSKEY" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Year" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Год" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="BenefitId" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Идентификатор льготы" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Benefit2Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Программа идентифик" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Benefit" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Льгота" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Benefit2" Type="Edm.String" Nullable="false" MaxLength="70" sap:label="Программа льгот" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Betrg" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:label="Сумма" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Deduc" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:label="Сумма удержания" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="StatusId" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Статус льготы" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<NavigationProperty Name="Tile" Relationship="ZMV_BEN_MAIN_SRV.aObtained_Tile" FromRole="FromRole_aObtained_Tile"
+					ToRole="ToRole_aObtained_Tile"/>
+				<NavigationProperty Name="Fields" Relationship="ZMV_BEN_MAIN_SRV.aObtFields" FromRole="FromRole_aObtFields" ToRole="ToRole_aObtFields"/>
+			</EntityType>
+			<EntityType Name="FieldValue" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="BenefitId"/>
+					<PropertyRef Name="Benefit2Id"/>
+					<PropertyRef Name="Link"/>
+					<PropertyRef Name="Key"/>
+				</Key>
+				<Property Name="BenefitId" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Идентификатор льготы" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Benefit2Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Программа идентифик" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UpperKey" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Название" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Datekey" Type="Edm.DateTime" Precision="7" sap:label="Текущая дата" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Link" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Поле из ИТ9178" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Key" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Нижний предел" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Краткое описание" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="Calc" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Key"/>
+				</Key>
+				<Property Name="BenefitId" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Идентификатор льготы" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Comment" Type="Edm.String" Nullable="false" MaxLength="200" sap:label="Текст уведомления" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Key" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Логика расчета стоим" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Year" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Год" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Benefit2Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Программа идентифик" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Betrg" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:label="Сумма" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<NavigationProperty Name="Fields" Relationship="ZMV_BEN_MAIN_SRV.aCalcFields" FromRole="FromRole_aCalcFields" ToRole="ToRole_aCalcFields"/>
+			</EntityType>
+			<EntityType Name="QuarterDeduction" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Date"/>
+				</Key>
+				<Property Name="Date" Type="Edm.DateTime" Nullable="false" Precision="7" sap:label="Дата" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Deduc" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:label="Сумма удержания" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="PersInfo" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Name"/>
+				</Key>
+				<Property Name="ToAdmin" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Флаг" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Persk" Type="Edm.String" Nullable="false" sap:label="Категория" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="AdminEnameCase" Type="Edm.String" Nullable="false" sap:label="ФИО админа в дательном падеже" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Message" Type="Edm.String" Nullable="false" sap:label="MESSAGE" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Stop" Type="Edm.Boolean" Nullable="false" sap:label="Запрет на отказ" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="HasWarnings" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Флаг" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="MaxDmsRel" Type="Edm.Byte" Nullable="false" sap:label="MAX_DMS_REL" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="NewMail" Type="Edm.Byte" Nullable="false" sap:label="int" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Retail" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Флаг" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Name" Type="Edm.String" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="Step2Check" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Year"/>
+					<PropertyRef Name="BenefitId"/>
+					<PropertyRef Name="Benefit2Id"/>
+				</Key>
+				<Property Name="Year" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Год" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="BenefitId" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Идентификатор льготы" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Benefit2Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Программа идентифик" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Message" Type="Edm.String" Nullable="false" sap:label="MESSAGE" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<NavigationProperty Name="Fields" Relationship="ZMV_BEN_MAIN_SRV.aStep2CheckFields" FromRole="FromRole_aStep2CheckFields"
+					ToRole="ToRole_aStep2CheckFields"/>
+			</EntityType>
+			<EntityType Name="Step4Description" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Year"/>
+					<PropertyRef Name="BenefitId"/>
+					<PropertyRef Name="Options"/>
+					<PropertyRef Name="Benefit2Id"/>
+				</Key>
+				<Property Name="Year" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Рабочий год" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="BenefitId" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Идентификатор льготы" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Options" Type="Edm.String" Nullable="false" sap:label="OPTIONS" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Benefit2Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Программа идентифик" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Description" Type="Edm.String" Nullable="false" sap:label="Описание (шаг 1)" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="Mail" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="DocId"/>
+				</Key>
+				<Property Name="DocId" Type="Edm.String" Nullable="false" MaxLength="46" sap:label="Ид. записи папки (объект+папка+имя переадресовавшего)"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="SendDateNum" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="NUM8" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ObjDescr" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Заголовок" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="SendTimeNum" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Номер" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="SendNam" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Имя отправителя" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="SendFnam" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="Полное имя отправителя" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Read" Type="Edm.Boolean" Nullable="false" sap:label="Объект прочитан" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="DocSize" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Размер SAPoffice-документа (для API1)"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Content" Type="Edm.String" Nullable="false" sap:label="Параметр" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<Association Name="aFilesFields" sap:content-version="1">
+				<End Type="ZMV_BEN_MAIN_SRV.Files" Multiplicity="1" Role="FromRole_aFilesFields"/>
+				<End Type="ZMV_BEN_MAIN_SRV.Fields" Multiplicity="*" Role="ToRole_aFilesFields"/>
+			</Association>
+			<Association Name="aCalcFields" sap:content-version="1">
+				<End Type="ZMV_BEN_MAIN_SRV.Calc" Multiplicity="1" Role="FromRole_aCalcFields"/>
+				<End Type="ZMV_BEN_MAIN_SRV.Fields" Multiplicity="*" Role="ToRole_aCalcFields"/>
+			</Association>
+			<Association Name="aFiles" sap:content-version="1">
+				<End Type="ZMV_BEN_MAIN_SRV.Tile" Multiplicity="1" Role="FromRole_aFiles"/>
+				<End Type="ZMV_BEN_MAIN_SRV.Files" Multiplicity="*" Role="ToRole_aFiles"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_aFiles">
+						<PropertyRef Name="BenefitId"/>
+						<PropertyRef Name="Benefit2Id"/>
+					</Principal>
+					<Dependent Role="ToRole_aFiles">
+						<PropertyRef Name="BenefitId"/>
+						<PropertyRef Name="Benefit2Id"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="aTileFields" sap:content-version="1">
+				<End Type="ZMV_BEN_MAIN_SRV.Tile" Multiplicity="1" Role="FromRole_aTileFields"/>
+				<End Type="ZMV_BEN_MAIN_SRV.Fields" Multiplicity="*" Role="ToRole_aTileFields"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_aTileFields">
+						<PropertyRef Name="BenefitId"/>
+						<PropertyRef Name="Benefit2Id"/>
+					</Principal>
+					<Dependent Role="ToRole_aTileFields">
+						<PropertyRef Name="BenefitId"/>
+						<PropertyRef Name="Benefit2Id"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="aStep2Descr" sap:content-version="1">
+				<End Type="ZMV_BEN_MAIN_SRV.Tile" Multiplicity="1" Role="FromRole_aStep2Descr"/>
+				<End Type="ZMV_BEN_MAIN_SRV.Step2Description" Multiplicity="1" Role="ToRole_aStep2Descr"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_aStep2Descr">
+						<PropertyRef Name="Year"/>
+						<PropertyRef Name="BenefitId"/>
+						<PropertyRef Name="Benefit2Id"/>
+					</Principal>
+					<Dependent Role="ToRole_aStep2Descr">
+						<PropertyRef Name="Year"/>
+						<PropertyRef Name="BenefitId"/>
+						<PropertyRef Name="Benefit2Id"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="aBenDescr" sap:content-version="1">
+				<End Type="ZMV_BEN_MAIN_SRV.Tile" Multiplicity="1" Role="FromRole_aBenDescr"/>
+				<End Type="ZMV_BEN_MAIN_SRV.BenDescription" Multiplicity="1" Role="ToRole_aBenDescr"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_aBenDescr">
+						<PropertyRef Name="Year"/>
+						<PropertyRef Name="BenefitId"/>
+						<PropertyRef Name="Benefit2Id"/>
+					</Principal>
+					<Dependent Role="ToRole_aBenDescr">
+						<PropertyRef Name="Year"/>
+						<PropertyRef Name="BenefitId"/>
+						<PropertyRef Name="Benefit2Id"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="aStep4Descr" sap:content-version="1">
+				<End Type="ZMV_BEN_MAIN_SRV.Tile" Multiplicity="1" Role="FromRole_aStep4Descr"/>
+				<End Type="ZMV_BEN_MAIN_SRV.Step4Description" Multiplicity="1" Role="ToRole_aStep4Descr"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_aStep4Descr">
+						<PropertyRef Name="Year"/>
+						<PropertyRef Name="BenefitId"/>
+						<PropertyRef Name="Benefit2Id"/>
+					</Principal>
+					<Dependent Role="ToRole_aStep4Descr">
+						<PropertyRef Name="Year"/>
+						<PropertyRef Name="BenefitId"/>
+						<PropertyRef Name="Benefit2Id"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="aStep3Descr" sap:content-version="1">
+				<End Type="ZMV_BEN_MAIN_SRV.Tile" Multiplicity="1" Role="FromRole_aStep3Descr"/>
+				<End Type="ZMV_BEN_MAIN_SRV.Step3Description" Multiplicity="1" Role="ToRole_aStep3Descr"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_aStep3Descr">
+						<PropertyRef Name="Year"/>
+						<PropertyRef Name="BenefitId"/>
+						<PropertyRef Name="Benefit2Id"/>
+					</Principal>
+					<Dependent Role="ToRole_aStep3Descr">
+						<PropertyRef Name="Year"/>
+						<PropertyRef Name="BenefitId"/>
+						<PropertyRef Name="Benefit2Id"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="aObtained_Tile" sap:content-version="1">
+				<End Type="ZMV_BEN_MAIN_SRV.Obtained" Multiplicity="1" Role="FromRole_aObtained_Tile"/>
+				<End Type="ZMV_BEN_MAIN_SRV.Tile" Multiplicity="1" Role="ToRole_aObtained_Tile"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_aObtained_Tile">
+						<PropertyRef Name="Year"/>
+						<PropertyRef Name="BenefitId"/>
+						<PropertyRef Name="Benefit2Id"/>
+					</Principal>
+					<Dependent Role="ToRole_aObtained_Tile">
+						<PropertyRef Name="Year"/>
+						<PropertyRef Name="BenefitId"/>
+						<PropertyRef Name="Benefit2Id"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="aObtFields" sap:content-version="1">
+				<End Type="ZMV_BEN_MAIN_SRV.Obtained" Multiplicity="1" Role="FromRole_aObtFields"/>
+				<End Type="ZMV_BEN_MAIN_SRV.Fields" Multiplicity="*" Role="ToRole_aObtFields"/>
+			</Association>
+			<Association Name="aStep2CheckFields" sap:content-version="1">
+				<End Type="ZMV_BEN_MAIN_SRV.Step2Check" Multiplicity="1" Role="FromRole_aStep2CheckFields"/>
+				<End Type="ZMV_BEN_MAIN_SRV.Fields" Multiplicity="*" Role="ToRole_aStep2CheckFields"/>
+			</Association>
+			<Association Name="aFieldValues" sap:content-version="1">
+				<End Type="ZMV_BEN_MAIN_SRV.Fields" Multiplicity="1" Role="FromRole_aFieldValues"/>
+				<End Type="ZMV_BEN_MAIN_SRV.FieldValue" Multiplicity="*" Role="ToRole_aFieldValues"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_aFieldValues">
+						<PropertyRef Name="BenefitId"/>
+						<PropertyRef Name="Benefit2Id"/>
+					</Principal>
+					<Dependent Role="ToRole_aFieldValues">
+						<PropertyRef Name="BenefitId"/>
+						<PropertyRef Name="Benefit2Id"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="aLimit" sap:content-version="1">
+				<End Type="ZMV_BEN_MAIN_SRV.Years" Multiplicity="1" Role="FromRole_aLimit"/>
+				<End Type="ZMV_BEN_MAIN_SRV.Limit" Multiplicity="1" Role="ToRole_aLimit"/>
+			</Association>
+			<Association Name="aObtained" sap:content-version="1">
+				<End Type="ZMV_BEN_MAIN_SRV.Years" Multiplicity="1" Role="FromRole_aObtained"/>
+				<End Type="ZMV_BEN_MAIN_SRV.Obtained" Multiplicity="*" Role="ToRole_aObtained"/>
+			</Association>
+			<EntityContainer Name="ZMV_BEN_MAIN_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+				<EntitySet Name="TileGroupSet" EntityType="ZMV_BEN_MAIN_SRV.TileGroup" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="TileSet" EntityType="ZMV_BEN_MAIN_SRV.Tile" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="Step2DescriptionSet" EntityType="ZMV_BEN_MAIN_SRV.Step2Description" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="LimitSet" EntityType="ZMV_BEN_MAIN_SRV.Limit" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="FieldsSet" EntityType="ZMV_BEN_MAIN_SRV.Fields" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="FilesSet" EntityType="ZMV_BEN_MAIN_SRV.Files" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="UploadSet" EntityType="ZMV_BEN_MAIN_SRV.Upload" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="Step3DescriptionSet" EntityType="ZMV_BEN_MAIN_SRV.Step3Description" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="CustomizationCollection" EntityType="ZMV_BEN_MAIN_SRV.Customization" sap:content-version="1"/>
+				<EntitySet Name="BenDescriptionSet" EntityType="ZMV_BEN_MAIN_SRV.BenDescription" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="YearsSet" EntityType="ZMV_BEN_MAIN_SRV.Years" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="ObtainedSet" EntityType="ZMV_BEN_MAIN_SRV.Obtained" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="FieldValueSet" EntityType="ZMV_BEN_MAIN_SRV.FieldValue" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="CalcSet" EntityType="ZMV_BEN_MAIN_SRV.Calc" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="QuarterDeductionSet" EntityType="ZMV_BEN_MAIN_SRV.QuarterDeduction" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="PersInfoSet" EntityType="ZMV_BEN_MAIN_SRV.PersInfo" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="Step2CheckSet" EntityType="ZMV_BEN_MAIN_SRV.Step2Check" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="Step4DescriptionSet" EntityType="ZMV_BEN_MAIN_SRV.Step4Description" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="MailSet" EntityType="ZMV_BEN_MAIN_SRV.Mail" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<AssociationSet Name="aCalcFields_AssocSet" Association="ZMV_BEN_MAIN_SRV.aCalcFields" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="CalcSet" Role="FromRole_aCalcFields"/>
+					<End EntitySet="FieldsSet" Role="ToRole_aCalcFields"/>
+				</AssociationSet>
+				<AssociationSet Name="aStep2CheckFields_AssocSet" Association="ZMV_BEN_MAIN_SRV.aStep2CheckFields" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1">
+					<End EntitySet="Step2CheckSet" Role="FromRole_aStep2CheckFields"/>
+					<End EntitySet="FieldsSet" Role="ToRole_aStep2CheckFields"/>
+				</AssociationSet>
+				<AssociationSet Name="aFieldValues_AssocSet" Association="ZMV_BEN_MAIN_SRV.aFieldValues" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="FieldsSet" Role="FromRole_aFieldValues"/>
+					<End EntitySet="FieldValueSet" Role="ToRole_aFieldValues"/>
+				</AssociationSet>
+				<AssociationSet Name="aObtained_AssocSet" Association="ZMV_BEN_MAIN_SRV.aObtained" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="YearsSet" Role="FromRole_aObtained"/>
+					<End EntitySet="ObtainedSet" Role="ToRole_aObtained"/>
+				</AssociationSet>
+				<AssociationSet Name="aStep2Descr_AssocSet" Association="ZMV_BEN_MAIN_SRV.aStep2Descr" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="TileSet" Role="FromRole_aStep2Descr"/>
+					<End EntitySet="Step2DescriptionSet" Role="ToRole_aStep2Descr"/>
+				</AssociationSet>
+				<AssociationSet Name="aStep4Descr_AssocSet" Association="ZMV_BEN_MAIN_SRV.aStep4Descr" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="TileSet" Role="FromRole_aStep4Descr"/>
+					<End EntitySet="Step4DescriptionSet" Role="ToRole_aStep4Descr"/>
+				</AssociationSet>
+				<AssociationSet Name="aTileFields_AssocSet" Association="ZMV_BEN_MAIN_SRV.aTileFields" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="TileSet" Role="FromRole_aTileFields"/>
+					<End EntitySet="FieldsSet" Role="ToRole_aTileFields"/>
+				</AssociationSet>
+				<AssociationSet Name="aBenDescr_AssocSet" Association="ZMV_BEN_MAIN_SRV.aBenDescr" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="TileSet" Role="FromRole_aBenDescr"/>
+					<End EntitySet="BenDescriptionSet" Role="ToRole_aBenDescr"/>
+				</AssociationSet>
+				<AssociationSet Name="aLimit_AssocSet" Association="ZMV_BEN_MAIN_SRV.aLimit" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="YearsSet" Role="FromRole_aLimit"/>
+					<End EntitySet="LimitSet" Role="ToRole_aLimit"/>
+				</AssociationSet>
+				<AssociationSet Name="aStep3Descr_AssocSet" Association="ZMV_BEN_MAIN_SRV.aStep3Descr" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="TileSet" Role="FromRole_aStep3Descr"/>
+					<End EntitySet="Step3DescriptionSet" Role="ToRole_aStep3Descr"/>
+				</AssociationSet>
+				<AssociationSet Name="aObtained_Tile_AssocSet" Association="ZMV_BEN_MAIN_SRV.aObtained_Tile" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="ObtainedSet" Role="FromRole_aObtained_Tile"/>
+					<End EntitySet="TileSet" Role="ToRole_aObtained_Tile"/>
+				</AssociationSet>
+				<AssociationSet Name="aFiles_AssocSet" Association="ZMV_BEN_MAIN_SRV.aFiles" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="TileSet" Role="FromRole_aFiles"/>
+					<End EntitySet="FilesSet" Role="ToRole_aFiles"/>
+				</AssociationSet>
+				<AssociationSet Name="aFilesFields_AssocSet" Association="ZMV_BEN_MAIN_SRV.aFilesFields" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="FilesSet" Role="FromRole_aFilesFields"/>
+					<End EntitySet="FieldsSet" Role="ToRole_aFilesFields"/>
+				</AssociationSet>
+				<AssociationSet Name="aObtFields_AssocSet" Association="ZMV_BEN_MAIN_SRV.aObtFields" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="ObtainedSet" Role="FromRole_aObtFields"/>
+					<End EntitySet="FieldsSet" Role="ToRole_aObtFields"/>
+				</AssociationSet>
+				<FunctionImport Name="GetParam" ReturnType="ZMV_BEN_MAIN_SRV.Customization" EntitySet="CustomizationCollection" m:HttpMethod="GET">
+					<Parameter Name="Param" Type="Edm.String" Mode="In" MaxLength="20"/>
+				</FunctionImport>
+				<FunctionImport Name="SetParam" ReturnType="ZMV_BEN_MAIN_SRV.Customization" EntitySet="CustomizationCollection" m:HttpMethod="GET">
+					<Parameter Name="Param" Type="Edm.String" Mode="In" MaxLength="20"/>
+					<Parameter Name="Value" Type="Edm.String" Mode="In" MaxLength="255"/>
+				</FunctionImport>
+				<FunctionImport Name="SendCart" ReturnType="ZMV_BEN_MAIN_SRV.Files" EntitySet="FilesSet" m:HttpMethod="GET">
+					<Parameter Name="Charity" Type="Edm.String" Mode="In" MaxLength="4"/>
+					<Parameter Name="Year" Type="Edm.String" Mode="In" MaxLength="4"/>
+				</FunctionImport>
+				<FunctionImport Name="GetDeductions" ReturnType="Collection(ZMV_BEN_MAIN_SRV.QuarterDeduction)" EntitySet="QuarterDeductionSet"
+					m:HttpMethod="GET">
+					<Parameter Name="Year" Type="Edm.String" Mode="In" MaxLength="4"/>
+				</FunctionImport>
+				<FunctionImport Name="GetPersInfo" ReturnType="ZMV_BEN_MAIN_SRV.PersInfo" EntitySet="PersInfoSet" m:HttpMethod="GET">
+					<Parameter Name="Key" Type="Edm.String" Mode="In"/>
+				</FunctionImport>
+				<FunctionImport Name="SetMailRead" ReturnType="ZMV_BEN_MAIN_SRV.Mail" EntitySet="MailSet" m:HttpMethod="GET">
+					<Parameter Name="Id" Type="Edm.String" Mode="In" MaxLength="46"/>
+				</FunctionImport>
+			</EntityContainer>
+			<atom:link rel="self" href="http://sap-gwd.corp.mvideo.ru:8060/sap/opu/odata/sap/ZMV_BEN_MAIN_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/>
+			<atom:link rel="latest-version" href="http://sap-gwd.corp.mvideo.ru:8060/sap/opu/odata/sap/ZMV_BEN_MAIN_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

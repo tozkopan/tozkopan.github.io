@@ -1,0 +1,17 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+	
+	<core:HTML class="mvRawHTML" content="&lt;div class='mvRawHTML'&gt;{local>/step2/descr}&lt;/div&gt;" preferDOM="false"/>
+
+	<HBox class="step2Calc" alignItems="Center" justifyContent="SpaceBetween" visible="{local>/step2/calc}">
+		<Label text="{i18n>WIZARD_STEP2_PRICE}" />
+		<HBox alignItems="Center">
+			<core:Icon src="sap-icon://collections-insight" />
+<!-- 			<Input class="step2CalcPrice" width="250px" editable="false" -->
+<!-- 				value="{path: 'local>/step2/calcValue', formatter: 'mvideo.cafe.util.Formatter.formatMoney'}" /> -->
+			<Text class="step2CalcPrice" width="250px"
+				text="{path: 'local>/step2/calcValue', formatter: 'mvideo.cafe.util.Formatter.formatMoney'}" />
+		</HBox>
+	</HBox>
+
+</core:FragmentDefinition>

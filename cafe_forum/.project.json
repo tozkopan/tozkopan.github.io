@@ -1,0 +1,13 @@
+{
+  "deploy": {
+    "destination": "DMS",
+    "name": "Z_FORUM_CAFE"
+  },
+  "mockpreview": {
+    "mockUri": "",
+    "metadataFilePath": "",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  }
+}

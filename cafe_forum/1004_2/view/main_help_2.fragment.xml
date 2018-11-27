@@ -1,0 +1,58 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core" xmlns:mv="mvideo.cafe.controls">
+
+	<!-- desktop -->
+		<VBox class="myCont" visible="{device>/mv_desktop}">
+			<HBox height="14%" justifyContent="SpaceBetween" class="mhP2TopParent">
+				<Image class="mhP1Logo" src="{/sRootPath}img/cafe_logo.svg" />
+			</HBox>
+			<HBox>
+				<VBox width="75%" class="mhP2TextParent">
+					<core:HTML
+						content="&lt;div class='mhP2Top'&gt;&lt;p&gt;{i18n>MAIN_HELP_WELCOME}&lt;/div&gt;&lt;/p&gt;" preferDOM="false"/>
+					<core:HTML
+						content="&lt;div class='mhP2Text'&gt;&lt;p&gt;{i18n>MAIN_HELP_P2_TOP}&lt;/div&gt;&lt;/p&gt;" preferDOM="false" />
+					<core:HTML
+						content="&lt;div class='mhP2Text'&gt;&lt;p&gt;{i18n>MAIN_HELP_P2_TEXT}&lt;/div&gt;&lt;/p&gt;" preferDOM="false" />
+					<core:HTML
+						content="&lt;div class='mhP2BotText'&gt;{i18n>MAIN_HELP_P2_BOTTEXT}&lt;/div&gt;" preferDOM="false" />
+				</VBox>
+			</HBox>	
+			<HBox height="12%" class="mhBottom" justifyContent="SpaceBetween" alignItems="Center">
+				<HBox width="85%" class="mhBottomRight" justifyContent="End" alignItems="Center">
+					<CheckBox class="mhNoMore" text="{i18n>MAIN_HELP_NOMORE}" id="mainHelpNomore"/>
+					<Button type="Reject" class="mhCloseBtn" text="{i18n>MAIN_HELP_CLOSE}" press="closeMainHelp"/>
+				</HBox>
+			</HBox>
+		</VBox>
+		
+		<!-- mobile -->
+		<VBox class="myCont" visible="{= ${device>/mv_mobile} || ${device>/mv_tablet} }">
+			<HBox height="14%" justifyContent="SpaceBetween" class="mhP2TopParent">
+				<Image class="mhP1Logo" src="{/sRootPath}img/cafe_logo.svg" />
+				<core:HTML
+					content="&lt;div class='mhP2Top'&gt;{i18n>MAIN_HELP_WELCOME}&lt;/div&gt;" preferDOM="false" />
+			</HBox>
+			<HBox height="70%" class="mhP2TextParent2">
+				<VBox width="50%" class="mhP2TextLeftParent">
+					<core:HTML
+						content="&lt;div class='mhP2Text'&gt;{i18n>MAIN_HELP_P2_TOP}&lt;/div&gt;" preferDOM="false" />
+				</VBox>
+				<VBox width="50%" class="mhP2TextRightParent">
+					<core:HTML
+						content="&lt;div class='mhP2Text'&gt;{i18n>MAIN_HELP_P2_TEXT}&lt;/div&gt;" preferDOM="false" />
+				</VBox>
+			</HBox>
+			<HBox height="12%" class="mhBottom" justifyContent="SpaceBetween">
+				<HBox width="75%">
+					<core:HTML
+						content="&lt;div class='mhP2BotText'&gt;{i18n>MAIN_HELP_P2_BOTTEXT}&lt;/div&gt;" preferDOM="false" />
+				</HBox>
+				<HBox width="25%" class="mhBottomRight" justifyContent="End" alignItems="Center">
+					<CheckBox class="mhNoMore" text="{i18n>MAIN_HELP_NOMORE}" id="mainHelpNomoreMobile"/>
+					<Button type="Reject" class="mhCloseBtn" text="{i18n>MAIN_HELP_CLOSE}" press="closeMainHelp"/>
+				</HBox>
+			</HBox>
+		</VBox>
+
+</core:FragmentDefinition>

@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+	
+	<core:HTML class="mvRawHTML" content="&lt;div class='mvRawHTML'&gt;{local>/step4/descr}&lt;/div&gt;"
+		visible="{ path: 'local>/step4/descr', formatter: 'mvideo.cafe.util.Formatter.isNotEmpty' }"
+		preferDOM="false"/>
+	
+</core:FragmentDefinition>

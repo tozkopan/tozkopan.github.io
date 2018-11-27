@@ -1,0 +1,58 @@
+<core:View controllerName="mvideo.cafe.view.Empty" xmlns:core="sap.ui.core" xmlns:mv="mvideo.cafe.controls"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml">
+	<html:style>
+		.myEmpty{ font-size: 1.75rem; }
+		.MVideo_cafe_mobile .myEmpty{ font-size: 1.125rem; }
+		.MVideo_cafe_mobile .emptyMainBox{ padding: 0.5rem; }
+	</html:style>
+	<Page title=" " showNavButton="true">
+		<customHeader>
+			<Toolbar>
+				<Button class="mvLogoImg" icon="sap-icon://nav-back" press="onMobileBackToMaster" visible="{device>/mv_mobile}"/>
+				<ToolbarSpacer/>
+				<!--<Button class="mvLogoImg" icon="sap-icon://menu2" press="onShowMaster"/>-->
+				<Image class="mvCup" height="40px" src="{/sRootPath}img/cafe_logo_new_40.png" />
+				<!--visible="{device>/mv_desktop}"-->
+				<ToolbarSpacer/>
+				<HBox>
+					<!--visible="{= ${/PersInfo/Retail} &amp;&amp; ${/Messages}.length !== 0 }"-->
+					 <!--icon="sap-icon://bell" -->
+					<mv:BellButton id="bell" class="mvLogoImg" icon="sap-icon://mvideo/bell" press="onNotifications"
+					visible="{= ${/Messages}.length !== 0 &amp;&amp; ${device>/mv_desktop}}"
+					count="{path: '/Messages', formatter: '.f.notificationUnread'}"/>
+					<Button class="mvLogoImg" icon="sap-icon://sys-help-2" press="onMainHelp" visible="{device>/mv_desktop}"/>
+				</HBox>
+			</Toolbar>
+		</customHeader>
+		<content>
+			<VBox height="100%" alignItems="Center" justifyContent="Center">
+				<VBox width="600px" alignItems="Start" justifyContent="Center" class="emptyMainBox">
+					<VBox visible="{settings>/currentYear/OnAdmin}">
+						<Text visible="{local>/toAdmin}" class="myEmpty" text="{parts: ['i18n>EMPTY_GOTO_ADMIN', '/PersInfo/AdminEnameCase'], formatter: 'jQuery.sap.formatMessage'}"/>
+						<Text class="myEmpty" text="" />
+					</VBox>
+					<Text class="myEmpty" text="{i18n>EMPTY_INSTRUCTION}" visible="{device>/mv_desktop}" />
+					<VBox visible="{local>/vis_deduct}">
+						<Text class="myEmpty" text="" />
+						<Text class="myEmpty"
+							text="График поквартальных удержаний за этот год" />
+
+						<VBox class="completeDeduct" items="{local>/deduct}">
+							<HBox justifyContent="SpaceBetween">
+								<Text class="myEmpty"
+									text="{i18n>COMPLETE_MONTH_PRE} {path:'local>Date', formatter: 'mvideo.cafe.util.Formatter.spellDateStop'
+									} - {
+									path:'local>Deduc', formatter: 'mvideo.cafe.util.Formatter.formatMoney'}" />
+							</HBox>
+						</VBox>
+					</VBox>
+				</VBox>
+			</VBox>
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer />
+			</Toolbar>
+		</footer>
+	</Page>
+</core:View>

@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+<!--<link rel="stylesheet" type="text/css" href="css/main.css">-->
+    <script src="../resources/sap-ui-core.js"
+        id="sap-ui-bootstrap"
+        data-sap-ui-libs="sap.m, sap.uxap, sap.ui.table"
+        data-sap-ui-theme="sap_bluecrystal"
+          data-sap-ui-xx-bindingSyntax="complex"
+          data-sap-ui-appCacheBuster="./"
+        data-sap-ui-resourceroots='{
+           "mvideo.cafe": "./",
+           "mvideo.cafe.controls": "./controls"
+        }'
+    >
+    </script>
+    <link rel="stylesheet" href="css_pc/index.css">
+    <!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+    <script>
+	    sap.ui.getCore().attachInit(function() {
+		    new sap.m.Shell({
+		      app : new sap.ui.core.ComponentContainer({
+		      name : "mvideo.cafe"
+		    }),
+	        appWidthLimited: false
+	      }).placeAt("content");
+		});
+    </script>
+
+  </head>
+  <body class="sapUiBody" role="application">
+    <div id="content"></div>
+    <div class="indexHeader">
+		<img src="img/heartEmpty.png" class="indexHeart"/>
+		<span class="indexTitle">DreamBenifits</span>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<VBox>
+		<core:HTML class="mvRawHTML" content="&lt;div class='mvRawHTML'&gt;{local>/step1/descr}&lt;/div&gt;" preferDOM="false"/>
+	</VBox>
+</core:FragmentDefinition>

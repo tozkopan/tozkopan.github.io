@@ -1,0 +1,84 @@
+.myWizardHeader * {
+	font-family: "MVideo";
+	font-weight: bold;
+}
+/* header step icon */
+.myWizardHeader .sapUiIcon {
+	border-style: solid;
+	border-radius: 3rem;
+	padding: 5px;
+	height: 18px;
+	width: 18px;
+}
+.myWizardHeader .sapMText {
+	text-align: left;
+	word-break: break-word;
+	width: 100px;
+	padding-left: 5px;
+}
+
+.myWizardHeader .myIconPast .sapUiIcon {
+	background-color: #747F7F;
+	color: #EEEEEE;
+}
+.myWizardHeader .myIconCurrent .sapUiIcon {
+	background-color: #36CF26;
+	color: #EEEEEE;
+}
+.myWizardHeader .myIconFuture .sapUiIcon {
+	background-color: #B6B6B6;
+	color: #EEEEEE;
+}
+.myWizardHeader .myIconPast .sapMText,
+.myWizardHeader .myIconCurrent .sapMText {
+	color: #747F7F;
+}
+.myWizardHeader .myIconFuture .sapMText {
+	color: #B6B6B6;
+}
+
+/* header spacer - dotted line */
+.myWizardHeader .sapMTBSpacer {
+	border-top-style: dashed !important;
+	border-width: 2px !important;
+	height: 0px;
+}
+/* step title */
+.myWizStepTitle {
+	padding: 10px 5px;
+	font-size: 1.25rem;
+}
+.myWizSubTitle {
+/*     font-style: italic; */
+    margin-bottom: 1rem;
+}
+
+.wizBody {
+	padding: 5px;
+}
+
+.myWizPanel .sapMPanelWrappingDiv:not(.sapMPanelWrappingDivExpanded),
+.myWizPanel .sapMPanelContent{
+	border-bottom: none;
+	padding: 0rem;
+}
+
+.wizContent{
+	padding: 1rem;
+}
+
+/* Overprice box */
+.overPriceStep1 span {
+    font-size: 1.1rem;
+}
+.overPriceStep1 {
+    border: dotted red 1px;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Select error */
+.mySelectStateError {
+    border: solid #e52929 2px;
+}

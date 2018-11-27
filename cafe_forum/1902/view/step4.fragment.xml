@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+	
+	<HBox class="step4price">
+		<Text text="{i18n>WIZARD_STEP4_PRICE}" />
+		<Text visible="{= ${local>/step2/calc} === false }"
+			text="{path: 'Price', formatter: 'mvideo.cafe.util.Formatter.formatMoney'}" />
+		<Text visible="{= ${local>/step2/calc} === true }"
+			text="{path: 'local>/step2/calcValue', formatter: 'mvideo.cafe.util.Formatter.formatMoney'}" />
+	</HBox>
+		
+</core:FragmentDefinition>

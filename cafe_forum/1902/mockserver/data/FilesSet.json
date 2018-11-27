@@ -1,0 +1,514 @@
+[{
+	"BenefitId": "0010",
+	"Benefit2Id": "0010",
+	"Filekey": "PERSONAL_DATA_DMS",
+	"Name": "Согласие на обработку персональных данных",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0010",
+	"Benefit2Id": "0020",
+	"Filekey": "PERSONAL_DATA_DMS",
+	"Name": "Согласие на обработку персональных данных",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0010",
+	"Benefit2Id": "0030",
+	"Filekey": "PERSONAL_DATA_DMS",
+	"Name": "Согласие на обработку персональных данных",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0010",
+	"Benefit2Id": "0040",
+	"Filekey": "PERSONAL_DATA_DMS",
+	"Name": "Согласие на обработку персональных данных",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0010",
+	"Benefit2Id": "0050",
+	"Filekey": "PERSONAL_DATA_DMS",
+	"Name": "Согласие на обработку персональных данных",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0020",
+	"Benefit2Id": "0010",
+	"Filekey": "PERSONAL_DATA_DMS",
+	"Name": "Согласие на обработку перс.данных родственника",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0020",
+	"Benefit2Id": "0010",
+	"Filekey": "QUESTIONARY_DMS",
+	"Name": "Анкета для страхования от 60 лет",
+	"Dynamic": "X",
+	"Extension": "XLSX",
+	"Agreement": "",
+	"Optional": "X"
+}, {
+	"BenefitId": "0020",
+	"Benefit2Id": "0020",
+	"Filekey": "PERSONAL_DATA_DMS",
+	"Name": "Согласие на обработку перс.данных родственника",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0020",
+	"Benefit2Id": "0020",
+	"Filekey": "QUESTIONARY_DMS",
+	"Name": "Анкета для страхования от 60 лет",
+	"Dynamic": "X",
+	"Extension": "XLSX",
+	"Agreement": "",
+	"Optional": "X"
+}, {
+	"BenefitId": "0020",
+	"Benefit2Id": "0030",
+	"Filekey": "PERSONAL_DATA_DMS",
+	"Name": "Согласие на обработку перс.данных родственника",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0020",
+	"Benefit2Id": "0040",
+	"Filekey": "PERSONAL_DATA_DMS",
+	"Name": "Согласие на обработку перс.данных родственника",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0020",
+	"Benefit2Id": "0040",
+	"Filekey": "QUESTIONARY_DMS",
+	"Name": "Анкета для страхования от 60 лет",
+	"Dynamic": "X",
+	"Extension": "XLSX",
+	"Agreement": "",
+	"Optional": "X"
+}, {
+	"BenefitId": "0020",
+	"Benefit2Id": "0050",
+	"Filekey": "PERSONAL_DATA_DMS",
+	"Name": "Согласие на обработку перс.данных родственника",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0020",
+	"Benefit2Id": "0060",
+	"Filekey": "PERSONAL_DATA_DMS",
+	"Name": "Согласие на обработку перс.данных родственника",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0022",
+	"Benefit2Id": "0010",
+	"Filekey": "PERSONAL_DATA_INVITRO",
+	"Name": "Согласие на обработку персональных данных",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0022",
+	"Benefit2Id": "0020",
+	"Filekey": "PERSONAL_DATA_INVITRO",
+	"Name": "Согласие на обработку персональных данных",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0030",
+	"Benefit2Id": "0002",
+	"Filekey": "BENEFICIARY",
+	"Name": "Заявление о назначении Выгодоприобретателя",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "0030",
+	"Benefit2Id": "0002",
+	"Filekey": "PERSONAL_DATA_NS",
+	"Name": "Согласие на обработку персональных данных (1)",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0030",
+	"Benefit2Id": "0002",
+	"Filekey": "PERSONAL_DATA_NS_OWN",
+	"Name": "Согласие на обработку персональных данных",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0030",
+	"Benefit2Id": "0010",
+	"Filekey": "BENEFICIARY",
+	"Name": "Заявление о назначении Выгодоприобретателя",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "0030",
+	"Benefit2Id": "0010",
+	"Filekey": "PERSONAL_DATA_NS",
+	"Name": "Согласие на обработку персональных данных (1)",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0030",
+	"Benefit2Id": "0010",
+	"Filekey": "PERSONAL_DATA_NS_OWN",
+	"Name": "Согласие на обработку персональных данных",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0030",
+	"Benefit2Id": "0020",
+	"Filekey": "BENEFICIARY",
+	"Name": "Заявление о назначении Выгодоприобретателя",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "0030",
+	"Benefit2Id": "0020",
+	"Filekey": "PERSONAL_DATA_NS",
+	"Name": "Согласие на обработку персональных данных (1)",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0030",
+	"Benefit2Id": "0020",
+	"Filekey": "PERSONAL_DATA_NS_OWN",
+	"Name": "Согласие на обработку персональных данных",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0030",
+	"Benefit2Id": "0030",
+	"Filekey": "BENEFICIARY",
+	"Name": "Заявление о назначении Выгодоприобретателя",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "0030",
+	"Benefit2Id": "0030",
+	"Filekey": "PERSONAL_DATA_NS",
+	"Name": "Согласие на обработку персональных данных (1)",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0030",
+	"Benefit2Id": "0030",
+	"Filekey": "PERSONAL_DATA_NS_OWN",
+	"Name": "Согласие на обработку персональных данных",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0031",
+	"Benefit2Id": "0005",
+	"Filekey": "BENEFICIARY",
+	"Name": "Заявление о назначении Выгодоприобретателя",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "0031",
+	"Benefit2Id": "0005",
+	"Filekey": "PERSONAL_DATA_NS",
+	"Name": "Согласие на обработку персональных данных (1)",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0031",
+	"Benefit2Id": "0005",
+	"Filekey": "PERSONAL_DATA_NS_OWN",
+	"Name": "Согласие на обработку персональных данных",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "X",
+	"Optional": ""
+}, {
+	"BenefitId": "0032",
+	"Benefit2Id": "0010",
+	"Filekey": "BEELINE_MVM",
+	"Name": "Заявление на перевод личного номера",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "0032",
+	"Benefit2Id": "0020",
+	"Filekey": "BEELINE_MVM",
+	"Name": "Заявление на перевод личного номера",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "0032",
+	"Benefit2Id": "0030",
+	"Filekey": "BEELINE_MVM",
+	"Name": "Заявление на перевод личного номера",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "0032",
+	"Benefit2Id": "0035",
+	"Filekey": "BEELINE_MVM",
+	"Name": "Заявление на перевод личного номера",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "0032",
+	"Benefit2Id": "0050",
+	"Filekey": "BEELINE_MVM",
+	"Name": "Заявление на перевод личного номера",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "0045",
+	"Benefit2Id": "0010",
+	"Filekey": "PARKING",
+	"Name": "Заявление на парковку",
+	"Dynamic": "X",
+	"Extension": "PDF",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9010",
+	"Benefit2Id": "0010",
+	"Filekey": "PERSONAL_DATA_DMS",
+	"Name": "Согласие на обработку персональных данных",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9010",
+	"Benefit2Id": "0020",
+	"Filekey": "PERSONAL_DATA_DMS",
+	"Name": "Согласие на обработку персональных данных",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9010",
+	"Benefit2Id": "0030",
+	"Filekey": "PERSONAL_DATA_DMS",
+	"Name": "Согласие на обработку персональных данных",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9020",
+	"Benefit2Id": "0010",
+	"Filekey": "PERSONAL_DATA_DMS",
+	"Name": "Согласие на обработку перс.данных родственника",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9020",
+	"Benefit2Id": "0020",
+	"Filekey": "PERSONAL_DATA_DMS",
+	"Name": "Согласие на обработку перс.данных родственника",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9020",
+	"Benefit2Id": "0030",
+	"Filekey": "PERSONAL_DATA_DMS",
+	"Name": "Согласие на обработку перс.данных родственника",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9020",
+	"Benefit2Id": "0040",
+	"Filekey": "PERSONAL_DATA_DMS",
+	"Name": "Согласие на обработку перс.данных родственника",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9030",
+	"Benefit2Id": "0002",
+	"Filekey": "BENEFICIARY",
+	"Name": "Заявление о назначении Выгодоприобретателя",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9030",
+	"Benefit2Id": "0002",
+	"Filekey": "PERSONAL_DATA_NS",
+	"Name": "Согласие на обработку персональных данных (1)",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9030",
+	"Benefit2Id": "0002",
+	"Filekey": "PERSONAL_DATA_NS_OWN",
+	"Name": "Согласие на обработку персональных данных",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9030",
+	"Benefit2Id": "0005",
+	"Filekey": "BENEFICIARY",
+	"Name": "Заявление о назначении Выгодоприобретателя",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9030",
+	"Benefit2Id": "0005",
+	"Filekey": "PERSONAL_DATA_NS",
+	"Name": "Согласие на обработку персональных данных (1)",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9030",
+	"Benefit2Id": "0005",
+	"Filekey": "PERSONAL_DATA_NS_OWN",
+	"Name": "Согласие на обработку персональных данных",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9030",
+	"Benefit2Id": "0010",
+	"Filekey": "BENEFICIARY",
+	"Name": "Заявление о назначении Выгодоприобретателя",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9030",
+	"Benefit2Id": "0010",
+	"Filekey": "PERSONAL_DATA_NS",
+	"Name": "Согласие на обработку персональных данных (1)",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9030",
+	"Benefit2Id": "0010",
+	"Filekey": "PERSONAL_DATA_NS_OWN",
+	"Name": "Согласие на обработку персональных данных",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9030",
+	"Benefit2Id": "0020",
+	"Filekey": "BENEFICIARY",
+	"Name": "Заявление о назначении Выгодоприобретателя",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9030",
+	"Benefit2Id": "0020",
+	"Filekey": "PERSONAL_DATA_NS",
+	"Name": "Согласие на обработку персональных данных (1)",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9030",
+	"Benefit2Id": "0020",
+	"Filekey": "PERSONAL_DATA_NS_OWN",
+	"Name": "Согласие на обработку персональных данных",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}, {
+	"BenefitId": "9045",
+	"Benefit2Id": "0010",
+	"Filekey": "PARKING",
+	"Name": "Заявление на парковку",
+	"Dynamic": "X",
+	"Extension": "XLS",
+	"Agreement": "",
+	"Optional": ""
+}]

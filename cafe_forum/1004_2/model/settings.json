@@ -1,0 +1,51 @@
+{
+	"create_description": [{
+		"number": 1,
+		"text": "CREATE_DESCR_01",
+		"add": "CREATE_DESCR_01_ADD"
+	}, {
+		"number": 2,
+		"text": "CREATE_DESCR_02",
+		"add": "CREATE_DESCR_02_ADD"
+	}, {
+		"number": 3,
+		"text": "CREATE_DESCR_03",
+		"add": "CREATE_DESCR_03_ADD"
+	}],
+	"limits": [{
+		"id": "Total",
+		"name": "MASTER_LIMIT_TOTAL",
+		"price": 20000,
+		"color": "none",
+		"info": "MASTER_LIMIT_INFO_TOTAL"
+	}, {
+		"id": "Available",
+		"name": "MASTER_LIMIT_AVAILABLE",
+		"price": 21000,
+		"color": "none",
+		"info": "MASTER_LIMIT_INFO_AVAILABLE"
+	}, {
+		"id": "Overdraft",
+		"name": "MASTER_LIMIT_OVERDRAFT",
+		"price": 23000,
+		"color": "red",
+		"info": "MASTER_LIMIT_INFO_OVERDRAFT"
+	}],
+	"statuses": [{
+		"id": "10",
+		"name": "STATUS_10"
+	}, {
+		"id": "20",
+		"name": "STATUS_20"
+	}, {
+		"id": "30",
+		"name": "STATUS_30"
+	}, {
+		"id": "40",
+		"name": "STATUS_40"
+	}, {
+		"id": "FX",
+		"name": "STATUS_FIXED"
+	}]
+
+}

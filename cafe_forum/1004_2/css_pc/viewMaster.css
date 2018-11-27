@@ -1,0 +1,204 @@
+.mainList {
+	border-top: solid 1px #AAA;
+/* 	padding: 0 0.5rem; */
+	background: #f2f3f5;
+}
+
+.mainList.sapMListBGSolid .sapMLIB {
+	background: #f2f3f5;
+}
+.sapMLIBActive .sapMText {
+	color: #4c4c4c !important;
+}
+.mainList .sapMLIB {
+	border-bottom: none;
+	padding: 0;
+}
+.mainList .sapMPanelContent {
+	padding: 0;
+	overflow: hidden;
+	border-bottom: none;
+	margin-top: 0.5rem;
+	margin-left: 32px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.mainList .sapMLIBContent {
+	width: 100%;
+}
+
+.mainList .sapMSLIDescription {
+	width: 0px;
+}
+
+.mainList .mainListGroup {
+	font-weight: bold;
+    font-size: 18px;
+}
+
+.mainList .sapMDLILabel {
+	font-size: 1rem;
+	line-height: 1rem;
+	white-space: normal;
+}
+
+.mainList .sapMDLI>.sapMLIBContent {
+	align-items: center;
+}
+
+.mainList .sapMPanelWrappingDivT {
+	border-bottom: none;
+}
+
+.mainList .sapMLIBSelectD {
+	width: 2rem;
+	margin-left: 0.5rem;
+}
+
+.masterCLIwrap {
+	margin: 0.3rem 0;
+}
+
+.masterCLIwrap .sapMText {
+    font-size: 17px;
+}
+
+.masterCLImoney {
+	white-space: nowrap;
+	margin-left: 1rem;
+}
+
+/* delete button*/
+.mainlistDelete>.sapMBtnInner.sapMBtnText {
+	height: 2rem;
+	width: 1rem;
+	min-width: 0;
+	padding: 0;
+}
+
+.mainlistDelete .sapMBtnContent {
+	font-size: 1.3rem;
+	line-height: 1.5rem;
+	color: #E5282B;
+}
+.mainlistDelete .sapMBtnActive .sapMBtnContent {
+	color: #ffffff !important;
+}
+/*hide expand icon*/
+
+.mainList .sapMPanel .sapMPanelWrappingDivTb .sapMIBar.sapMTB{
+	margin-left: 17px;
+}
+
+.mainList .sapMPanelWrappingDivTb{
+}
+
+.mainList .sapMPanelExpandableIcon {
+	visibility: hidden;
+}
+
+/* limit list */
+.limitList .sapMDLIValue {
+	font-size: 1.5rem;
+	word-break: initial;
+	white-space: nowrap;
+}
+
+.limitList .sapMDLILabel {
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+
+.limitList .sapMDLI {
+	height: 2rem;
+}
+
+.limitPadding {
+	padding-right: 10px;
+	padding-left: 14px;
+	height: 48px !important;
+}
+
+.sapMText[data-mycolor="red"] {
+	color: #CC1919;
+}
+
+.sapMText[data-mycolor="green"] {
+	color: green;
+}
+
+.myCollapseIcon {
+	display: block;
+	height: 20px;
+	cursor: pointer;
+	width: 20px;
+	line-height: 20px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+/*.myCollapseIcon {
+	background-color: grey;
+	color: white;
+}*/
+.myCollapseIcon {
+	color: grey;
+    padding-right: 0.5rem;
+}
+
+/* Select year */
+.sapMSelectListItem.sapMSelectListItemPressed,
+.MVideo_cafe .sapMSltPressed.sapMSltIconOnly:not(.sapMSltDisabled ),
+.MVideo_cafe .sapMSltIconOnly.sapMSltPressed.sapMSltHoverable:hover{
+	background: #E5282B;
+}
+.masterSendBtn {
+	margin: 0 0 !important;
+}
+
+.masterPriceAndClose{
+	flex-shrink: 0;
+}
+
+.masterSubTotal{
+    word-break: initial;
+}
+
+/** mobile test **/
+.MVideo_cafe_mobile .mainlistDelete>.sapMBtnInner.sapMBtnText{
+	width: 2rem;
+}
+.MVideo_cafe_mobile .mainlistDelete .sapMBtnContent {
+    font-size: 2.8rem;
+    line-height: 1.8rem;
+}
+
+.mv_tocreate_parent{
+	position: relative;	
+}
+.mv_tocreate{
+    /*visibility: hidden;*/
+    visibility: visible;
+    width: auto;
+    font-size: 1.125rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    right: 3.0rem;
+    bottom: 0.5rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.mv_tocreate_parent .mv_tocreate::after {
+    content: " ";
+    position: absolute;
+    bottom: 0.5rem;
+    right: -1rem;
+    border-width: 0.5rem;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+}

@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core" xmlns:mv="mvideo.cafe.controls">
+
+	<VBox class="myCont" visible="{= ${local>/step} === 1}">
+		<HBox height="26%" justifyContent="Start">
+			<Image class="mhP1Logo" src="{/sRootPath}img/cafe_logo.svg" />
+		</HBox>
+		<VBox>
+			<HBox>
+				<core:HTML
+					content="&lt;div class='mhWelcome'&gt;{i18n>MAIN_HELP_WELCOME}&lt;/div&gt;" preferDOM="false" />
+			</HBox>
+			<HBox>
+				<Button type="Reject" class="mhNextBtn" text="{i18n>MAIN_HELP_BTN_NEXT}" />
+			</HBox>
+		</VBox>
+
+	</VBox>
+
+</core:FragmentDefinition>

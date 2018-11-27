@@ -1,0 +1,125 @@
+<core:View controllerName="mvideo.cafe.view.Master"
+	xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mv="mvideo.cafe.controls"
+	xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Page>
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<HBox>
+					<VBox class="masterName">
+						<Text class="sapMTitleStyleAuto" text="{/PersInfo/SecondName}" />
+						<Text class="sapMTitleStyleAuto" text="{/PersInfo/FirstName}" />
+					</VBox>
+					<!--<Image class="mvCupMaster" height="40px" src="{/sRootPath}img/cafe_logo_cup.png" visible="{device>/mv_mobile}"/>-->
+					</HBox>
+				</contentLeft>
+				<contentRight>
+					<HBox>
+						<mv:BellButton id="bell" class="_mvLogoImg" icon="sap-icon://mvideo/bell" press="onNotifications"
+							visible="{= ${/Messages}.length !== 0 &amp;&amp; ${device>/mv_mobile}}"
+							count="{path: '/Messages', formatter: '.f.notificationUnread'}"/>
+						<Button class="_mvLogoImg" icon="sap-icon://sys-help-2" press="onMainHelp" visible="{device>/mv_mobile}"/>
+						<mv:Select id="yearSelect" icon="ssspast" width="3rem" iconText="{i18n>MASTER_YEAR_BTN}"
+							autoAdjustWidth="true"
+							type="IconOnly" items="{/years}" change="onYearSelect"
+							selectedKey="{/selectedYear}">
+							<core:Item key="{Year}" text="{Text}" data:uri="{uri}" />
+						</mv:Select>
+					</HBox>
+				</contentRight>
+			</Bar>
+		</customHeader>
+		<content>
+
+			<List mode="None" id="limitList" class="limitList"
+				showSeparators="Inner" items="{/limits}">
+				<items>
+					<CustomListItem visible="true">
+						<HBox height="35px" justifyContent="SpaceBetween" alignItems="Center"
+							class="limitPadding">
+							<Text class="sapMDLILabel" text="{name}{i18n>MASTER_LIMIT_POSTFIX}" />
+							<HBox alignItems="Center">
+								<Text class="sapMDLIValue" textAlign="End"
+									text="{path:'price', 
+									formatter:'mvideo.cafe.util.Formatter.formatMoney'}">
+									<customData>
+										<core:CustomData key="mycolor" value="{color}"
+											writeToDom="true" />
+									</customData>
+								</Text>
+								<HBox width="{= ${device>/mv_desktop} ? '25px' : '30px'}" justifyContent="End">
+									<core:Icon src="sap-icon://sys-help" press="onLimitHelp"
+									size="{= ${device>/mv_desktop} ? '16px' : '20px'}">
+										<core:customData>
+											<core:CustomData key="text" value="{info}" />
+										</core:customData>
+									</core:Icon>
+								</HBox>
+							</HBox>
+						</HBox>
+					</CustomListItem>
+				</items>
+			</List>
+
+			<List id="mainList" class="mainList" mode="None"
+				items="{path: '/benifits_g', templateShareable: 'true' }">
+				<items>
+					<CustomListItem>
+						<Panel expandable="true" expanded="{expanded}"
+							visible="{path: 'content', formatter: 'mvideo.cafe.util.Formatter.isArrayNotEmpty'}">
+							<headerToolbar>
+								<Toolbar>
+									<Text class="mainListGroup mvListText" text="{text}" />
+									<ToolbarSpacer />
+									<Text class="masterSubTotal mvListSum"
+										text="{path: 'content', formatter: 'mvideo.cafe.util.Formatter.getGroupSum'}" />
+									<core:Icon size="18px" press="mainListPanelExpand"
+										class="myCollapseIcon"
+										src="sap-icon://{path: 'expanded',
+										formatter: 'mvideo.cafe.util.Formatter.mainListPanelExpandIcon'}" />
+								</Toolbar>
+							</headerToolbar>
+							<content>
+								<List delete="onDelete" items="{path: 'content', templateShareable: 'true'}">
+									<items>
+										<CustomListItem type="Active" press="onListPress">
+											<HBox class="masterCLIwrap" justifyContent="SpaceBetween"
+												alignItems="Center">
+												<Text
+													text="{Benefit2}{path:'Pskey', 
+													formatter:'mvideo.cafe.util.Formatter.seqnrCurls'}" />
+												<HBox class="masterPriceAndClose" alignItems="Center">
+													<Text class="masterCLImoney"
+														text="{path:'Betrg', 
+														formatter:'mvideo.cafe.util.Formatter.formatMoney'}" />
+													<Button class="mainlistDelete" type="Transparent"
+														text="×" press="onDelete"
+														visible="{path: 'StatusId', formatter: 'mvideo.cafe.util.Formatter.isListModeDelete'}" />
+												</HBox>
+											</HBox>
+										</CustomListItem>
+									</items>
+								</List>
+							</content>
+						</Panel>
+					</CustomListItem>
+				</items>
+			</List>
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer visible="{= !${device>/mv_mobile} }"/>
+				<Button text="{i18n>MASTER_SEND_BTN}" press="onSend" type="Reject"
+					class="masterSendBtn mvNextBtn mvMasterMobileBtn"
+					visible="{path: '/benifits_g', formatter: '.f.sendVisible'}" />
+				<Button text="{i18n>MASTER_EMPTY_BTN}" press="toEmpty"
+					visible="{= ${device>/mv_mobile} &amp;&amp; !${settings>/currentYear/Open} }"/>
+				<ToolbarSpacer />
+				<Button text="{i18n>MASTER_ADD_BTN}" press="toCreate" id="mvMasterToCreate" 
+					type="Reject" class="masterSendBtn mvNextBtn mvMasterMobileBtn"
+					visible="{= ${device>/mv_mobile} &amp;&amp; ${settings>/currentYear/Open} }"/>
+			</Toolbar>
+		</footer>
+	</Page>
+</core:View>

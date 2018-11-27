@@ -1,0 +1,7 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+	<Text class="myWizSubTitle" text="{i18n>WIZARD_DOC_TEMPLATE}" />
+	<core:HTML class="mvRawHTML step3_pre" content="&lt;div class='mvRawHTML step3_pre'&gt;{local>/step3/descr}&lt;/div&gt;"
+		visible="{ path: 'local>/step3/descr', formatter: 'mvideo.cafe.util.Formatter.isNotEmpty' }" preferDOM="false" />
+		
+</core:FragmentDefinition>

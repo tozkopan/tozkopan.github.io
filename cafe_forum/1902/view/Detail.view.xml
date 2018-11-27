@@ -1,0 +1,70 @@
+<core:View controllerName="mvideo.cafe.view.Detail"
+	xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:u="sap.ui.unified"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+
+<!-- 	<html:link rel="stylesheet" type="text/css" href="css/viewDetail.css" /> -->
+<!-- 	<html:link rel="stylesheet" type="text/css" href="css/viewSteps.css" /> -->
+
+	<Page title="{Benefit2}" showNavButton="true" navButtonPress="handleBack">
+		<content>
+			<VBox class="myDetailMain" width="{= ${device>/mv_desktop} ? '50%' : '100%' }">
+				<items>
+					<FlexBox alignItems="Start" justifyContent="SpaceBetween" class="myDetailFlex">
+						<items>
+							<Text class="myDetailMainLeft" text="{i18n>DETAIL_GROUP}" />
+							<Text class="myDetailMainRight" text="{Benefit}" />
+						</items>
+					</FlexBox>
+					<FlexBox alignItems="Start" justifyContent="SpaceBetween" class="myDetailFlex"
+						visible="{ path: 'Betrg', formatter: 'mvideo.cafe.util.Formatter.isNotEmpty'}">
+						<items>
+							<Text class="myDetailMainLeft" text="{i18n>DETAIL_PRICE}" />
+							<Text class="myDetailMainRight"
+								text="{ path: 'Betrg', formatter: 'mvideo.cafe.util.Formatter.formatMoney' }" />
+						</items>
+					</FlexBox>
+					<FlexBox alignItems="Start" justifyContent="SpaceBetween" class="myDetailFlex">
+						<items>
+							<Text class="myDetailMainLeft" text="{i18n>DETAIL_STATUS}" />
+							<Text class="myDetailMainRight"
+								text="{ path: 'StatusId', formatter: 'mvideo.cafe.util.Formatter.getStatusText' }" />
+						</items>
+					</FlexBox>
+				</items>
+			</VBox>
+
+			<IconTabBar id="idIconTabBarMulti" expandable="false"
+				class="sapUiResponsiveContentPadding detailITB">
+				<items>
+					<IconTabFilter text="{i18n>ITB_TOOLTIP_HINT}" icon="sap-icon://hint">
+						<core:Fragment fragmentName="mvideo.cafe.view.step1"
+							type="XML" />
+					</IconTabFilter>
+					<IconTabFilter text="{i18n>ITB_TOOLTIP_ATTACHMENTS}" icon="sap-icon://attachment" 
+						visible="{ path: 'local>/step3/files', formatter: 'mvideo.cafe.util.Formatter.isArrayNotEmpty' }"
+						count="{ path: 'local>/step3/files', formatter: 'mvideo.cafe.util.Formatter.length' }">
+						<core:Fragment fragmentName="mvideo.cafe.view.step3"
+							type="XML" />
+					</IconTabFilter>
+					<IconTabFilter id="addInfo" text="{i18n>ITB_TOOLTIP_FORM}" icon="sap-icon://form" 
+						visible="{ path: 'local>/step2/fieldGroups',
+							formatter: 'mvideo.cafe.util.Formatter.isArrayNotEmpty' }">
+						<!-- visible="{local>/step2enabled}" -->
+						<core:Fragment fragmentName="mvideo.cafe.view.step2"
+							type="XML" />
+							
+						<!-- Cellphone benefit only -->
+						<core:HTML class="mvRawHTML step3_pre"
+							content="&lt;div class='mvRawHTML step3_pre'&gt;{local>/step3/descr}&lt;/div&gt;"
+							visible="{ path: 'local>/step3/descr', formatter: 'mvideo.cafe.util.Formatter.isNotEmpty' }"
+							preferDOM="false" />
+
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+		<footer>
+		</footer>
+	</Page>
+</core:View>

@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<List class="" items="{/Messages}">
+		<items>
+			<NotificationListItem title="{ObjDescr}" hideShowMoreButton="false" showCloseButton="false"
+				unread="{= !${Read}}" description="{ parts:[{ path: 'SendDateNum' },{ path: 'SendTimeNum' }], formatter: '.f.notificationDateTime'}"
+				priority="{= ${Read} ? 'Low' : 'High'}" >
+				<buttons>
+					<!--<Button text="Accept" type="Accept" press="onAcceptPress"></Button>-->
+					<!--<Button text="Reject" type="Reject" press="onRejectPress"></Button>-->
+				</buttons>
+			</NotificationListItem>
+		</items>
+	</List>
+</core:FragmentDefinition>

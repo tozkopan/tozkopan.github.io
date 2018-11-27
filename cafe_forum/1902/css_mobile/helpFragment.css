@@ -1,0 +1,193 @@
+.helpFragment {
+	background-size: cover;
+	background-position: center;
+}
+.sapMDialog, .helpFragment {
+    background: #fafafa;
+    /* border: solid 1px #bfbfbf; */
+}    
+.helpFragment .sapMFlexItem {
+    position: relative !important;
+    -ms-flex-preferred-size: auto;
+    -ms-flex-negative: 1;
+}
+
+.helpFragment .sapMDialogSection {
+	background: linear-gradient(rgba(255, 255, 255, 0.7),
+		rgba(255, 255, 255, 0.1), transparent, transparent);
+}
+.mhP2TopParent,
+.mhBottom,
+.mhP2TextParent2 {
+	position: relative !important;
+}
+.helpFragment .sapMDialogScrollCont {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	padding: 0;
+}
+
+.helpFragment .myCont {
+	height: 80.3%;
+	display: flex;
+	flex-direction: column;
+	margin: 3% 0 0 3%;
+}
+/*p1 Logo*/
+.mhP1Logo {
+	height: 11vmin;
+	max-width: 50vmax;
+}
+
+/*p1 Text*/
+.mhWelcome {
+	color: white;
+	font-size: 4.4vmin;
+	line-height: 5.4vmin;
+	font-weight: bold;
+}
+/*p1 Button	*/
+.mhNextBtn {
+	height: 7vmin;
+	padding: 0;
+	margin-top: 4vmin;
+}
+
+.mhNextBtn div.sapMBtnInner {
+	height: 7vmin;
+	width: 27vmin;
+	background-color: #E23B44;
+	border: none;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+
+.mhNextBtn .sapMBtnContent {
+	font-size: 4vmin;
+	line-height: 100%
+}
+/*p2 Top text*/
+.mhP2Top,
+.mhP2Top p{
+    font-size: 3.2vmin;
+    margin-top: 1vmin;
+    margin-right: 3vmax;
+    margin-left: 1vmax;
+    color: grey;
+}
+/*p2 Wall of text*/
+.mhP2TextParent {
+	padding-left: 1%;
+	padding-right: 1%;
+    padding-top: 1%;
+   	background: linear-gradient(to right, rgba(255, 255, 255, 0.5), transparent);
+}
+.mhP2TextLeftParent {
+	padding-left: 1%;
+	padding-right: 2%;
+   	background: linear-gradient(to right, rgba(255, 255, 255, 0.5), transparent);
+}
+.mhP2TextRightParent {
+	padding-left: 2%;
+	padding-right: 1%;
+   	background: linear-gradient(to right, rgba(255, 255, 255, 0.5), transparent);
+}
+.mhP2Text *,
+.mhP2Text,
+.mhP2Text p{
+    font-size: 3vmin;
+}
+.mhP2Text ol {
+    padding-left: 0;
+}
+/*p2 Img*/
+.mhP2ImgParent{
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-left: -6%;
+}
+.mhP2ImgParent img{
+	height: 50vmin;
+}
+/*p2 Bottom*/
+.mhBottom{
+	margin-left: 1%;
+	margin-top: 2%;
+}
+/*p2 Bottom Text*/
+.mhP2BotText{
+    font-size: 2.5vmin;
+    line-height: 2.1vmin;
+}
+/*p2 Button + CB*/
+.mhBottomRight{
+	height: 100%;
+	margin-right: 1rem;
+}
+.mhBottomRight>.sapMFlexItem{
+	font-size: 0;
+}
+
+/*p2 Button*/
+.mhCloseBtn {
+    height: 10vmin;
+    width: 30vmin;
+	padding: 0;
+}
+.mhCloseBtn :not(.sapMBtnActive) div.sapMBtnInner{
+	background-color: #E23B44 !important; 
+}
+.mhCloseBtn div.sapMBtnInner {
+	height: 10vmin;
+	background-color: #E23B44;
+	border: none;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+    border-radius: 0vmin;
+}
+.mhCloseBtn .sapMBtnContent {
+	font-size: 3vmin;
+	line-height: 100%;
+	white-space: normal;
+}
+
+/*p2 Checkbox NoMore*/
+.mhNoMore {
+    height: 7vmin;
+    line-height: 7vmin;
+    padding: 0 0 0 7vmin;
+}
+.mhNoMore label{
+	color: white;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 3vmin;
+    width: 13vmin;
+    text-shadow: 0px 0px 1vh rgba(0, 0, 0, 1);
+    vertical-align: middle;
+    font-size: 2vmin;
+}
+.mhNoMore .sapMCbBg {
+    left: 2vmin;
+    top: 2vmin;
+    height: 3vmin;
+    width: 3vmin;
+    line-height: 2.5vmin;
+    border: none;
+    border-radius: 0vmin;
+    font-size: 3vmin;
+}
+.mhNoMore .sapMCbBg.sapMCbMarkChecked:before{
+	color: #E23B44;
+}
+
+/** mobile test **/
+.MVideo_cafe.helpFragment.MVideo_cafe_help_mobile_portrait{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);	
+}

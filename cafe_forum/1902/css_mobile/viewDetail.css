@@ -1,0 +1,59 @@
+.myDetailMain {
+	padding: 10px 15px;
+}
+
+.myDetailMain>* {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.myDetailFlex {
+	width: 100%;
+}
+.myDetailFlex .sapMFlexItem{
+	width: 50%;
+}
+.myDetailFlex .sapMFlexItem:last-child{
+	text-align: right;
+}
+
+.myDetailMainLeft {
+	font-size: 18px;
+	word-break: normal;
+}
+
+.myDetailMainRight {
+	font-size: 18px;   
+	word-break: normal; 
+}
+
+.myForm2
+.sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont>.sapUiFormResGridLbl:not 
+ (.sapUiRespGridSpanM12 )>.sapMLabel {
+	text-align: left !important;
+}
+
+.myForm2 .sapUiForm .sapMLabel:after {
+	content: "";
+}
+
+/* IconTabBar icons recolor */
+.detailITB .sapMITBSelected .sapMITBFilterDefault {
+    background: #808080;
+}
+.detailITB .sapMITBFilterIcon{
+	border-color: #808080 !important;
+}
+.detailITB .sapMITBFilterDefault {
+    color: #808080;
+}
+.detailITB .sapMITBSelected>.sapMITBContentArrow {
+    border-color: #808080;
+}
+.detailITB .sapMITBSelected .sapMITBFilterDefault {
+    color: #ffffff;
+}
+
+/**mobile test**/
+.MVideo_cafe_mobile #Detail--idIconTabBarMulti>.sapMITBContainerContent{
+	padding: 0.5rem 0.5rem;
+}

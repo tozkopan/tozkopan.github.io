@@ -1,0 +1,106 @@
+<core:View controllerName="mvideo.cafe.view.Complete"
+	xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:u="sap.ui.unified"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+
+<!-- 	<html:link rel="stylesheet" type="text/css" href="css/viewWizard.css" /> -->
+<!-- 	<html:link rel="stylesheet" type="text/css" href="css/viewComplete.css" /> -->
+
+	<Page title="{i18n>COMPLETE_TITLE}" showNavButton="true"
+		navButtonPress="handleBack">
+		<subHeader>
+			<Toolbar class="myWizardHeader" visible="{= !${/PersInfo/Retail} }">
+				<content>
+					<HBox id="completeHead1" alignItems="Center">
+						<core:Icon src="sap-icon://hint" />
+						<VBox>
+							<Text width="100px" text="{i18n>COMPLETE_TITLE_STEP1}" />
+						</VBox>
+					</HBox>
+					<ToolbarSpacer id="completeHead2a" visible="{local>/step2enabled}" />
+					<HBox id="completeHead2" alignItems="Center">
+						<core:Icon src="sap-icon://attachment" />
+						<VBox>
+							<Text width="110px" text="{i18n>COMPLETE_TITLE_STEP2}" />
+						</VBox>
+					</HBox>
+				</content>
+			</Toolbar>
+		</subHeader>
+
+		<content>
+			<VBox id="completeBody1" class="wizBody" width="100%"
+				visible="{= ${local>/currentStep} >= 1}">
+				<Text class="myWizStepTitle" text="{i18n>COMPLETE_TITLE_STEP1}" />
+				
+				<VBox id="warningContent" visible="{= ${local>/currentStep} === 1 &amp;&amp; ${local>/hasWarnings} }" items="{local>/warningTxt}">
+					<items>
+						<VBox class="completeRest completeRestRed">
+							<Text text="{local>}" class="completeRestHeader"/>
+						</VBox>
+					</items>
+				</VBox>
+
+				<VBox class="completeRest completeRestRed"
+					visible="{= ${local>/limitOverflow} === 'OVER' }">
+					<Text text="Превышен максимальный лимит на льготы.\nЧасть будет оплачена за ваш счет." class="completeRestHeader"/>
+					<Text text="Всего будет удержано - {path:'local>/overdraft', formatter:'mvideo.cafe.util.Formatter.formatMoney'}." class="completeRestHeader"/>
+					
+					<!--<VBox class="completeDeduct" width="200px" items="{local>/deduct}">-->
+					<!--	<HBox justifyContent="SpaceBetween">-->
+					<!--		<Text text="{i18n>COMPLETE_MONTH_PRE} {path:'local>Date', formatter: 'mvideo.cafe.util.Formatter.spellDateStop'-->
+					<!--		} - {-->
+					<!--		path:'local>Deduc', formatter: 'mvideo.cafe.util.Formatter.formatMoney'}" class="completeRestHeader"/>-->
+					<!--	</HBox>-->
+					<!--</VBox>-->
+				</VBox>
+				<VBox class="completeRest"
+					visible="{= ${local>/limitOverflow} === 'CHARITY' }">
+					<Text text="{i18n>COMPLETE_CHARITY}{path:'local>/available', formatter:'mvideo.cafe.util.Formatter.formatMoney'}"
+						class="completeRestHeader" />
+					<Text text="{i18n>COMPLETE_CHARITY_SELECT}" />
+					<!--<RadioButtonGroup id="rbg_0" columns="{= ${device>/mv_wide} ? 2 : 1}" editable="{= ${local>/currentStep} === 1 }"-->
+					<RadioButtonGroup id="rbg_0" columns="1" editable="{= ${local>/currentStep} === 1 }"
+						selectedIndex="{local>/charitySelected}">
+						<buttons>
+							<!--<RadioButton text="{local>Text}" 
+								visible="{local>visible}" selected="{local>selected}"/>-->
+						</buttons>
+					</RadioButtonGroup>
+				</VBox>
+				<VBox class="completeRest"
+					visible="{= ${local>/limitOverflow} === 'EXACT' }">
+					<Text text="{i18n>COMPLETE_EXACT}" class="completeRestHeader" />
+				</VBox>
+			</VBox>
+			<VBox id="completeBody2" class="wizBody" width="100%"
+				visible="{= ${local>/currentStep} >= 2}">
+				<Text class="myWizStepTitle" text="{i18n>COMPLETE_TITLE_STEP2}" />
+				<!-- <Text class="completeFilesDescr" text="{i18n>COMPLETE_FILES_DESCR}" /> -->
+				<core:HTML class="mvRawHTML" content="&lt;div class='mvRawHTML'&gt;{i18n>COMPLETE_FILES_DESCR}&lt;/div&gt;" preferDOM="false"/>				
+				<core:Fragment type="XML" fragmentName="mvideo.cafe.view.completeFiles" />
+			</VBox>
+		</content>
+		<footer>
+			<Toolbar>
+				<Button type="Reject" class="mvNextBtn"
+					icon="sap-icon://close-command-field"
+					iconFirst="true" text="Отменить" press="handleBack" />
+				<ToolbarSpacer />
+				<Button id="btnPrev" icon="sap-icon://navigation-left-arrow"
+					visible="{= ${local>/currentStep} > 1 }" iconFirst="true"
+					text="{i18n>WIZARD_BTN_PREV}" press="onPrev" />
+				<Button id="btnNext" icon="sap-icon://navigation-right-arrow" type="Reject" class="mvNextBtn"
+					visible="{= ${local>/currentStep} &lt; 2 &amp;&amp; !${/PersInfo/Retail} }" iconFirst="false"
+					text="{i18n>WIZARD_BTN_NEXT}" press="onNext" enabled="{local>/completeAllowed}"/>
+				<Button id="btnComplete" icon="sap-icon://complete" type="Reject" class="mvNextBtn"
+					visible="{= ${local>/currentStep} === 2 &amp;&amp; !${/PersInfo/Retail} }" iconFirst="true" enabled="false"
+					text="{i18n>COMPLETE_BTN_COMPLETE}" press="onComplete" />
+				<!-- complete button for retail -->
+				<Button id="btnCompleteRetail" icon="sap-icon://complete" type="Reject" class="mvNextBtn"
+					visible="{/PersInfo/Retail}" iconFirst="true" enabled="{local>/completeAllowed}"
+					text="{i18n>COMPLETE_BTN_COMPLETE}" press="onComplete" />
+			</Toolbar>
+		</footer>
+	</Page>
+</core:View>

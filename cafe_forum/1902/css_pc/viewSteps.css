@@ -1,0 +1,128 @@
+.step2subTitle{
+    font-size: 1.3rem !important;
+    font-weight: bold;
+    font-family: MVideo;
+}
+.step2group{
+    border-style: dotted;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    border-width: 1px;	
+}
+.step2group:nth-last-child(n+2){
+	margin-bottom: 30px;
+}
+.step2group .sapMLabel{
+    font-size: 1rem;
+    font-family: MVideo;
+} 
+/*.step2 .sapMInputBase.sapMInputBaseReadonly{*/
+/*	height: 1.5rem;*/
+/*}*/
+/*
+.step2 .step2Inputs>:not(.step2IQUAN) .sapMInputBaseInner.sapMInputBaseReadonlyInner{
+	height: 1.2rem;
+}*/
+
+.step2 .sapMInputBaseInner.sapMInputBaseReadonlyInner{
+    height: 2.5rem;
+    font-size: 1rem;
+}
+.wizBody2 .step2 .step2Inputs>.step2IQUAN .sapMInputBaseInner.sapMInputBaseReadonlyInner{
+	height: 2.5rem;
+}
+
+.sapMCbHoverable:hover {
+    border-color: #E5282B;
+}
+.sapMCbBg.sapMCbMarkChecked:before{
+	color: #36CF26;
+}
+/*Select*/
+.step2group .sapMSlt>.sapMSltLabel {
+    font-family: Arial,Helvetica,sans-serif;
+    padding-left: 0.75rem;
+}
+.step2group .sapMSltDisabled {
+    height: 1.5rem;
+    opacity: 1;
+    border: none;
+    margin: initial;
+}
+.step2group .sapMSltDisabled>.sapMSltArrow{
+	visibility: hidden;
+}
+.step2group .sapMSltDisabled.sapMSlt>.sapMSltLabel{
+    line-height: 1.5rem;
+    padding-top: 2px;
+}
+
+.step2fieldCalc{
+	margin-left: 0.5rem;
+}
+
+.step2Calc{
+	margin-top: 0.5rem;
+}
+.step2Calc input,
+.step2Calc label,
+.step2Calc span{
+    font-size: 1.25rem;
+    color: black;
+}
+.step2Calc span{
+	margin-left: 0.5rem;
+}
+.step4price span {
+	font-size: 1.2rem;
+    padding-right: 0.5rem;
+    margin-bottom: 1rem;
+/*     font-style: italic; */
+}
+.step3_pre{
+	margin-bottom: 1rem;
+}
+
+.step2IQUAN>.sapMFlexItem:nth-child(2){
+	width:100%;
+}
+
+.step2IQUAN .sapMInputBaseErrorInner.sapMInputBaseInner.sapMInputBaseReadonlyInner{
+    border-color: #e52929;
+}
+
+
+/* step 3 APPROVE_PERSONAL_DATA */
+.APPROVE_PERSONAL_DATA_MORE,
+.APPROVE_PERSONAL_DATA_PRE,
+.APPROVE_PERSONAL_DATA_BODY{
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+.APPROVE_PERSONAL_DATA_PRE{
+	margin-top: 1rem;
+    background-color: #EEE;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+.APPROVE_PERSONAL_DATA_CONT{
+	max-width: 30rem;	
+}
+.APPROVE_PERSONAL_DATA_BODY{
+	padding-top: 0.5rem;	
+}
+.APPROVE_PERSONAL_DATA_CHECKBOX>.sapMCbBg{
+	background-color: #EEE;
+}
+.APPROVE_PERSONAL_DATA_CHECKBOX>.sapMCbBg:before{
+	color: #36CF26;
+}
+.APPROVE_PERSONAL_DATA_MORE {
+	color: black;
+}
+
+
+.MVideo_cafe_portrait .step2fields{
+	display: block;
+}

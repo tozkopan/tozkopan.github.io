@@ -1,0 +1,106 @@
+<core:View controllerName="mvideo.cafe.view.Master"
+	xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mv="mvideo.cafe.controls"
+	xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Page>
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<HBox>
+					</HBox>
+				</contentLeft>
+				<contentRight>
+				</contentRight>
+			</Bar>
+		</customHeader>
+		<content>
+			<List mode="None" id="limitList" class="limitList"
+				showSeparators="Inner" items="{/limits}">
+				<items>
+					<CustomListItem visible="true">
+						<HBox height="35px" justifyContent="SpaceBetween" alignItems="Center"
+							class="limitPadding">
+							<Text class="sapMDLILabel" text="{name}{i18n>MASTER_LIMIT_POSTFIX}" />
+							<HBox alignItems="Center">
+								<Text class="sapMDLIValue myMoney" textAlign="End" text="{price}">
+									<customData>
+										<core:CustomData key="mycolor" value="{color}"
+											writeToDom="true" />
+									</customData>
+								</Text>
+								<HBox width="{= ${device>/mv_desktop} ? '25px' : '30px'}" justifyContent="End">
+									<core:Icon src="sap-icon://sys-help" press="onLimitHelp"
+									size="{= ${device>/mv_desktop} ? '16px' : '20px'}">
+										<core:customData>
+											<core:CustomData key="text" value="{info}" />
+										</core:customData>
+									</core:Icon>
+								</HBox>
+							</HBox>
+						</HBox>
+					</CustomListItem>
+				</items>
+			</List>
+
+			<List id="mainList" class="mainList" mode="None"
+				items="{path: '/benifits_g', templateShareable: 'true' }" noDataText="Корзина пуста">
+				<items>
+					<CustomListItem>
+						<Panel expandable="true" expanded="{expanded}"
+							visible="{path: 'content', formatter: 'mvideo.cafe.util.Formatter.isArrayNotEmpty'}">
+							<headerToolbar>
+								<Toolbar>
+									<Text class="mainListGroup mvListText" text="{text}" />
+									<ToolbarSpacer />
+									<Text class="masterSubTotal mvListSum myMoney"
+										text="{path: 'content', formatter: 'mvideo.cafe.util.Formatter.getGroupSum'}" />
+									<core:Icon size="18px" press="mainListPanelExpand"
+										class="myCollapseIcon"
+										src="sap-icon://{path: 'expanded',
+										formatter: 'mvideo.cafe.util.Formatter.mainListPanelExpandIcon'}" />
+								</Toolbar>
+							</headerToolbar>
+							<content>
+								<List delete="onDelete" items="{path: 'content', templateShareable: 'true'}">
+									<items>
+										<CustomListItem type="Active" press="_onViewInfoPress">
+										<!--<CustomListItem type="Active" press="onListPress">-->
+											<HBox class="masterCLIwrap" justifyContent="SpaceBetween"
+												alignItems="Center">
+												<Text
+													text="{Benefit2}{path:'Pskey', 
+													formatter:'mvideo.cafe.util.Formatter.seqnrCurls'}" />
+												<HBox class="masterPriceAndClose" alignItems="Center">
+													<Text class="masterCLImoney myMoney"
+														text="{path:'Betrg', 
+														formatter:'mvideo.cafe.util.Formatter.formatMoney'}" />
+													<Button class="mainlistDelete" type="Transparent"
+														text="×" press="onDelete"
+														visible="{path: 'StatusId', formatter: 'mvideo.cafe.util.Formatter.isListModeDelete'}" />
+												</HBox>
+											</HBox>
+										</CustomListItem>
+									</items>
+								</List>
+							</content>
+						</Panel>
+					</CustomListItem>
+				</items>
+			</List>
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer visible="{= !${device>/mv_mobile} }"/>
+				<Button text="{i18n>MASTER_SEND_BTN}" press="onSend" type="Reject"
+					class="masterSendBtn mvNextBtn mvMasterMobileBtn"
+					visible="{path: '/benifits_g', formatter: '.f.sendVisible'}" />
+				<Button text="{i18n>MASTER_EMPTY_BTN}" press="toEmpty"
+					visible="{= ${device>/mv_mobile} &amp;&amp; !${settings>/currentYear/Open} }"/>
+				<ToolbarSpacer />
+				<Button text="{i18n>MASTER_ADD_BTN}" press="toCreate" id="mvMasterToCreate" 
+					type="Reject" class="masterSendBtn mvNextBtn mvMasterMobileBtn"
+					visible="{= ${device>/mv_mobile} &amp;&amp; ${settings>/currentYear/Open} }"/>
+			</Toolbar>
+		</footer>
+	</Page>
+</core:View>
